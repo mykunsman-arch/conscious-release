@@ -33,7 +33,7 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
         <div className={`text-center space-y-10 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-peach/20 px-6 py-3 rounded-full">
-            <Flower2 className="h-5 w-5 text-accent" />
+            <Flower2 className="h-5 w-5 text-accent animate-rotate-slow hover:scale-125 transition-all" />
             <span className="text-accent font-semibold">התהליך שלנו</span>
           </div>
 
@@ -61,8 +61,8 @@ const HowItWorksSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-3 md:gap-4 pt-2">
-                  <div className="flex-shrink-0 bg-accent/10 text-accent rounded-full p-2 md:p-3 group-hover:bg-accent group-hover:text-white transition-colors">
-                    <Check className="h-5 w-5 md:h-6 md:w-6" />
+                  <div className="flex-shrink-0 bg-accent/10 text-accent rounded-full p-2 md:p-3 group-hover:bg-accent group-hover:text-white transition-all">
+                    <Check className="h-5 w-5 md:h-6 md:w-6 group-hover:scale-110 transition-transform" />
                   </div>
                   <p className="text-base md:text-lg text-foreground/80 text-right flex-1 leading-relaxed group-hover:text-foreground transition-colors">
                     {challenge.text}

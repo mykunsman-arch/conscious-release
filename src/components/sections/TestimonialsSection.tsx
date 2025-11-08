@@ -102,9 +102,9 @@ const TestimonialsSection = () => {
         {[...Array(5)].map((_, index) => (
           <Star
             key={index}
-            className={`h-5 w-5 ${
+            className={`h-5 w-5 transition-all hover:scale-125 ${
               index < rating
-                ? "fill-yellow-400 text-yellow-400"
+                ? "fill-yellow-400 text-yellow-400 hover:rotate-12"
                 : "fill-muted text-muted"
             }`}
           />
@@ -122,7 +122,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className={`text-center space-y-8 mb-16 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full animate-fade-in">
-            <Heart className="h-5 w-5 text-accent" />
+            <Heart className="h-5 w-5 text-accent animate-pulse hover:scale-125 hover:rotate-12 transition-all" />
             <span className="text-accent font-semibold">סיפורי הצלחה</span>
           </div>
 
@@ -186,9 +186,9 @@ const TestimonialsSection = () => {
             <DialogTrigger asChild>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground px-8 py-6 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 gap-2"
+                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground px-8 py-6 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 gap-2 group"
               >
-                <Plus className="h-5 w-5" />
+                <Plus className="h-5 w-5 group-hover:rotate-90 transition-transform" />
                 הוסף המלצה שלך
               </Button>
             </DialogTrigger>

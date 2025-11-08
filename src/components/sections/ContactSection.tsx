@@ -52,7 +52,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className={`text-center space-y-10 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full">
-            <Mail className="h-5 w-5 text-accent" />
+            <Mail className="h-5 w-5 text-accent animate-bounce-gentle hover:scale-125 hover:rotate-12 transition-all" />
             <span className="text-accent font-semibold">בואו נדבר</span>
           </div>
 
@@ -84,8 +84,8 @@ const ContactSection = () => {
                   <label htmlFor="phone" className="block text-sm font-semibold mb-2 md:mb-3 text-foreground/80">
                     טלפון
                   </label>
-                  <div className="relative">
-                    <Phone className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 h-4 w-4 md:h-5 md:w-5 text-muted-foreground" />
+                  <div className="relative group">
+                    <Phone className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 h-4 w-4 md:h-5 md:w-5 text-muted-foreground group-focus-within:text-accent group-focus-within:scale-110 transition-all" />
                     <Input
                       id="phone"
                       type="tel"
@@ -115,9 +115,9 @@ const ContactSection = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-5 md:py-7 text-lg md:text-xl rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-5 md:py-7 text-lg md:text-xl rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 group"
                 >
-                  <Send className="ml-2 h-5 w-5" />
+                  <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   שלחו ונחזור אליכם
                 </Button>
               </form>
@@ -130,14 +130,14 @@ const ContactSection = () => {
                 size="lg"
                 className="group relative bg-[#25D366] hover:bg-[#20BA5A] text-white w-full py-6 md:py-10 text-lg md:text-2xl rounded-2xl shadow-2xl hover:shadow-[#25D366]/30 transition-all hover:scale-105 overflow-hidden"
               >
-                <MessageCircle className="ml-2 md:ml-3 h-6 w-6 md:h-7 md:w-7" />
+                <MessageCircle className="ml-2 md:ml-3 h-6 w-6 md:h-7 md:w-7 group-hover:rotate-12 group-hover:scale-110 transition-all" />
                 שיחה מיידית בוואטסאפ
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
               </Button>
               
-              <Card className="p-6 md:p-8 bg-gradient-to-br from-accent/10 to-peach/10 rounded-3xl border-2 border-accent/20 shadow-xl">
+              <Card className="p-6 md:p-8 bg-gradient-to-br from-accent/10 to-peach/10 rounded-3xl border-2 border-accent/20 shadow-xl group">
                 <div className="space-y-4 md:space-y-6 text-center">
-                  <MapPin className="h-10 w-10 md:h-12 md:w-12 text-accent mx-auto" />
+                  <MapPin className="h-10 w-10 md:h-12 md:w-12 text-accent mx-auto group-hover:animate-bounce-gentle transition-all" />
                   <div>
                     <p className="text-lg md:text-xl font-semibold text-primary mb-2">איך מתחילים</p>
                     <p className="text-base md:text-lg text-foreground/70">
@@ -153,9 +153,9 @@ const ContactSection = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 md:p-8 bg-card/80 backdrop-blur-sm rounded-3xl border-2 border-border/50 shadow-xl">
+              <Card className="p-6 md:p-8 bg-card/80 backdrop-blur-sm rounded-3xl border-2 border-border/50 shadow-xl group">
                 <div className="space-y-3 md:space-y-4 text-center">
-                  <Phone className="h-8 w-8 md:h-10 md:w-10 text-accent mx-auto" />
+                  <Phone className="h-8 w-8 md:h-10 md:w-10 text-accent mx-auto group-hover:animate-wiggle transition-all" />
                   <div>
                     <p className="text-sm font-semibold text-muted-foreground mb-2">צרו קשר</p>
                     <a href="tel:052-717-6000" className="text-lg md:text-xl font-bold text-primary hover:text-accent transition-colors">

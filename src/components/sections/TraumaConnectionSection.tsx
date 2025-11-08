@@ -25,7 +25,7 @@ const TraumaConnectionSection = () => {
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
         <div className={`text-center space-y-10 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-peach/20 px-6 py-3 rounded-full">
-            <Sparkles className="h-5 w-5 text-accent" />
+            <Sparkles className="h-5 w-5 text-accent animate-bounce-gentle hover:scale-125 hover:rotate-12 transition-all" />
             <span className="text-accent font-semibold">התהליך שלנו</span>
           </div>
 
@@ -44,24 +44,24 @@ const TraumaConnectionSection = () => {
             
             <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
               <ul className="space-y-4 text-right">
-                <li className="flex items-start gap-3">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                <li className="flex items-start gap-3 group">
+                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">זיהוי דפוסים רגשיים ומחשבתיים חוזרים</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                <li className="flex items-start gap-3 group">
+                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">עבודה עם תת־המודע לשחרור עומסים ואמונות מגבילות</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                <li className="flex items-start gap-3 group">
+                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">איזון בין גוף, רגש ותודעה</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                <li className="flex items-start gap-3 group">
+                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">תמיכה בצמיחה רגשית, זוגית ופיזית</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                <li className="flex items-start gap-3 group">
+                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">התאמה אישית של השיטה לפי הצורך</span>
                 </li>
               </ul>
