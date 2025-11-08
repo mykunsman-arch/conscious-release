@@ -8,6 +8,7 @@ const HowItWorksSection = () => {
     { text: "תחושת כבדות, תקיעות או עייפות מתמשכת", icon: "😔" },
     { text: "דפוסים רגשיים שחוזרים שוב ושוב", icon: "🔄" },
     { text: "קשיי ריכוז, מתח או עומס פנימי", icon: "🌀" },
+    { text: "קושי בזוגיות ובמערכות יחסים", icon: "💔" },
     { text: "רצון להתחבר מחדש לשקט ולבהירות פנימית", icon: "🌸" },
   ];
 
