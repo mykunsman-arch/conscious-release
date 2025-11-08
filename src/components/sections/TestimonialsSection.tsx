@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useTilt } from "@/hooks/use-tilt";
 import { useMagnetic } from "@/hooks/use-magnetic";
+import bgWomanFlowers from "@/assets/bg-woman-flowers.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -118,6 +119,15 @@ const TestimonialsSection = () => {
 
   return (
     <section ref={ref} id="testimonials" className="snap-section py-24 bg-gradient-soft relative overflow-hidden" dir="rtl">
+      {/* Decorative background image on right */}
+      <div 
+        className="absolute top-0 right-0 h-full w-1/2 bg-contain md:bg-cover bg-right bg-no-repeat opacity-[0.08] pointer-events-none"
+        style={{ 
+          backgroundImage: `url(${bgWomanFlowers})`,
+          backgroundPosition: 'right center'
+        }}
+      ></div>
+      
       {/* Decorative elements */}
       <div className="absolute top-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl floating"></div>
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>

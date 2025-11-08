@@ -1,5 +1,6 @@
 import { Heart, Brain, Sparkles } from "lucide-react";
 import healingWomanImage from "@/assets/healing-woman.jpg";
+import bgWomanFlowers from "@/assets/bg-woman-flowers.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 import { useImageReveal } from "@/hooks/use-image-reveal";
@@ -31,6 +32,15 @@ const WhatIsSection = () => {
         ></div>
         <div className={`image-reveal-mask ${imageReveal.isRevealed ? 'revealed' : ''}`}></div>
       </div>
+      
+      {/* Decorative background image on right */}
+      <div 
+        className="absolute top-0 right-0 h-full w-1/2 bg-contain md:bg-cover bg-right bg-no-repeat opacity-[0.15] pointer-events-none"
+        style={{ 
+          backgroundImage: `url(${bgWomanFlowers})`,
+          backgroundPosition: 'right center'
+        }}
+      ></div>
       
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>

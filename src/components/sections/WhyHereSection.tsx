@@ -1,5 +1,6 @@
 import { Heart, Shield, Users, Sparkles } from "lucide-react";
 import healingHandsImage from "@/assets/healing-hands.jpg";
+import bgHandsButterflies from "@/assets/bg-hands-butterflies.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 import { useTilt } from "@/hooks/use-tilt";
@@ -34,6 +35,15 @@ const WhyHereSection = () => {
         ></div>
         <div className={`image-reveal-mask ${imageReveal.isRevealed ? 'revealed' : ''}`}></div>
       </div>
+      
+      {/* Decorative background image on right */}
+      <div 
+        className="absolute top-0 right-0 h-full w-1/2 bg-contain md:bg-cover bg-right bg-no-repeat opacity-[0.12] pointer-events-none"
+        style={{ 
+          backgroundImage: `url(${bgHandsButterflies})`,
+          backgroundPosition: 'right center'
+        }}
+      ></div>
       
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>

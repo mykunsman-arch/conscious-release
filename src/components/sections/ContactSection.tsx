@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
 import lotusImage from "@/assets/lotus-healing.jpg";
+import bgFlowersButterflies from "@/assets/bg-flowers-butterflies.jpg";
 import { Mail, Phone, Send, MessageCircle, MapPin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
@@ -54,6 +55,15 @@ const ContactSection = () => {
           }}
         ></div>
       </div>
+      
+      {/* Decorative background image on right */}
+      <div 
+        className="absolute top-0 right-0 h-full w-1/2 bg-contain md:bg-cover bg-right bg-no-repeat opacity-[0.08] pointer-events-none"
+        style={{ 
+          backgroundImage: `url(${bgFlowersButterflies})`,
+          backgroundPosition: 'right center'
+        }}
+      ></div>
       
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
