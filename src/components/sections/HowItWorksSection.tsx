@@ -27,28 +27,28 @@ const HowItWorksSection = () => {
             <span className="text-accent font-semibold">התהליך שלנו</span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-bold text-gradient leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gradient leading-tight px-4">
             איך זה עובד בפועל?
           </h2>
           
           <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>
           
-          <div className="grid md:grid-cols-2 gap-6 pt-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 pt-12 max-w-4xl mx-auto px-4">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-muted/50 to-background p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-accent/30 hover:-translate-y-2"
+                className="group relative bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-accent/30 hover:-translate-y-2"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="absolute -top-4 -right-4 bg-gradient-to-br from-accent to-peach text-white w-12 h-12 rounded-2xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform">
+                <div className="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-gradient-to-br from-accent to-peach text-white w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center text-xl md:text-2xl shadow-lg group-hover:scale-110 transition-transform">
                   {step.icon}
                 </div>
                 
-                <div className="flex items-start gap-4 pt-2">
-                  <div className="flex-shrink-0 bg-accent/10 text-accent rounded-full p-3 group-hover:bg-accent group-hover:text-white transition-colors">
-                    <Check className="h-6 w-6" />
+                <div className="flex items-start gap-3 md:gap-4 pt-2">
+                  <div className="flex-shrink-0 bg-accent/10 text-accent rounded-full p-2 md:p-3 group-hover:bg-accent group-hover:text-white transition-colors">
+                    <Check className="h-5 w-5 md:h-6 md:w-6" />
                   </div>
-                  <p className="text-lg text-foreground/80 text-right flex-1 leading-relaxed group-hover:text-foreground transition-colors">
+                  <p className="text-base md:text-lg text-foreground/80 text-right flex-1 leading-relaxed group-hover:text-foreground transition-colors">
                     {step.text}
                   </p>
                 </div>
@@ -59,8 +59,8 @@ const HowItWorksSection = () => {
             ))}
           </div>
           
-          <div className="pt-8">
-            <p className="text-xl md:text-2xl font-medium bg-gradient-to-r from-accent to-peach bg-clip-text text-transparent inline-block">
+          <div className="pt-8 px-4">
+            <p className="text-lg md:text-xl lg:text-2xl font-medium bg-gradient-to-r from-accent to-peach bg-clip-text text-transparent inline-block">
               התהליך מותאם באופן אישי, ויכול לשלב כלים שונים בהתאם לצורך.
             </p>
           </div>

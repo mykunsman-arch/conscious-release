@@ -14,7 +14,7 @@ const WhatIsSection = () => {
             <span className="text-accent font-semibold">הבסיס שלנו</span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-bold text-primary leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-primary leading-tight px-4">
             מה זה ריפוי תודעתי
           </h2>
           
@@ -24,18 +24,18 @@ const WhatIsSection = () => {
             <div className="h-1 w-12 bg-gradient-to-l from-transparent to-accent rounded-full"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 pt-12">
-            <div className="bg-gradient-to-br from-muted/50 to-background p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
-              <Brain className="h-12 w-12 text-accent mx-auto mb-6" />
-              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 pt-12 px-4">
+            <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
+              <Brain className="h-10 w-10 md:h-12 md:w-12 text-accent mx-auto mb-6" />
+              <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">
                 חוויות, אמונות וטראומות מהעבר <span className="text-primary font-semibold">נשמרות בתת־המודע</span>,
                 ולעיתים מנהלות את הרגש, המחשבות והבחירות שלנו בלי שנשים לב.
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-accent/10 to-peach/10 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-accent/20">
-              <Sparkles className="h-12 w-12 text-accent mx-auto mb-6" />
-              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+            <div className="bg-gradient-to-br from-accent/10 to-peach/10 p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-accent/20">
+              <Sparkles className="h-10 w-10 md:h-12 md:w-12 text-accent mx-auto mb-6" />
+              <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">
                 ריפוי תודעתי הוא <span className="text-primary font-semibold">תהליך עדין</span> שמכוון אל שורשים פנימיים,
                 מאפשר לזהות ולשחרר מטען רגשי,
                 ולהחזיר את הגוף והנפש <span className="text-accent font-semibold">לאיזון ולחופש</span>.
