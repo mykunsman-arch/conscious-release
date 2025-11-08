@@ -6,7 +6,7 @@ import { useTilt } from "@/hooks/use-tilt";
 import { useImageReveal } from "@/hooks/use-image-reveal";
 
 const WhyHereSection = () => {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation({ variant: "diagonal", threshold: 0.1 });
   const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
   const tilt1 = useTilt({ maxTilt: 8, scale: 1.03 });
@@ -39,7 +39,7 @@ const WhyHereSection = () => {
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className={`space-y-8 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
+          <div className={`space-y-8 section-diagonal ${isVisible ? 'visible' : ''}`}>
             <div className="inline-flex items-center gap-2 bg-peach/20 px-6 py-3 rounded-full">
               <Heart className="h-5 w-5 text-accent animate-pulse hover:scale-125 hover:rotate-12 transition-all" />
               <span className="text-accent font-semibold">הייחודיות שלנו</span>

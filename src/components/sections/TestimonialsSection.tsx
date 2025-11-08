@@ -79,7 +79,7 @@ const initialTestimonials: Testimonial[] = [
 
 const TestimonialsSection = () => {
   const { toast } = useToast();
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation({ variant: "zoom", threshold: 0.1 });
   const magneticBtn = useMagnetic({ strength: 0.3, tolerance: 120 });
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -123,7 +123,7 @@ const TestimonialsSection = () => {
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        <div className={`text-center space-y-8 mb-16 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
+        <div className={`text-center space-y-8 mb-16 section-scale ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full animate-fade-in">
             <Heart className="h-5 w-5 text-accent animate-pulse hover:scale-125 hover:rotate-12 transition-all" />
             <span className="text-accent font-semibold">סיפורי הצלחה</span>

@@ -8,7 +8,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 
 const QuestionnaireSection = () => {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation({ variant: "scale", threshold: 0.1 });
   const parallaxOffset = useParallax(0.3);
   const [answers, setAnswers] = useState<boolean[]>([false, false, false, false, false]);
   const [showResult, setShowResult] = useState(false);
@@ -62,7 +62,7 @@ const QuestionnaireSection = () => {
       <div className="absolute bottom-20 left-20 w-64 h-64 bg-peach/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 max-w-4xl relative z-10">
-        <div className={`text-center space-y-10 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
+        <div className={`text-center space-y-10 section-scale ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full">
             <ClipboardCheck className="h-5 w-5 text-accent" />
             <span className="text-accent font-semibold">זה בשבילכם?</span>

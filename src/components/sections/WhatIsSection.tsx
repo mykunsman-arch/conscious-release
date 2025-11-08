@@ -6,7 +6,7 @@ import { useImageReveal } from "@/hooks/use-image-reveal";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const WhatIsSection = () => {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation({ variant: "fade-up", threshold: 0.1 });
   const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
   const typingText = useTypingEffect({ 
@@ -37,7 +37,7 @@ const WhatIsSection = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-peach/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
-        <div className={`text-center space-y-8 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
+        <div className={`text-center space-y-8 section-slide-up ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full">
             <Sparkles className="h-5 w-5 text-accent animate-bounce-gentle transition-all hover:scale-125 hover:rotate-12" />
             <span className="text-accent font-semibold">הבסיס שלנו</span>

@@ -6,7 +6,7 @@ import { useImageReveal } from "@/hooks/use-image-reveal";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const TraumaConnectionSection = () => {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation({ variant: "slide-right", threshold: 0.1 });
   const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
   const typingText = useTypingEffect({ 
@@ -36,7 +36,7 @@ const TraumaConnectionSection = () => {
       <div className="absolute top-1/2 left-10 w-2 h-32 bg-gradient-to-b from-peach to-transparent rounded-full"></div>
 
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
-        <div className={`text-center space-y-10 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
+        <div className={`text-center space-y-10 section-slide-right ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-peach/20 px-6 py-3 rounded-full">
             <Sparkles className="h-5 w-5 text-accent animate-bounce-gentle hover:scale-125 hover:rotate-12 transition-all" />
             <span className="text-accent font-semibold">התהליך שלנו</span>
