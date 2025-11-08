@@ -39,7 +39,7 @@ const Index = () => {
   return (
     <div className="min-h-screen snap-container">
       <FloatingBubbles />
-      <LogoIntro />
+      {/* <LogoIntro /> */}
       <ScrollProgressBar />
       <ScrollProgressDots />
       <Header />
