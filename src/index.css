@@ -453,12 +453,12 @@ All colors MUST be HSL.
   }
 
   .logo-intro-overlay {
-    animation: logoIntroOverlay 4.5s ease-in-out forwards;
+    animation: logoIntroOverlay 1.5s ease-in-out forwards;
   }
 
   .logo-intro-content {
-    animation: logoIntroScale 4.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
-               logoIntroGlow 4.5s ease-in-out;
+    animation: logoIntroScale 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+               logoIntroGlow 1.5s ease-in-out;
   }
   
   .scroll-reveal {
