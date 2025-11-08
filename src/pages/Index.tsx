@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
@@ -7,8 +6,6 @@ import StickyCTA from "@/components/StickyCTA";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FloatingWhatsAppCTA from "@/components/FloatingWhatsAppCTA";
 import FloatingBubbles from "@/components/FloatingBubbles";
-import LogoIntro from "@/components/LogoIntro";
-import LoadingSkeleton from "@/components/LoadingSkeleton";
 import HeroSection from "@/components/sections/HeroSection";
 import WhatIsSection from "@/components/sections/WhatIsSection";
 import TraumaConnectionSection from "@/components/sections/TraumaConnectionSection";
@@ -22,24 +19,11 @@ import ContactSection from "@/components/sections/ContactSection";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const Index = () => {
-  const [isLoading, setIsLoading] = useState(true);
   useSmoothScroll();
-  
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return <LoadingSkeleton />;
-  }
   
   return (
     <div className="min-h-screen snap-container">
       <FloatingBubbles />
-      <LogoIntro />
       <ScrollProgressBar />
       <ScrollProgressDots />
       <Header />
