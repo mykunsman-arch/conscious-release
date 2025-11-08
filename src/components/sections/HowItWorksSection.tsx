@@ -41,14 +41,6 @@ const HowItWorksSection = () => {
             ומסייע בהתמודדות עם אתגרים רגשיים, מנטליים ופיזיים כמו:
           </p>
           
-          <div className="pt-8 px-4 max-w-3xl mx-auto">
-            <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg border border-border/50 mb-8">
-              <p className="text-base md:text-lg text-foreground/70 leading-relaxed text-center">
-                אין כאן התחייבות לריפוי מוחלט. התהליך נועד לתמוך באיזון, שקט ושיפור איכות החיים.
-              </p>
-            </div>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto px-4">
             {challenges.map((challenge, index) => (
               <div
