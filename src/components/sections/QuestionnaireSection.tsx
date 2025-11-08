@@ -68,27 +68,43 @@ const QuestionnaireSection = () => {
             <span className="text-accent font-semibold">זה בשבילכם?</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gradient leading-tight px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient leading-tight px-4 font-['Heebo']">
             שאלון קצר להקשבה פנימה
           </h2>
           
-          <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>
+          <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto px-4 font-light">
+            בחרו את התשובות המתאימות לכם
+          </p>
           
-          <Card className="p-6 md:p-10 space-y-6 md:space-y-8 text-right bg-card/80 backdrop-blur-sm shadow-2xl rounded-3xl border-2 border-border/50">
+          <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full shadow-lg"></div>
+          
+          <Card className="p-8 md:p-12 space-y-8 md:space-y-10 text-right bg-card/90 backdrop-blur-md shadow-2xl rounded-[2.5rem] border-2 border-border/30">
             {questions.map((question, index) => (
               <div
                 key={index}
-                className="group flex items-start gap-3 md:gap-4 p-4 md:p-6 hover:bg-accent/5 rounded-2xl transition-all duration-300 border border-transparent hover:border-accent/20"
+                className="group relative flex items-center gap-4 md:gap-6 p-6 md:p-8 hover:bg-gradient-to-r hover:from-accent/10 hover:to-peach/10 rounded-3xl transition-all duration-500 border-2 border-border/30 hover:border-accent/40 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
+                onClick={() => handleCheckboxChange(index, !answers[index])}
               >
+                {/* Decorative Number */}
+                <div className={`absolute top-4 left-4 md:top-6 md:left-6 w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl transition-all duration-500 ${
+                  answers[index] 
+                    ? 'bg-gradient-to-br from-accent to-peach text-white shadow-lg scale-110' 
+                    : 'bg-muted/30 text-muted-foreground/40 group-hover:bg-accent/20 group-hover:text-accent'
+                }`}>
+                  {index + 1}
+                </div>
+                
                 <Checkbox
                   id={`question-${index}`}
                   checked={answers[index]}
                   onCheckedChange={(checked) => handleCheckboxChange(index, checked as boolean)}
-                  className="mt-1 data-[state=checked]:bg-accent data-[state=checked]:border-accent flex-shrink-0"
+                  className="mt-1 w-7 h-7 md:w-8 md:h-8 data-[state=checked]:bg-accent data-[state=checked]:border-accent border-2 flex-shrink-0 transition-all duration-300"
+                  onClick={(e) => e.stopPropagation()}
                 />
                 <label
                   htmlFor={`question-${index}`}
-                  className="text-base md:text-lg lg:text-xl text-foreground/80 group-hover:text-foreground cursor-pointer flex-1 leading-relaxed transition-colors"
+                  className="text-lg md:text-xl lg:text-2xl text-foreground group-hover:text-foreground cursor-pointer flex-1 leading-relaxed transition-all duration-300 pr-16 md:pr-20 font-['Assistant'] font-medium"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   {question}
                 </label>
@@ -97,9 +113,9 @@ const QuestionnaireSection = () => {
             
             <Button
               onClick={handleSubmit}
-              className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-5 md:py-7 text-lg md:text-xl rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="w-full bg-gradient-to-r from-primary via-accent to-primary hover:from-primary/90 hover:via-accent/90 hover:to-primary/90 text-primary-foreground py-7 md:py-9 text-xl md:text-2xl font-bold rounded-3xl shadow-2xl hover:shadow-accent/50 transition-all duration-500 hover:scale-[1.03] border-2 border-accent/30"
             >
-              <Sparkles className="ml-2 h-5 w-5" />
+              <Sparkles className="ml-2 h-6 w-6 animate-pulse" />
               הצג תוצאה
             </Button>
             
