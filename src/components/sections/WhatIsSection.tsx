@@ -6,7 +6,7 @@ const WhatIsSection = () => {
     <section id="what-is" className="py-24 bg-card relative overflow-hidden" dir="rtl">
       {/* Background image */}
       <div 
-        className="absolute inset-0 opacity-[0.08] bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 opacity-[0.08] md:opacity-[0.08] bg-contain md:bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${healingWomanImage})` }}
       ></div>
       

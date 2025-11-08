@@ -6,7 +6,7 @@ const TraumaConnectionSection = () => {
     <section className="py-24 bg-gradient-soft relative overflow-hidden" dir="rtl">
       {/* Background image */}
       <div 
-        className="absolute inset-0 opacity-[0.06] bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 opacity-[0.06] md:opacity-[0.06] bg-contain md:bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${healingHandsImage})` }}
       ></div>
       
