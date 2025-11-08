@@ -1,4 +1,3 @@
-import healingImage from "@/assets/healing-woman.jpg";
 import { Heart, Shield, Users, Sparkles } from "lucide-react";
 
 const WhyHereSection = () => {
@@ -8,8 +7,8 @@ const WhyHereSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8 order-2 md:order-1">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-peach/20 px-6 py-3 rounded-full">
               <Heart className="h-5 w-5 text-accent" />
               <span className="text-accent font-semibold">הייחודיות שלנו</span>
@@ -77,18 +76,6 @@ const WhyHereSection = () => {
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl order-1 md:order-2 group">
-            <img
-              src={healingImage}
-              alt="ריפוי תודעתי"
-              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-            
-            {/* Decorative overlay */}
-            <div className="absolute inset-0 border-2 md:border-4 border-accent/20 rounded-3xl"></div>
           </div>
         </div>
       </div>
