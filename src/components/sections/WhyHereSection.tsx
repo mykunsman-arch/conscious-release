@@ -89,7 +89,18 @@ const WhyHereSection = () => {
                 </div>
                 <div className="flex-1 text-right">
                   <p className="text-base md:text-lg text-foreground/80 font-semibold">
-                    🕊️ מומלץ על־ידי אנשי מקצוע מתחום הנפש והבריאות, וברכות והמלצות התקבלו מרבנים ויועצים רוחניים
+                    🕊️ מומלץ על־ידי אנשי מקצוע מתחום הנפש והבריאות
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-all hover:scale-105 shadow-lg">
+                <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0">
+                  <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-accent" />
+                </div>
+                <div className="flex-1 text-right">
+                  <p className="text-base md:text-lg text-foreground/80 font-semibold">
+                    וברכות והמלצות התקבלו מרבנים ויועצים רוחניים
                   </p>
                 </div>
               </div>
