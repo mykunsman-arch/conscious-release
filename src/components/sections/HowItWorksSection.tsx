@@ -17,12 +17,12 @@ const HowItWorksSection = () => {
   });
   
   const challenges = [
-    { text: "חרדות, חוסר שקט ופחדים", icon: "😰" },
-    { text: "כאבים פיזיים, מתח כרוני או עייפות", icon: "🩹" },
-    { text: "קשיים בזוגיות ותקשורת בין־אישית", icon: "💔" },
-    { text: "חוסר איזון הורמונלי, קשיי שינה או עייפות מתמשכת", icon: "😴" },
-    { text: "תופעות כמו טיקים, הרטבה, או קשיים רגשיים אצל ילדים", icon: "👶" },
-    { text: "תחושת תקיעות, בלבול או חוסר חיבור פנימי", icon: "🌀" },
+    { text: "חרדות, חוסר שקט ופחדים" },
+    { text: "כאבים פיזיים, מתח כרוני או עייפות" },
+    { text: "קשיים בזוגיות ותקשורת בין־אישית" },
+    { text: "חוסר איזון הורמונלי, קשיי שינה או עייפות מתמשכת" },
+    { text: "תופעות כמו טיקים, הרטבה, או קשיים רגשיים אצל ילדים" },
+    { text: "תחושת תקיעות, בלבול או חוסר חיבור פנימי" },
   ];
 
   return (
@@ -75,14 +75,10 @@ const HowItWorksSection = () => {
                 onMouseMove={tilt.handleMouseMove}
                 onMouseLeave={tilt.handleMouseLeave}
                 style={tilt.tiltStyle}
-                className="group relative bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-border/50 hover:border-accent/30"
+                className="group relative bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-border/50 hover:border-sage/30"
               >
-                <div className="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-gradient-to-br from-accent to-peach text-white w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center text-xl md:text-2xl shadow-lg group-hover:scale-110 transition-transform">
-                  {challenge.icon}
-                </div>
-                
-                <div className="flex items-start gap-3 md:gap-4 pt-2">
-                  <div className="flex-shrink-0 bg-accent/10 text-accent rounded-full p-2 md:p-3 group-hover:bg-accent group-hover:text-white transition-all">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="flex-shrink-0 bg-sage/10 text-sage rounded-full p-2 md:p-3 group-hover:bg-sage group-hover:text-white transition-all">
                     <Check className="h-5 w-5 md:h-6 md:w-6 group-hover:scale-110 transition-transform" />
                   </div>
                   <p className="text-base md:text-lg text-foreground/80 text-right flex-1 leading-relaxed group-hover:text-foreground transition-colors">
@@ -91,7 +87,7 @@ const HowItWorksSection = () => {
                 </div>
 
                 {/* Hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-peach/0 group-hover:from-accent/5 group-hover:to-peach/5 rounded-3xl transition-all duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-sage/0 to-primary/0 group-hover:from-sage/5 group-hover:to-primary/5 rounded-3xl transition-all duration-300 pointer-events-none"></div>
               </div>
               );
             })}
