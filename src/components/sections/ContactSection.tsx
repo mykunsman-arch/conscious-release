@@ -66,7 +66,7 @@ const ContactSection = () => {
             <span className="text-accent font-semibold">בואו נדבר</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 font-varela">
             צרו קשר
           </h2>
           

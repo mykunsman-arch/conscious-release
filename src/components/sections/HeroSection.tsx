@@ -39,7 +39,7 @@ const HeroSection = () => {
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>
 
       <div className="container mx-auto max-w-5xl text-center space-y-3 md:space-y-10 relative z-10">
-        <div className="animate-scale-in">
+        <div className="animate-scale-in" id="hero">
           <img 
             src={logo} 
             alt="המרכז לריפוי תודעתי" 
@@ -48,7 +48,7 @@ const HeroSection = () => {
         </div>
         
         <div className="space-y-4 md:space-y-6 animate-fade-in">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4 min-h-[3em] flex items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[3em] flex items-center justify-center font-varela">
             {typingText.displayedText}
             {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent ml-1 animate-pulse"></span>}
           </h1>

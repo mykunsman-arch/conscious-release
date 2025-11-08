@@ -68,7 +68,7 @@ const QuestionnaireSection = () => {
             <span className="text-accent font-semibold">זה בשבילכם?</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient leading-tight px-4 font-['Heebo']">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient-shimmer leading-tight px-4 font-varela">
             שאלון קצר להקשבה פנימה
           </h2>
           

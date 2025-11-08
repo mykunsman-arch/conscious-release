@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         'heebo': ['Heebo', 'Assistant', 'Rubik', 'sans-serif'],
         'assistant': ['Assistant', 'Rubik', 'sans-serif'],
+        'varela': ['Varela Round', 'Heebo', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -46,6 +47,10 @@ export default {
         peach: {
           DEFAULT: "hsl(var(--peach))",
           foreground: "hsl(var(--peach-foreground))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -257,6 +262,38 @@ export default {
             transform: "scale(1.1)",
             opacity: "0"
           }
+        },
+        "shimmer-slide": {
+          "0%": {
+            backgroundPosition: "-100% 0"
+          },
+          "100%": {
+            backgroundPosition: "100% 0"
+          }
+        },
+        "float-up": {
+          "0%": {
+            transform: "translateY(100vh) scale(0)",
+            opacity: "0"
+          },
+          "10%": {
+            opacity: "0.6"
+          },
+          "90%": {
+            opacity: "0.6"
+          },
+          "100%": {
+            transform: "translateY(-100vh) scale(1.5)",
+            opacity: "0"
+          }
+        },
+        "pulse-glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 20px hsl(var(--accent) / 0.3)"
+          },
+          "50%": {
+            boxShadow: "0 0 60px hsl(var(--accent) / 0.6), 0 0 100px hsl(var(--peach) / 0.3)"
+          }
         }
       },
       animation: {
@@ -280,6 +317,9 @@ export default {
         "rotate-slow": "rotate-slow 8s linear infinite",
         "wiggle": "wiggle 1s ease-in-out infinite",
         "ping-slow": "ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite",
+        "shimmer-slide": "shimmer-slide 3s linear infinite",
+        "float-up": "float-up 15s linear infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
   },

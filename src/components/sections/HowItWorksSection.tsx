@@ -51,14 +51,14 @@ const HowItWorksSection = () => {
             <span className="text-accent font-semibold">התהליך שלנו</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4 min-h-[2em] flex items-center justify-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[2em] flex items-center justify-center font-varela">
             {typingText.displayedText}
             {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent mr-1 animate-pulse"></span>}
           </h2>
           
           <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-3xl mx-auto px-4">
+          <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-[1.9] max-w-3xl mx-auto px-4 font-light">
             התהליך מתאים למבוגרים, נוער וילדים,
             <br />
             ומסייע בהתמודדות עם אתגרים רגשיים, מנטליים ופיזיים כמו:

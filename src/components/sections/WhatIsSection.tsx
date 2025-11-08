@@ -43,7 +43,7 @@ const WhatIsSection = () => {
             <span className="text-accent font-semibold">הבסיס שלנו</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-tight px-4 min-h-[2em] flex items-center justify-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[2em] flex items-center justify-center font-varela">
             {typingText.displayedText}
             {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent mr-1 animate-pulse"></span>}
           </h2>
@@ -56,7 +56,7 @@ const WhatIsSection = () => {
           
           <div className={`space-y-8 pt-12 px-4 max-w-4xl mx-auto grid-stagger ${isVisible ? 'visible' : ''}`}>
             <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
-              <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed text-center">
+              <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-[1.9] text-center font-light">
                 ריפוי תודעתי <span className="text-primary font-semibold">רואה את האדם כמכלול של גוף, נפש ותודעה</span>.
                 <br />
                 חוויות, טראומות, דפוסים ואמונות שנצרבו בעבר עשויים להשפיע עלינו גם היום.
@@ -69,7 +69,7 @@ const WhatIsSection = () => {
 
             <div className="bg-gradient-to-br from-accent/10 to-peach/10 p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-accent/20 group">
               <Sparkles className="h-10 w-10 md:h-12 md:w-12 text-accent mx-auto mb-6 animate-bounce-gentle group-hover:scale-110 group-hover:rotate-12 transition-all" />
-              <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed text-center">
+              <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-[1.9] text-center font-light">
                 התהליך אינו מהווה טיפול רפואי או תחליף לטיפול רפואי,
                 <br />
                 אך עשוי לשמש תהליך תומך ומשלים לריפוי ולצמיחה אישית.

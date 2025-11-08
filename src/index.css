@@ -239,6 +239,9 @@ All colors MUST be HSL.
     --peach: 15 65% 80%;
     --peach-foreground: 160 28% 25%;
 
+    --gold: 45 90% 65%;
+    --gold-foreground: 160 28% 25%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
@@ -264,31 +267,34 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 160 28% 12%;
-    --foreground: 30 25% 95%;
+    --background: 160 28% 8%;
+    --foreground: 30 25% 98%;
 
-    --card: 160 28% 18%;
-    --card-foreground: 30 25% 95%;
+    --card: 160 28% 12%;
+    --card-foreground: 30 25% 98%;
 
-    --popover: 160 28% 18%;
-    --popover-foreground: 30 25% 95%;
+    --popover: 160 28% 12%;
+    --popover-foreground: 30 25% 98%;
 
-    --primary: 30 25% 95%;
-    --primary-foreground: 160 28% 25%;
+    --primary: 30 25% 98%;
+    --primary-foreground: 160 28% 15%;
 
-    --secondary: 160 18% 28%;
-    --secondary-foreground: 30 25% 95%;
+    --secondary: 160 18% 22%;
+    --secondary-foreground: 30 25% 98%;
 
-    --muted: 160 12% 22%;
-    --muted-foreground: 160 15% 65%;
+    --muted: 160 12% 18%;
+    --muted-foreground: 160 15% 75%;
 
-    --accent: 35 45% 60%;
-    --accent-foreground: 160 28% 25%;
+    --accent: 35 45% 70%;
+    --accent-foreground: 160 28% 15%;
 
-    --peach: 15 65% 80%;
-    --peach-foreground: 160 28% 25%;
+    --peach: 15 65% 85%;
+    --peach-foreground: 160 28% 15%;
+    
+    --gold: 45 90% 70%;
+    --gold-foreground: 160 28% 15%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62.8% 40.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 160 12% 28%;
@@ -322,10 +328,24 @@ All colors MUST be HSL.
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    line-height: 1.8;
+  }
+  
+  /* Enhanced Typography */
+  h1, h2, h3 {
+    font-family: 'Varela Round', 'Heebo', 'Assistant', sans-serif;
+  }
+  
+  p {
+    line-height: 1.8;
   }
   
   /* Mobile Typography Improvements */
   @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+    
     h1 {
       @apply leading-tight;
       letter-spacing: -0.02em;
@@ -337,17 +357,17 @@ All colors MUST be HSL.
     }
     
     p, li {
-      line-height: 1.7;
+      line-height: 1.8;
       letter-spacing: 0.01em;
     }
     
-    /* Improved spacing for mobile */
+    /* Improved spacing for mobile - reduced by 20% */
     section {
-      @apply py-16;
+      @apply py-12;
     }
     
     .container {
-      @apply px-6;
+      @apply px-4;
     }
   }
 
@@ -384,8 +404,26 @@ All colors MUST be HSL.
     background-image: var(--gradient-accent);
   }
   
+  .text-gradient-shimmer {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, 
+      hsl(var(--primary)) 0%, 
+      hsl(var(--accent)) 25%,
+      hsl(var(--gold)) 50%,
+      hsl(var(--accent)) 75%,
+      hsl(var(--primary)) 100%);
+    background-size: 200% auto;
+    animation: shimmer-slide 3s linear infinite;
+  }
+  
   .bg-gradient-soft {
     background-image: var(--gradient-soft);
+  }
+  
+  .glass-effect {
+    @apply bg-card/60 backdrop-blur-xl border-2 border-white/10;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
   }
   
   .floating {
@@ -470,5 +508,22 @@ All colors MUST be HSL.
   .scroll-reveal.revealed {
     opacity: 1;
     transform: translateY(0);
+  }
+  
+  /* Ripple Effect */
+  .ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(var(--accent) / 0.6), transparent);
+    transform: scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+  }
+  
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
   }
 }

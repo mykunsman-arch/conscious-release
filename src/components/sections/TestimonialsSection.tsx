@@ -129,7 +129,7 @@ const TestimonialsSection = () => {
             <span className="text-accent font-semibold">סיפורי הצלחה</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4 animate-scale-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 animate-scale-in font-varela">
             המלצות מלקוחות מרוצים
           </h2>
 
@@ -178,10 +178,14 @@ const TestimonialsSection = () => {
                         </p>
                       </div>
 
-                      {/* Testimonial Text */}
-                      <p className="text-foreground/80 leading-relaxed text-base">
-                        "{testimonial.text}"
-                      </p>
+                      {/* Testimonial Text with Quote Marks */}
+                      <div className="relative">
+                        <span className="absolute -top-4 -right-2 text-6xl text-accent/20 font-serif leading-none">"</span>
+                        <p className="text-foreground/80 leading-relaxed text-base lg:text-lg px-4">
+                          {testimonial.text}
+                        </p>
+                        <span className="absolute -bottom-8 -left-2 text-6xl text-accent/20 font-serif leading-none">"</span>
+                      </div>
                     </div>
                   </Card>
                 </CarouselItem>
