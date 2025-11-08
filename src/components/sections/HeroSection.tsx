@@ -11,7 +11,7 @@ const HeroSection = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/972527176000", "_blank");
+    window.open("https://wa.me/972527176000?text=שלום%20🌿%20הגעתי%20מהאתר%20mindcenter.co.il%20ורציתי%20לשמוע%20פרטים%20על%20התהליך", "_blank");
   };
 
   return (
@@ -36,6 +36,10 @@ const HeroSection = () => {
         </div>
         
         <div className="space-y-4 md:space-y-6 animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient leading-tight px-4">
+            ריפוי תודעתי, בגישה עדינה ומדויקת.
+          </h1>
+          
           <div className="flex items-center justify-center gap-2 md:gap-3 px-4">
             <Sparkles className="text-accent h-5 w-5 md:h-6 md:w-6 animate-pulse flex-shrink-0" />
             <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gradient-accent">
@@ -46,15 +50,11 @@ const HeroSection = () => {
         </div>
         
         <p className="text-lg sm:text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed animate-fade-in px-4" style={{ animationDelay: '0.2s' }}>
-          כל ריפוי אמיתי מתחיל בתודעה.
+          כל תהליך של שינוי וריפוי אמיתי מתחיל בתודעה.
           <br />
-          כאן נוצר <span className="text-primary font-medium">מרחב רגוע ומכיל</span>, שבו ניתן לשחרר עומסים רגשיים ודפוסים מעכבים —
+          כאן נוצר <span className="text-primary font-medium">מרחב רגוע ומכיל</span>, שבו ניתן לשחרר עומסים רגשיים ודפוסים מעכבים,
           <br className="hidden sm:block" />
-          ולאפשר ריפוי עמוק גם לנפש וגם לגוף.
-          <br />
-          דרך חיבור עדין לתת־המודע, אנחנו מזהים את שורש הבעיה ומשחררים את מה שכבר לא משרת אותנו,
-          <br className="hidden sm:block" />
-          כדי להתחבר מחדש לשקט, לבהירות ולחיוניות מבפנים.
+          ולתמוך באיזון של הגוף והנפש בדרך נעימה, מכבדת ולא שיפוטית.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4 md:pt-6 animate-fade-in px-4" style={{ animationDelay: '0.4s' }}>

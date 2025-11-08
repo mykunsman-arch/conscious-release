@@ -3,13 +3,12 @@ import healingHandsImage from "@/assets/healing-hands.jpg";
 
 const HowItWorksSection = () => {
   const challenges = [
-    { text: "חרדה, חוסר שקט, פחדים או קושי להירדם", icon: "😰" },
-    { text: "כאבים כרוניים שלא נמצאה להם סיבה רפואית", icon: "🩹" },
-    { text: "תחושת כבדות, תקיעות או עייפות מתמשכת", icon: "😔" },
-    { text: "דפוסים רגשיים שחוזרים שוב ושוב", icon: "🔄" },
-    { text: "קשיי ריכוז, מתח או עומס פנימי", icon: "🌀" },
-    { text: "קושי בזוגיות ובמערכות יחסים", icon: "💔" },
-    { text: "רצון להתחבר מחדש לשקט ולבהירות פנימית", icon: "🌸" },
+    { text: "חרדות, חוסר שקט ופחדים", icon: "😰" },
+    { text: "כאבים פיזיים, מתח כרוני או עייפות", icon: "🩹" },
+    { text: "קשיים בזוגיות ותקשורת בין־אישית", icon: "💔" },
+    { text: "חוסר איזון הורמונלי, קשיי שינה או עייפות מתמשכת", icon: "😴" },
+    { text: "תופעות כמו טיקים, הרטבה, או קשיים רגשיים אצל ילדים", icon: "👶" },
+    { text: "תחושת תקיעות, בלבול או חוסר חיבור פנימי", icon: "🌀" },
   ];
 
   return (
@@ -31,21 +30,23 @@ const HowItWorksSection = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gradient leading-tight px-4">
-            למי זה מתאים
+            למי זה עשוי להתאים
           </h2>
           
           <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>
           
           <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-3xl mx-auto px-4">
-            הריפוי התודעתי מתאים לכל מי שמרגיש תקיעות, עומס, מתח או כאב — רגשי או גופני —
+            התהליך מתאים למבוגרים, נוער וילדים,
             <br />
-            ומחפש דרך אחרת, עדינה ומדויקת יותר להבין, לשחרר ולהתרפא.
+            ומסייע בהתמודדות עם אתגרים רגשיים, מנטליים ופיזיים כמו:
           </p>
           
-          <div className="pt-8 px-4">
-            <p className="text-xl md:text-2xl font-bold text-primary mb-6">
-              מטופלים רבים מגיעים עם אתגרים כמו:
-            </p>
+          <div className="pt-8 px-4 max-w-3xl mx-auto">
+            <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg border border-border/50 mb-8">
+              <p className="text-base md:text-lg text-foreground/70 leading-relaxed text-center">
+                אין כאן התחייבות לריפוי מוחלט. התהליך נועד לתמוך באיזון, שקט ושיפור איכות החיים.
+              </p>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto px-4">

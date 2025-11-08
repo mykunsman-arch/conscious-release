@@ -34,19 +34,24 @@ const WhatIsSection = () => {
           <div className="space-y-8 pt-12 px-4 max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
               <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed text-center">
-                חוויות, טראומות ואמונות שנצרבו בעבר <span className="text-primary font-semibold">נשמרות בתת־המודע</span> ומשפיעות על הדרך שבה אנחנו מרגישים, חושבים —
-                ולעיתים גם על הגוף עצמו.
+                ריפוי תודעתי <span className="text-primary font-semibold">רואה את האדם כמכלול של גוף, נפש ותודעה</span>.
+                <br />
+                חוויות, טראומות, דפוסים ואמונות שנצרבו בעבר עשויים להשפיע עלינו גם היום.
                 <br /><br />
-                כאבים גופניים, מתח כרוני או עייפות – לעיתים הם ביטוי של עומס רגשי שלא שוחרר.
+                באמצעות הקשבה עדינה, עבודה עם התודעה ותת־המודע,
+                <br />
+                התהליך מסייע בשחרור מטענים רגשיים ואנרגטיים וביצירת תחושת הקלה, איזון וחיבור פנימי.
               </p>
             </div>
 
             <div className="bg-gradient-to-br from-accent/10 to-peach/10 p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-accent/20">
               <Sparkles className="h-10 w-10 md:h-12 md:w-12 text-accent mx-auto mb-6" />
               <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed text-center">
-                ריפוי תודעתי הוא <span className="text-primary font-semibold">תהליך עדין</span> שמכוון אל אותם שורשים פנימיים,
-                מאפשר לפרוק מטען רגשי ואנרגטי,
-                ולהחזיר את הגוף והנפש <span className="text-accent font-semibold">לאיזון, לשקט ולתחושת חופש מבפנים</span>.
+                <span className="text-muted-foreground font-semibold">⚠️ הערה חשובה:</span>
+                <br /><br />
+                התהליך אינו מהווה טיפול רפואי או תחליף לטיפול רפואי,
+                <br />
+                אך עשוי לשמש תהליך תומך ומשלים לריפוי ולצמיחה אישית.
               </p>
             </div>
           </div>

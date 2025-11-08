@@ -5,14 +5,15 @@ import { Card } from "@/components/ui/card";
 import { ClipboardCheck, Sparkles } from "lucide-react";
 
 const QuestionnaireSection = () => {
-  const [answers, setAnswers] = useState<boolean[]>([false, false, false, false]);
+  const [answers, setAnswers] = useState<boolean[]>([false, false, false, false, false]);
   const [showResult, setShowResult] = useState(false);
 
   const questions = [
-    "האם אתם חווים עומס רגשי, מחשבות בלתי פוסקות או מתח בגוף?",
-    "האם יש כאבים גופניים שחוזרים שוב ושוב, בלי סיבה רפואית ברורה?",
-    "האם אתם מרגישים שמגיע לכם יותר שקט, חופש ואיזון?",
-    "האם אתם רוצים להבין את עצמכם לעומק וליצור שינוי אמיתי מבפנים?",
+    "האם אתם חווים עומס רגשי או מתח מתמשך בגוף?",
+    "האם יש תחום בחיים שמרגיש תקוע או חוזר על עצמו?",
+    "האם יש תחושות בגוף שמושפעות ממתח או רגש?",
+    "האם אתם חווים קשיים בזוגיות או בתקשורת?",
+    "האם יש תסמינים כמו טיקים, הרטבה, בעיות שינה או חוסר איזון הורמונלי?",
   ];
 
   const handleCheckboxChange = (index: number, checked: boolean) => {
@@ -54,12 +55,8 @@ const QuestionnaireSection = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient leading-tight px-4">
-            שאלון עצמי — האם זה הזמן לטפל בעצמכם?
+            שאלון קצר להקשבה פנימה
           </h2>
-          
-          <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto px-4">
-            ענו לעצמכם בכנות:
-          </p>
           
           <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>
           
@@ -101,13 +98,13 @@ const QuestionnaireSection = () => {
                   
                   <p className="text-xl md:text-2xl font-bold text-primary">
                     {isMatch
-                      ? "אם עניתם \"כן\" על יותר משתי שאלות – זה סימן שהגיע הזמן להקשיב פנימה."
+                      ? "אם עניתם \"כן\" על יותר משתי שאלות —"
                       : "תודה שמילאתם את השאלון."}
                   </p>
                   <p className="text-base md:text-lg text-foreground/70">
                     {isMatch 
-                      ? "במרכז לריפוי תודעתי תגלו גישה אחרת: רכה, לא שיפוטית, שמאפשרת שינוי עמוק ויציב מבפנים."
-                      : "זה לא אבחון – זו הזמנה להקשבה פנימה."}
+                      ? "ייתכן שתהליך של ריפוי תודעתי יכול לסייע לכם. זו אינה אבחנה רפואית אלא הזמנה להקשיב לעצמכם."
+                      : "זו הזמנה להקשבה פנימה."}
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center pt-4">
@@ -115,14 +112,14 @@ const QuestionnaireSection = () => {
                       onClick={handleWhatsAppClick}
                       className="bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 md:px-10 py-5 md:py-6 text-base md:text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
                     >
-                      שיחה אישית בוואטסאפ
+                      שיחה מיידית בוואטסאפ
                     </Button>
                     <Button
                       onClick={scrollToContact}
                       variant="outline"
                       className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-6 md:px-10 py-5 md:py-6 text-base md:text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
                     >
-                      השאירו פרטים ונחזור אליכם
+                      להשארת פרטים לחזרה
                     </Button>
                   </div>
                 </div>

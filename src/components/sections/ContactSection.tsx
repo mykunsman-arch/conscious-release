@@ -90,23 +90,6 @@ const ContactSection = () => {
                   </div>
                 </div>
                 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold mb-2 md:mb-3 text-foreground/80">
-                    אימייל
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 h-4 w-4 md:h-5 md:w-5 text-muted-foreground" />
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      required
-                      className="text-right text-base md:text-lg p-4 md:p-6 pl-10 md:pl-12 rounded-xl border-2 focus:border-accent transition-all"
-                      dir="rtl"
-                    />
-                  </div>
-                </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold mb-2 md:mb-3 text-foreground/80">
@@ -188,13 +171,15 @@ const ContactSection = () => {
               <br />
               📱 052-717-6000
               <br />
-              🌐 mindcenter.co.il
+              💬 <a href="https://wa.me/972527176000" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">לחצו לשיחה בוואטסאפ</a>
             </p>
           </div>
           
           <div className="pt-6 md:pt-8 pb-4 border-t border-border/30 mt-8">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} כל הזכויות שמורות
+              © כל הזכויות שמורות — המרכז לריפוי תודעתי 🌿
+              <br />
+              mindcenter.co.il
             </p>
           </div>
         </div>

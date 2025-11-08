@@ -35,23 +35,26 @@ const TraumaConnectionSection = () => {
             </p>
             
             <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
-              <h3 className="text-xl md:text-2xl font-bold text-primary mb-6">הטיפול כולל:</h3>
               <ul className="space-y-4 text-right">
                 <li className="flex items-start gap-3">
                   <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">עבודה עם תת־המודע והרגש</span>
+                  <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">זיהוי דפוסים רגשיים ומחשבתיים חוזרים</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">פריקה של דפוסים ואמונות מגבילות</span>
+                  <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">עבודה עם תת־המודע לשחרור עומסים ואמונות מגבילות</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">איזון בין הגוף, הרגש והתודעה</span>
+                  <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">איזון בין גוף, רגש ותודעה</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">ריפוי רגשי, מנטלי ולעיתים גם פיזי</span>
+                  <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">תמיכה בצמיחה רגשית, זוגית ופיזית</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">התאמה אישית של השיטה לפי הצורך</span>
                 </li>
               </ul>
             </div>
