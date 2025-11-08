@@ -204,7 +204,7 @@ const TestimonialsSection = () => {
               <Button
                 ref={magneticBtn as any}
                 size="lg"
-                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground px-8 py-6 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all gap-2 group"
+                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground px-8 py-6 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all gap-2 group min-h-[56px] touch-manipulation active:scale-95"
                 style={{ transition: 'transform 0.2s ease-out' }}
               >
                 <Plus className="h-5 w-5 group-hover:rotate-90 transition-transform" />
@@ -228,7 +228,7 @@ const TestimonialsSection = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="text-right"
+                      className="text-right min-h-[48px] touch-manipulation"
                       dir="rtl"
                       placeholder="א.כ."
                     />
@@ -240,9 +240,10 @@ const TestimonialsSection = () => {
                     <Input
                       id="age"
                       type="number"
+                      inputMode="numeric"
                       value={formData.age}
                       onChange={(e) => setFormData({ ...formData, age: e.target.value })}
-                      className="text-right"
+                      className="text-right min-h-[48px] touch-manipulation"
                       dir="rtl"
                       placeholder="35"
                     />
@@ -258,7 +259,7 @@ const TestimonialsSection = () => {
                     value={formData.issue}
                     onChange={(e) => setFormData({ ...formData, issue: e.target.value })}
                     required
-                    className="text-right"
+                    className="text-right min-h-[48px] touch-manipulation"
                     dir="rtl"
                     placeholder="לדוגמה: חרדות, כאבים, קשיי שינה..."
                   />
@@ -274,7 +275,7 @@ const TestimonialsSection = () => {
                     onChange={(e) => setFormData({ ...formData, testimonial: e.target.value })}
                     required
                     rows={6}
-                    className="text-right resize-none"
+                    className="text-right resize-none min-h-[140px] touch-manipulation"
                     dir="rtl"
                     placeholder="שתף את החוויה שלך מהטיפול..."
                   />
@@ -282,7 +283,7 @@ const TestimonialsSection = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-6 text-lg rounded-2xl"
+                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-6 text-lg rounded-2xl min-h-[56px] touch-manipulation active:scale-95"
                 >
                   שלח המלצה
                 </Button>

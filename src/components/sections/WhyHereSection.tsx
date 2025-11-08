@@ -4,6 +4,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 import { useTilt } from "@/hooks/use-tilt";
 import { useImageReveal } from "@/hooks/use-image-reveal";
+import AccordionWhyHere from "./AccordionWhyHere";
 
 const WhyHereSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "diagonal", threshold: 0.1 });
@@ -51,7 +52,8 @@ const WhyHereSection = () => {
             
             <div className="h-1 w-24 bg-gradient-to-r from-sage to-peach rounded-full"></div>
 
-            <div className={`space-y-4 md:space-y-6 grid-stagger ${isVisible ? 'visible' : ''}`}>
+            {/* Desktop List */}
+            <div className={`hidden md:block space-y-4 md:space-y-6 grid-stagger ${isVisible ? 'visible' : ''}`}>
               <div 
                 ref={tilt1.ref}
                 onMouseMove={tilt1.handleMouseMove}
@@ -171,6 +173,9 @@ const WhyHereSection = () => {
                 </div>
               </div>
             </div>
+
+            {/* Mobile Accordion */}
+            <AccordionWhyHere />
           </div>
         </div>
       </div>

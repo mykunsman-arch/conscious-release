@@ -4,6 +4,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 import { useImageReveal } from "@/hooks/use-image-reveal";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
+import AccordionHowItWorks from "./AccordionHowItWorks";
 
 const TraumaConnectionSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "slide-right", threshold: 0.1 });
@@ -56,30 +57,34 @@ const TraumaConnectionSection = () => {
             באמצעות הקשבה עמוקה ותהליך מודע, המטופל לומד לזהות את המקור, לשחרר אותו ולהרגיש שינוי אמיתי.
           </p>
             
-            <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
+            {/* Desktop List */}
+            <div className="hidden md:block bg-gradient-to-br from-muted/50 to-background p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
               <ul className={`space-y-4 text-right grid-stagger ${isVisible ? 'visible' : ''}`}>
                 <li className="flex items-start gap-3 group">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
+                  <CircleDot className="h-6 w-6 text-sage flex-shrink-0 mt-1 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">זיהוי דפוסים רגשיים ומחשבתיים חוזרים</span>
                 </li>
                 <li className="flex items-start gap-3 group">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
+                  <CircleDot className="h-6 w-6 text-sage flex-shrink-0 mt-1 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">עבודה עם תת־המודע לשחרור עומסים ואמונות מגבילות</span>
                 </li>
                 <li className="flex items-start gap-3 group">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
+                  <CircleDot className="h-6 w-6 text-sage flex-shrink-0 mt-1 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">איזון בין גוף, רגש ותודעה</span>
                 </li>
                 <li className="flex items-start gap-3 group">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
+                  <CircleDot className="h-6 w-6 text-sage flex-shrink-0 mt-1 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">תמיכה בצמיחה רגשית, זוגית ופיזית</span>
                 </li>
                 <li className="flex items-start gap-3 group">
-                  <CircleDot className="h-6 w-6 text-accent flex-shrink-0 mt-1 group-hover:scale-125 group-hover:rotate-90 transition-all" />
+                  <CircleDot className="h-6 w-6 text-sage flex-shrink-0 mt-1 transition-all" />
                   <span className="text-base md:text-lg lg:text-xl text-foreground/80 leading-relaxed">התאמה אישית של השיטה לפי הצורך</span>
                 </li>
               </ul>
             </div>
+
+            {/* Mobile Accordion */}
+            <AccordionHowItWorks />
           </div>
         </div>
       </div>

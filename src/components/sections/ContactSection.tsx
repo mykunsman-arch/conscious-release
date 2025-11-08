@@ -77,7 +77,7 @@ const ContactSection = () => {
             <Card className="p-6 md:p-10 bg-card/80 backdrop-blur-sm shadow-2xl rounded-3xl border-2 border-border/50 hover:border-accent/30 transition-all">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 text-right">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold mb-2 md:mb-3 text-foreground/80">
+                  <label htmlFor="name" className="block text-base font-semibold mb-3 text-foreground/80">
                     שם מלא
                   </label>
                   <Input
@@ -85,51 +85,55 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
-                    className="text-right text-base md:text-lg p-4 md:p-6 rounded-xl border-2 focus:border-accent transition-all"
+                    className="text-right text-lg p-6 rounded-xl border-2 focus:border-sage transition-all min-h-[56px] touch-manipulation"
                     dir="rtl"
+                    placeholder="הכנס את שמך המלא"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold mb-2 md:mb-3 text-foreground/80">
+                  <label htmlFor="phone" className="block text-base font-semibold mb-3 text-foreground/80">
                     טלפון
                   </label>
                   <div className="relative group">
-                    <Phone className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 h-4 w-4 md:h-5 md:w-5 text-muted-foreground group-focus-within:text-accent group-focus-within:scale-110 transition-all" />
+                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground group-focus-within:text-sage transition-all pointer-events-none" />
                     <Input
                       id="phone"
                       type="tel"
+                      inputMode="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
-                      className="text-right text-base md:text-lg p-4 md:p-6 pl-10 md:pl-12 rounded-xl border-2 focus:border-accent transition-all"
+                      className="text-right text-lg p-6 pl-14 rounded-xl border-2 focus:border-sage transition-all min-h-[56px] touch-manipulation"
                       dir="rtl"
+                      placeholder="05X-XXX-XXXX"
                     />
                   </div>
                 </div>
                 
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold mb-2 md:mb-3 text-foreground/80">
+                  <label htmlFor="message" className="block text-base font-semibold mb-3 text-foreground/80">
                     הודעה
                   </label>
                   <Textarea
                     id="message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={4}
-                    className="text-right text-base md:text-lg p-4 md:p-6 rounded-xl border-2 focus:border-accent transition-all resize-none"
+                    rows={5}
+                    className="text-right text-lg p-6 rounded-xl border-2 focus:border-sage transition-all resize-none min-h-[140px] touch-manipulation"
                     dir="rtl"
+                    placeholder="ספרו לנו על מה שמעניין אתכם..."
                   />
                 </div>
                 
                 <Button 
                   ref={magneticSubmit as any}
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-5 md:py-7 text-lg md:text-xl rounded-2xl shadow-lg hover:shadow-xl transition-all group"
+                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-7 md:py-8 text-xl font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all group min-h-[56px] touch-manipulation active:scale-95"
                   style={{ transition: 'transform 0.2s ease-out' }}
                 >
-                  <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <Send className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
                   שלחו ונחזור אליכם
                 </Button>
               </form>
@@ -141,10 +145,10 @@ const ContactSection = () => {
                 ref={magneticWhatsApp as any}
                 onClick={handleWhatsAppClick}
                 size="lg"
-                className="group relative bg-[#25D366] hover:bg-[#20BA5A] text-white w-full py-6 md:py-10 text-lg md:text-2xl rounded-2xl shadow-2xl hover:shadow-[#25D366]/30 transition-all overflow-hidden"
+                className="group relative bg-[#25D366] hover:bg-[#20BA5A] text-white w-full py-8 md:py-10 text-xl md:text-2xl font-semibold rounded-2xl shadow-2xl hover:shadow-[#25D366]/30 transition-all overflow-hidden min-h-[56px] touch-manipulation active:scale-95"
                 style={{ transition: 'transform 0.2s ease-out' }}
               >
-                <MessageCircle className="ml-2 md:ml-3 h-6 w-6 md:h-7 md:w-7 group-hover:rotate-12 group-hover:scale-110 transition-all" />
+                <MessageCircle className="ml-3 h-7 w-7 transition-all" />
                 שיחה מיידית בוואטסאפ
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
               </Button>

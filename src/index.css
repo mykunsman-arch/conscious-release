@@ -346,10 +346,19 @@ All colors MUST be HSL.
     line-height: 1.8;
   }
   
-  /* Mobile Typography Improvements */
+  /* Mobile touch optimizations */
   @media (max-width: 768px) {
+    * {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    
+    button, a, input, textarea, select {
+      touch-action: manipulation;
+    }
+    
     body {
       font-size: 16px;
+      -webkit-text-size-adjust: 100%;
     }
     
     h1 {

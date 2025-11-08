@@ -75,7 +75,7 @@ const HeroSection = () => {
             ref={magneticBtn1 as any}
             size="lg"
             onClick={() => scrollToSection("questionnaire")}
-            className="w-full sm:w-auto group relative bg-primary hover:bg-primary/90 text-primary-foreground px-4 sm:px-6 md:px-8 py-4 md:py-6 text-sm sm:text-base md:text-lg rounded-2xl shadow-2xl hover:shadow-accent/20 transition-all duration-300 overflow-hidden"
+            className="w-full sm:w-auto group relative bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 md:px-10 py-6 md:py-8 text-base sm:text-lg md:text-xl rounded-2xl shadow-2xl hover:shadow-sage/20 transition-all duration-300 overflow-hidden min-h-[56px] touch-manipulation active:scale-95"
             style={{ transition: 'transform 0.2s ease-out' }}
           >
             <span className="relative z-10">בדקו אם התהליך מתאים לכם</span>
@@ -87,7 +87,7 @@ const HeroSection = () => {
             size="lg"
             variant="outline"
             onClick={handleWhatsAppClick}
-            className="w-full sm:w-auto border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-4 sm:px-6 md:px-8 py-4 md:py-6 text-sm sm:text-base md:text-lg rounded-2xl shadow-lg hover:shadow-accent/30 transition-all duration-300"
+            className="w-full sm:w-auto border-2 border-sage text-sage hover:bg-sage hover:text-white px-6 sm:px-8 md:px-10 py-6 md:py-8 text-base sm:text-lg md:text-xl rounded-2xl shadow-lg hover:shadow-sage/30 transition-all duration-300 min-h-[56px] touch-manipulation active:scale-95"
             style={{ transition: 'transform 0.2s ease-out' }}
           >
             שיחה בוואטסאפ
