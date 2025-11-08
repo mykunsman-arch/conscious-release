@@ -2,10 +2,18 @@ import { Heart, Shield, Users, Sparkles } from "lucide-react";
 import healingHandsImage from "@/assets/healing-hands.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
+import { useTilt } from "@/hooks/use-tilt";
 
 const WhyHereSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const parallaxOffset = useParallax(0.3);
+  const tilt1 = useTilt({ maxTilt: 8, scale: 1.03 });
+  const tilt2 = useTilt({ maxTilt: 8, scale: 1.03 });
+  const tilt3 = useTilt({ maxTilt: 8, scale: 1.03 });
+  const tilt4 = useTilt({ maxTilt: 8, scale: 1.03 });
+  const tilt5 = useTilt({ maxTilt: 8, scale: 1.03 });
+  const tilt6 = useTilt({ maxTilt: 8, scale: 1.03 });
+  const tilt7 = useTilt({ maxTilt: 8, scale: 1.03 });
   
   return (
     <section ref={ref} className="snap-section py-24 bg-card relative overflow-hidden" dir="rtl">
@@ -36,7 +44,13 @@ const WhyHereSection = () => {
             <div className="h-1 w-24 bg-gradient-to-r from-accent to-peach rounded-full"></div>
 
             <div className={`space-y-4 md:space-y-6 grid-stagger ${isVisible ? 'visible' : ''}`}>
-              <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-all hover:scale-105 shadow-lg group">
+              <div 
+                ref={tilt1.ref}
+                onMouseMove={tilt1.handleMouseMove}
+                onMouseLeave={tilt1.handleMouseLeave}
+                style={tilt1.tiltStyle}
+                className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-colors shadow-lg group"
+              >
                 <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-all">
                   <Heart className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 group-hover:animate-pulse transition-all" />
                 </div>
@@ -47,7 +61,13 @@ const WhyHereSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-accent/10 to-peach/10 rounded-2xl border border-accent/20 hover:border-accent/40 transition-all hover:scale-105 shadow-lg group">
+              <div 
+                ref={tilt2.ref}
+                onMouseMove={tilt2.handleMouseMove}
+                onMouseLeave={tilt2.handleMouseLeave}
+                style={tilt2.tiltStyle}
+                className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-accent/10 to-peach/10 rounded-2xl border border-accent/20 hover:border-accent/40 transition-colors shadow-lg group"
+              >
                 <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-all">
                   <Shield className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 transition-all" />
                 </div>
@@ -58,7 +78,13 @@ const WhyHereSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-all hover:scale-105 shadow-lg group">
+              <div 
+                ref={tilt3.ref}
+                onMouseMove={tilt3.handleMouseMove}
+                onMouseLeave={tilt3.handleMouseLeave}
+                style={tilt3.tiltStyle}
+                className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-colors shadow-lg group"
+              >
                 <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-all">
                   <Users className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 transition-all" />
                 </div>
@@ -69,7 +95,13 @@ const WhyHereSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-accent/10 to-peach/10 rounded-2xl border border-accent/20 hover:border-accent/40 transition-all hover:scale-105 shadow-lg group">
+              <div 
+                ref={tilt4.ref}
+                onMouseMove={tilt4.handleMouseMove}
+                onMouseLeave={tilt4.handleMouseLeave}
+                style={tilt4.tiltStyle}
+                className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-accent/10 to-peach/10 rounded-2xl border border-accent/20 hover:border-accent/40 transition-colors shadow-lg group"
+              >
                 <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-all">
                   <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 group-hover:rotate-12 transition-all" />
                 </div>
@@ -80,7 +112,13 @@ const WhyHereSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-all hover:scale-105 shadow-lg group">
+              <div 
+                ref={tilt5.ref}
+                onMouseMove={tilt5.handleMouseMove}
+                onMouseLeave={tilt5.handleMouseLeave}
+                style={tilt5.tiltStyle}
+                className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-colors shadow-lg group"
+              >
                 <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-all">
                   <Shield className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 transition-all" />
                 </div>
@@ -91,7 +129,13 @@ const WhyHereSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-accent/10 to-peach/10 rounded-2xl border border-accent/20 hover:border-accent/40 transition-all hover:scale-105 shadow-lg group">
+              <div 
+                ref={tilt6.ref}
+                onMouseMove={tilt6.handleMouseMove}
+                onMouseLeave={tilt6.handleMouseLeave}
+                style={tilt6.tiltStyle}
+                className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-accent/10 to-peach/10 rounded-2xl border border-accent/20 hover:border-accent/40 transition-colors shadow-lg group"
+              >
                 <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-all">
                   <Heart className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 group-hover:animate-pulse transition-all" />
                 </div>
@@ -102,7 +146,13 @@ const WhyHereSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-all hover:scale-105 shadow-lg group">
+              <div 
+                ref={tilt7.ref}
+                onMouseMove={tilt7.handleMouseMove}
+                onMouseLeave={tilt7.handleMouseLeave}
+                style={tilt7.tiltStyle}
+                className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-colors shadow-lg group"
+              >
                 <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-all">
                   <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 group-hover:rotate-12 transition-all" />
                 </div>

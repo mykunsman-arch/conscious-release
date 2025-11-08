@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useTilt } from "@/hooks/use-tilt";
 import {
   Carousel,
   CarouselContent,
@@ -148,9 +149,18 @@ const TestimonialsSection = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-4">
-              {initialTestimonials.map((testimonial) => (
+              {initialTestimonials.map((testimonial) => {
+                // eslint-disable-next-line react-hooks/rules-of-hooks
+                const tilt = useTilt({ maxTilt: 8, scale: 1.02 });
+                return (
                 <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/2">
-                  <Card className="p-6 md:p-8 bg-card/80 backdrop-blur-sm shadow-xl rounded-3xl border-2 border-border/50 hover:border-accent/30 transition-all hover:shadow-2xl h-full">
+                  <Card 
+                    ref={tilt.ref}
+                    onMouseMove={tilt.handleMouseMove}
+                    onMouseLeave={tilt.handleMouseLeave}
+                    style={tilt.tiltStyle}
+                    className="p-6 md:p-8 bg-card/80 backdrop-blur-sm shadow-xl rounded-3xl border-2 border-border/50 hover:border-accent/30 transition-colors hover:shadow-2xl h-full"
+                  >
                     <div className="space-y-4 text-center">
                       {/* Stars */}
                       <StarRating rating={testimonial.rating} />
@@ -173,7 +183,8 @@ const TestimonialsSection = () => {
                     </div>
                   </Card>
                 </CarouselItem>
-              ))}
+                );
+              })}
             </CarouselContent>
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />

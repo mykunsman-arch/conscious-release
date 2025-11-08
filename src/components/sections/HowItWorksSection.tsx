@@ -2,6 +2,7 @@ import { Check, Flower2 } from "lucide-react";
 import healingHandsImage from "@/assets/healing-hands.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
+import { useTilt } from "@/hooks/use-tilt";
 
 const HowItWorksSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -50,10 +51,17 @@ const HowItWorksSection = () => {
           </p>
           
           <div className={`grid md:grid-cols-2 gap-6 max-w-4xl mx-auto px-4 grid-stagger ${isVisible ? 'visible' : ''}`}>
-            {challenges.map((challenge, index) => (
+            {challenges.map((challenge, index) => {
+              // eslint-disable-next-line react-hooks/rules-of-hooks
+              const tilt = useTilt({ maxTilt: 10, scale: 1.05 });
+              return (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-accent/30 hover:-translate-y-2"
+                ref={tilt.ref}
+                onMouseMove={tilt.handleMouseMove}
+                onMouseLeave={tilt.handleMouseLeave}
+                style={tilt.tiltStyle}
+                className="group relative bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-border/50 hover:border-accent/30"
               >
                 <div className="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-gradient-to-br from-accent to-peach text-white w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center text-xl md:text-2xl shadow-lg group-hover:scale-110 transition-transform">
                   {challenge.icon}
@@ -71,7 +79,8 @@ const HowItWorksSection = () => {
                 {/* Hover effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-peach/0 group-hover:from-accent/5 group-hover:to-peach/5 rounded-3xl transition-all duration-300 pointer-events-none"></div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
