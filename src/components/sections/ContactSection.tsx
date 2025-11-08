@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
-import logo from "@/assets/logo-full.png";
 import lotusImage from "@/assets/lotus-healing.jpg";
 import { Mail, Phone, Send, MessageCircle, MapPin } from "lucide-react";
 
@@ -182,10 +181,6 @@ const ContactSection = () => {
       {/* Footer */}
       <footer className="mt-16 md:mt-24 pt-12 md:pt-16 border-t border-border/50" dir="rtl">
         <div className="container mx-auto px-4 text-center space-y-6 md:space-y-8 relative z-10">
-          <div className="flex justify-center">
-            <img src={logo} alt="המרכז לריפוי תודעתי" className="h-24 md:h-32 w-auto mx-auto object-contain" />
-          </div>
-          
           <div className="space-y-4 text-center">
             <p className="text-lg md:text-xl font-semibold text-primary">המרכז לריפוי תודעתי</p>
             <p className="text-base md:text-lg text-foreground/70">
