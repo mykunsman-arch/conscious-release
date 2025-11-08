@@ -41,15 +41,15 @@ const WhyHereSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className={`space-y-8 section-diagonal ${isVisible ? 'visible' : ''}`}>
             <div className="inline-flex items-center gap-2 bg-peach/20 px-6 py-3 rounded-full">
-              <Heart className="h-5 w-5 text-accent animate-pulse hover:scale-125 hover:rotate-12 transition-all" />
-              <span className="text-accent font-semibold">הייחודיות שלנו</span>
+              <Heart className="h-5 w-5 text-sage transition-all" />
+              <span className="text-sage font-semibold">הייחודיות שלנו</span>
             </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight font-varela">
             למה לבחור במרכז לריפוי תודעתי
           </h2>
             
-            <div className="h-1 w-24 bg-gradient-to-r from-accent to-peach rounded-full"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-sage to-peach rounded-full"></div>
 
             <div className={`space-y-4 md:space-y-6 grid-stagger ${isVisible ? 'visible' : ''}`}>
               <div 

@@ -62,15 +62,15 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className={`text-center space-y-10 section-slide-down ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full">
-            <Mail className="h-5 w-5 text-accent animate-bounce-gentle hover:scale-125 hover:rotate-12 transition-all" />
-            <span className="text-accent font-semibold">בואו נדבר</span>
+            <Mail className="h-5 w-5 text-sage transition-all" />
+            <span className="text-sage font-semibold">בואו נדבר</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 font-varela">
             צרו קשר
           </h2>
           
-          <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>
+          <div className="h-1 w-32 bg-gradient-to-r from-sage via-peach to-sage mx-auto rounded-full"></div>
           
           <div className={`grid md:grid-cols-2 gap-6 md:gap-8 pt-12 px-4 grid-stagger ${isVisible ? 'visible' : ''}`}>
             {/* Form */}
@@ -149,9 +149,9 @@ const ContactSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
               </Button>
               
-              <Card className="p-6 md:p-8 bg-gradient-to-br from-accent/10 to-peach/10 rounded-3xl border-2 border-accent/20 shadow-xl group">
+              <Card className="p-6 md:p-8 bg-gradient-to-br from-sage/10 to-primary/10 rounded-3xl border-2 border-sage/20 shadow-xl group">
                 <div className="space-y-4 md:space-y-6 text-center">
-                  <MapPin className="h-10 w-10 md:h-12 md:w-12 text-accent mx-auto group-hover:animate-bounce-gentle transition-all" />
+                  <MapPin className="h-10 w-10 md:h-12 md:w-12 text-sage mx-auto transition-all" />
                   <div>
                     <p className="text-lg md:text-xl font-semibold text-primary mb-2">איך מתחילים</p>
                     <p className="text-base md:text-lg text-foreground/70">
@@ -169,10 +169,10 @@ const ContactSection = () => {
 
               <Card className="p-6 md:p-8 bg-card/80 backdrop-blur-sm rounded-3xl border-2 border-border/50 shadow-xl group">
                 <div className="space-y-3 md:space-y-4 text-center">
-                  <Phone className="h-8 w-8 md:h-10 md:w-10 text-accent mx-auto group-hover:animate-wiggle transition-all" />
+                  <Phone className="h-8 w-8 md:h-10 md:w-10 text-sage mx-auto transition-all" />
                   <div>
                     <p className="text-sm font-semibold text-muted-foreground mb-2">צרו קשר</p>
-                    <a href="tel:052-717-6000" className="text-lg md:text-xl font-bold text-primary hover:text-accent transition-colors">
+                    <a href="tel:052-717-6000" className="text-lg md:text-xl font-bold text-primary hover:text-sage transition-colors">
                       052-717-6000
                     </a>
                   </div>

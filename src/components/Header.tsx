@@ -46,7 +46,7 @@ const Header = () => {
                 className="relative text-sm md:text-base font-medium text-foreground/70 hover:text-accent transition-colors group whitespace-nowrap"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-gold group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-sage to-primary group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
           </nav>

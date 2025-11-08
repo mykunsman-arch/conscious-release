@@ -43,11 +43,10 @@ const FloatingWhatsAppCTA = () => {
         onClick={() => setIsExpanded(!isExpanded)}
         className="relative bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all group"
       >
-        <MessageCircle className="h-6 w-6 group-hover:rotate-12 transition-transform" />
-        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+        <MessageCircle className="h-6 w-6 transition-transform" />
+        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
           1
         </span>
-        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-50 animate-ping-slow"></span>
       </button>
     </div>
   );

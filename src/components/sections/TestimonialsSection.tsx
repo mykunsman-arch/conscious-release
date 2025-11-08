@@ -125,8 +125,8 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className={`text-center space-y-8 mb-16 section-scale ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full animate-fade-in">
-            <Heart className="h-5 w-5 text-accent animate-pulse hover:scale-125 hover:rotate-12 transition-all" />
-            <span className="text-accent font-semibold">סיפורי הצלחה</span>
+            <Heart className="h-5 w-5 text-sage transition-all" />
+            <span className="text-sage font-semibold">סיפורי הצלחה</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 animate-scale-in font-varela">
@@ -137,7 +137,7 @@ const TestimonialsSection = () => {
             אנשים אמיתיים, סיפורים אמיתיים של שינוי וריפוי
           </p>
 
-          <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>
+          <div className="h-1 w-32 bg-gradient-to-r from-sage via-peach to-sage mx-auto rounded-full"></div>
         </div>
 
         {/* Carousel */}

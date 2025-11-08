@@ -50,15 +50,15 @@ const HeroSection = () => {
         <div className="space-y-4 md:space-y-6 animate-fade-in">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[3em] flex items-center justify-center font-varela">
             {typingText.displayedText}
-            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent ml-1 animate-pulse"></span>}
+            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-sage ml-1 animate-pulse"></span>}
           </h1>
           
           <div className="flex items-center justify-center gap-2 md:gap-3 px-4">
-            <Sparkles className="text-accent h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-pulse flex-shrink-0" />
+            <Sparkles className="text-sage h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
             <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gradient-accent">
               להשתחרר. להתחבר. להתרפא.
             </p>
-            <Sparkles className="text-accent h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-pulse flex-shrink-0" />
+            <Sparkles className="text-sage h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
           </div>
         </div>
         

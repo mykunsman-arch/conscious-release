@@ -45,15 +45,15 @@ const FAQSection = () => {
         <div className={`space-y-8 section-slide-up ${isVisible ? 'visible' : ''}`}>
           <div className="text-center space-y-4">
             <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full">
-              <HelpCircle className="h-5 w-5 text-accent" />
-              <span className="text-accent font-semibold">שאלות נפוצות</span>
+              <HelpCircle className="h-5 w-5 text-sage" />
+              <span className="text-sage font-semibold">שאלות נפוצות</span>
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient font-varela">
               שאלות שכדאי לדעת
             </h2>
             
-            <div className="h-1 w-24 bg-gradient-to-r from-accent to-peach rounded-full mx-auto"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-sage to-peach rounded-full mx-auto"></div>
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
@@ -63,7 +63,7 @@ const FAQSection = () => {
                 value={`item-${index}`}
                 className="glass-effect rounded-2xl px-6 border-border/30 hover:border-accent/30 transition-all"
               >
-                <AccordionTrigger className="text-right text-lg md:text-xl font-semibold hover:text-accent py-6">
+                <AccordionTrigger className="text-right text-lg md:text-xl font-semibold hover:text-sage py-6">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-right text-base md:text-lg text-foreground/70 leading-relaxed pb-6">

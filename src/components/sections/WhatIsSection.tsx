@@ -39,19 +39,19 @@ const WhatIsSection = () => {
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
         <div className={`text-center space-y-8 section-slide-up ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full">
-            <Sparkles className="h-5 w-5 text-accent animate-bounce-gentle transition-all hover:scale-125 hover:rotate-12" />
-            <span className="text-accent font-semibold">הבסיס שלנו</span>
+            <Sparkles className="h-5 w-5 text-sage transition-all" />
+            <span className="text-sage font-semibold">הבסיס שלנו</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[2em] flex items-center justify-center font-varela">
             {typingText.displayedText}
-            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent mr-1 animate-pulse"></span>}
+            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-sage mr-1 animate-pulse"></span>}
           </h2>
           
           <div className="flex items-center justify-center gap-4">
-            <div className="h-1 w-12 bg-gradient-to-r from-transparent to-accent rounded-full"></div>
-            <Heart className="h-6 w-6 text-accent animate-pulse hover:scale-125 hover:text-peach transition-all cursor-pointer" />
-            <div className="h-1 w-12 bg-gradient-to-l from-transparent to-accent rounded-full"></div>
+            <div className="h-1 w-12 bg-gradient-to-r from-transparent to-sage rounded-full"></div>
+            <Heart className="h-6 w-6 text-sage transition-all cursor-pointer" />
+            <div className="h-1 w-12 bg-gradient-to-l from-transparent to-sage rounded-full"></div>
           </div>
           
           <div className={`space-y-8 pt-12 px-4 max-w-4xl mx-auto grid-stagger ${isVisible ? 'visible' : ''}`}>
@@ -68,7 +68,7 @@ const WhatIsSection = () => {
             </div>
 
             <div className="bg-gradient-to-br from-accent/10 to-peach/10 p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-accent/20 group">
-              <Sparkles className="h-10 w-10 md:h-12 md:w-12 text-accent mx-auto mb-6 animate-bounce-gentle group-hover:scale-110 group-hover:rotate-12 transition-all" />
+              <Sparkles className="h-10 w-10 md:h-12 md:w-12 text-sage mx-auto mb-6 transition-all" />
               <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-[1.9] text-center font-light">
                 התהליך אינו מהווה טיפול רפואי או תחליף לטיפול רפואי,
                 <br />

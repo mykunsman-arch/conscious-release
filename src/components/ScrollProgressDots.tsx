@@ -49,11 +49,11 @@ const ScrollProgressDots = () => {
           aria-label={section.label}
         >
           <div
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              activeSection === index
-                ? "bg-accent scale-125 shadow-lg shadow-accent/50"
-                : "bg-border hover:bg-accent/50 hover:scale-110"
-            }`}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  activeSection === index
+                    ? "bg-sage scale-125 shadow-lg shadow-sage/50"
+                    : "bg-border hover:bg-sage/50 hover:scale-110"
+                }`}
           />
           <span className="absolute right-6 top-1/2 -translate-y-1/2 bg-card/95 backdrop-blur-sm px-3 py-1 rounded-lg text-sm font-medium text-foreground opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border/50 shadow-lg">
             {section.label}

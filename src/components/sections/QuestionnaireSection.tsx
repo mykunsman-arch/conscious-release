@@ -64,8 +64,8 @@ const QuestionnaireSection = () => {
       <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <div className={`text-center space-y-10 section-scale ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full">
-            <ClipboardCheck className="h-5 w-5 text-accent" />
-            <span className="text-accent font-semibold">זה בשבילכם?</span>
+            <ClipboardCheck className="h-5 w-5 text-sage" />
+            <span className="text-sage font-semibold">זה בשבילכם?</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient-shimmer leading-tight px-4 font-varela">
@@ -76,7 +76,7 @@ const QuestionnaireSection = () => {
             בחרו את התשובות המתאימות לכם
           </p>
           
-          <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full shadow-lg"></div>
+          <div className="h-1 w-32 bg-gradient-to-r from-sage via-peach to-sage mx-auto rounded-full shadow-lg"></div>
           
           <Card className="p-8 md:p-12 space-y-8 md:space-y-10 text-right bg-card/90 backdrop-blur-md shadow-2xl rounded-[2.5rem] border-2 border-border/30">
             {questions.map((question, index) => (
@@ -88,8 +88,8 @@ const QuestionnaireSection = () => {
                 {/* Decorative Number */}
                 <div className={`absolute top-4 left-4 md:top-6 md:left-6 w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl transition-all duration-500 ${
                   answers[index] 
-                    ? 'bg-gradient-to-br from-accent to-peach text-white shadow-lg scale-110' 
-                    : 'bg-muted/30 text-muted-foreground/40 group-hover:bg-accent/20 group-hover:text-accent'
+                    ? 'bg-gradient-to-br from-sage to-primary text-white shadow-lg scale-110' 
+                    : 'bg-muted/30 text-muted-foreground/40 group-hover:bg-sage/20 group-hover:text-sage'
                 }`}>
                   {index + 1}
                 </div>
@@ -98,7 +98,7 @@ const QuestionnaireSection = () => {
                   id={`question-${index}`}
                   checked={answers[index]}
                   onCheckedChange={(checked) => handleCheckboxChange(index, checked as boolean)}
-                  className="mt-1 w-7 h-7 md:w-8 md:h-8 data-[state=checked]:bg-accent data-[state=checked]:border-accent border-2 flex-shrink-0 transition-all duration-300"
+                  className="mt-1 w-7 h-7 md:w-8 md:h-8 data-[state=checked]:bg-sage data-[state=checked]:border-sage border-2 flex-shrink-0 transition-all duration-300"
                   onClick={(e) => e.stopPropagation()}
                 />
                 <label
@@ -113,17 +113,17 @@ const QuestionnaireSection = () => {
             
             <Button
               onClick={handleSubmit}
-              className="w-full bg-gradient-to-r from-primary via-accent to-primary hover:from-primary/90 hover:via-accent/90 hover:to-primary/90 text-primary-foreground py-7 md:py-9 text-xl md:text-2xl font-bold rounded-3xl shadow-2xl hover:shadow-accent/50 transition-all duration-500 hover:scale-[1.03] border-2 border-accent/30"
+              className="w-full bg-gradient-to-r from-primary via-sage to-primary hover:from-primary/90 hover:via-sage/90 hover:to-primary/90 text-primary-foreground py-7 md:py-9 text-xl md:text-2xl font-bold rounded-3xl shadow-2xl hover:shadow-sage/50 transition-all duration-500 hover:scale-[1.03] border-2 border-sage/30"
             >
-              <Sparkles className="ml-2 h-6 w-6 animate-pulse" />
+              <Sparkles className="ml-2 h-6 w-6" />
               הצג תוצאה
             </Button>
             
             {showResult && (
               <div className="mt-8 p-6 md:p-8 bg-gradient-to-br from-accent/10 to-peach/10 rounded-3xl border-2 border-accent/30 shadow-xl animate-scale-in">
                 <div className="text-center space-y-4 md:space-y-6">
-                  <div className="inline-flex items-center gap-2 bg-accent/20 px-6 py-3 rounded-full">
-                    <Sparkles className="h-5 w-5 text-accent" />
+                  <div className="inline-flex items-center gap-2 bg-sage/20 px-6 py-3 rounded-full">
+                    <Sparkles className="h-5 w-5 text-sage" />
                   </div>
                   
                   <p className="text-xl md:text-2xl font-bold text-primary">

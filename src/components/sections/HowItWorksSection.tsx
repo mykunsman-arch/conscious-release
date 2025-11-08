@@ -47,16 +47,16 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
         <div className={`text-center space-y-10 section-slide-left ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-peach/20 px-6 py-3 rounded-full">
-            <Flower2 className="h-5 w-5 text-accent animate-rotate-slow hover:scale-125 transition-all" />
-            <span className="text-accent font-semibold">התהליך שלנו</span>
+            <Flower2 className="h-5 w-5 text-sage transition-all" />
+            <span className="text-sage font-semibold">התהליך שלנו</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[2em] flex items-center justify-center font-varela">
             {typingText.displayedText}
-            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent mr-1 animate-pulse"></span>}
+            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-sage mr-1 animate-pulse"></span>}
           </h2>
           
-          <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>
+          <div className="h-1 w-32 bg-gradient-to-r from-sage via-primary to-sage mx-auto rounded-full"></div>
           
           <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-[1.9] max-w-3xl mx-auto px-4 font-light">
             התהליך מתאים למבוגרים, נוער וילדים,

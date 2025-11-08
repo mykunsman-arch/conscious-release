@@ -48,10 +48,10 @@ const StatsSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "scale", threshold: 0.2 });
 
   const stats = [
-    { icon: Users, value: 500, suffix: "+", label: "לקוחות מרוצים", color: "text-accent" },
-    { icon: Heart, value: 95, suffix: "%", label: "שביעות רצון", color: "text-peach" },
-    { icon: Star, value: 15, suffix: "+", label: "שנות ניסיון", color: "text-gold" },
-    { icon: Award, value: 98, suffix: "%", label: "המלצות חוזרות", color: "text-primary" },
+    { icon: Users, value: 500, suffix: "+", label: "לקוחות מרוצים", color: "text-sage" },
+    { icon: Heart, value: 95, suffix: "%", label: "שביעות רצון", color: "text-primary" },
+    { icon: Star, value: 15, suffix: "+", label: "שנות ניסיון", color: "text-accent" },
+    { icon: Award, value: 98, suffix: "%", label: "המלצות חוזרות", color: "text-sage" },
   ];
 
   return (
@@ -63,10 +63,10 @@ const StatsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="glass-effect p-6 md:p-8 rounded-3xl text-center space-y-3 md:space-y-4 hover:scale-105 transition-transform duration-300 group animate-pulse-glow"
+              className="glass-effect p-6 md:p-8 rounded-3xl text-center space-y-3 md:space-y-4 hover:scale-105 transition-transform duration-300 group"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <stat.icon className={`h-10 w-10 md:h-12 md:w-12 mx-auto ${stat.color} group-hover:scale-110 group-hover:rotate-12 transition-all`} />
+              <stat.icon className={`h-10 w-10 md:h-12 md:w-12 mx-auto ${stat.color} transition-all`} />
               <div>
                 <Counter end={stat.value} suffix={stat.suffix} isVisible={isVisible} />
               </div>
