@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-full.png";
 import { Mail, Phone, Send, MessageCircle, MapPin } from "lucide-react";
 
 const ContactSection = () => {
@@ -172,16 +172,8 @@ const ContactSection = () => {
       <footer className="mt-24 pt-16 border-t border-border/50" dir="rtl">
         <div className="container mx-auto px-4 text-center space-y-8 relative z-10">
           <div className="flex justify-center">
-            <div className="bg-gradient-to-br from-accent/10 to-peach/10 p-4 rounded-3xl">
-              <img src={logo} alt="המרכז לריפוי תודעתי" className="h-24 w-24 mx-auto object-contain mix-blend-multiply" />
-            </div>
+            <img src={logo} alt="המרכז לריפוי תודעתי" className="h-32 w-auto mx-auto object-contain" />
           </div>
-          
-          <h3 className="text-3xl font-bold text-gradient">המרכז לריפוי תודעתי</h3>
-          
-          <p className="text-xl text-gradient-accent font-semibold">
-            להשתחרר. להתחבר. להתרפא.
-          </p>
           
           <div className="pt-8 pb-4">
             <p className="text-sm text-muted-foreground">

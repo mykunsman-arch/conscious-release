@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-full.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,8 +31,8 @@ const Header = () => {
           <img 
             src={logo} 
             alt="המרכז לריפוי תודעתי" 
-            className={`h-16 w-16 object-contain transition-all duration-300 mix-blend-multiply ${
-              isScrolled ? "drop-shadow-lg" : ""
+            className={`h-20 w-auto object-contain transition-all duration-300 ${
+              isScrolled ? "drop-shadow-lg h-16" : ""
             }`} 
           />
           
