@@ -7,7 +7,7 @@ import { useImageReveal } from "@/hooks/use-image-reveal";
 
 const WhyHereSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "diagonal", threshold: 0.1 });
-  const parallaxOffset = useParallax({ speed: 0.5, direction: "vertical", reverse: true, scale: true, scaleIntensity: 0.1 });
+  const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
   const tilt1 = useTilt({ maxTilt: 8, scale: 1.03 });
   const tilt2 = useTilt({ maxTilt: 8, scale: 1.03 });

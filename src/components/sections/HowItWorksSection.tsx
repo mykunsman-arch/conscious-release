@@ -8,7 +8,7 @@ import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const HowItWorksSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "slide-left", threshold: 0.1 });
-  const parallaxOffset = useParallax({ speed: 0.25, direction: "zoom", scale: true, scaleIntensity: 0.15 });
+  const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
   const typingText = useTypingEffect({ 
     text: "למי זה עשוי להתאים",

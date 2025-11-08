@@ -7,7 +7,7 @@ import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const TraumaConnectionSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "slide-right", threshold: 0.1 });
-  const parallaxOffset = useParallax({ speed: 0.4, direction: "diagonal", reverse: true });
+  const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
   const typingText = useTypingEffect({ 
     text: "איך זה עובד",

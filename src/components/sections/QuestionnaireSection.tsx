@@ -9,7 +9,7 @@ import { useParallax } from "@/hooks/use-parallax";
 
 const QuestionnaireSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "scale", threshold: 0.1 });
-  const parallaxOffset = useParallax({ speed: 0.35, direction: "rotate", rotate: true, rotateIntensity: 0.03 });
+  const parallaxOffset = useParallax(0.3);
   const [answers, setAnswers] = useState<boolean[]>([false, false, false, false, false]);
   const [showResult, setShowResult] = useState(false);
 

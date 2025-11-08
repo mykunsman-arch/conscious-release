@@ -15,7 +15,7 @@ import { useMagnetic } from "@/hooks/use-magnetic";
 const ContactSection = () => {
   const { toast } = useToast();
   const { ref, isVisible } = useScrollAnimation({ variant: "fade-down", threshold: 0.1 });
-  const parallaxOffset = useParallax({ speed: 0.2, direction: "diagonal", scale: true, scaleIntensity: 0.08 });
+  const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
   const magneticSubmit = useMagnetic({ strength: 0.25, tolerance: 100 });
   const magneticWhatsApp = useMagnetic({ strength: 0.3, tolerance: 120 });

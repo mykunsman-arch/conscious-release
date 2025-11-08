@@ -7,7 +7,7 @@ import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const WhatIsSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "fade-up", threshold: 0.1 });
-  const parallaxOffset = useParallax({ speed: 0.3, direction: "vertical" });
+  const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
   const typingText = useTypingEffect({ 
     text: "מהו ריפוי תודעתי",
