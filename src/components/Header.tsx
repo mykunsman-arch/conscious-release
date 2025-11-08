@@ -26,8 +26,8 @@ const Header = () => {
       }`}
       dir="rtl"
     >
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-center">
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex items-center justify-center mt-8">
           <nav className="flex gap-8">
             {[
               { id: "what-is", label: "מה זה ריפוי תודעתי" },
@@ -38,7 +38,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative text-sm font-medium text-foreground/70 hover:text-accent transition-colors group"
+                className="relative text-lg font-medium text-foreground/70 hover:text-accent transition-colors group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-peach group-hover:w-full transition-all duration-300"></span>
