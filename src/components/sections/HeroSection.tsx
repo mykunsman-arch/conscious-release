@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-full.png";
 import { Sparkles } from "lucide-react";
 
 const HeroSection = () => {
@@ -31,15 +31,11 @@ const HeroSection = () => {
           <img 
             src={logo} 
             alt="המרכז לריפוי תודעתי" 
-            className="h-40 w-40 mx-auto object-contain drop-shadow-2xl animate-glow-pulse" 
+            className="h-auto w-96 max-w-full mx-auto object-contain drop-shadow-2xl" 
           />
         </div>
         
         <div className="space-y-6 animate-fade-in">
-          <h1 className="text-6xl md:text-8xl font-bold leading-tight">
-            <span className="text-gradient">המרכז לריפוי תודעתי</span>
-          </h1>
-          
           <div className="flex items-center justify-center gap-3">
             <Sparkles className="text-accent h-6 w-6 animate-pulse" />
             <p className="text-3xl md:text-4xl font-semibold text-gradient-accent">
