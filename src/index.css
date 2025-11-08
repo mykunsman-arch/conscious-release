@@ -532,4 +532,140 @@ All colors MUST be HSL.
       opacity: 0;
     }
   }
+  
+  /* Logo Bloom Animation - Flower Opening Effect */
+  @keyframes logo-bloom {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+      filter: blur(10px);
+    }
+    40% {
+      transform: scale(1.1);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    70% {
+      transform: scale(1);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+      filter: blur(5px);
+    }
+  }
+  
+  @keyframes logo-bloom-bg {
+    0% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes logo-bloom-glow {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes logo-bloom-petal-1 {
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 0;
+    }
+    40% {
+      transform: scale(2) rotate(120deg);
+      opacity: 0.4;
+    }
+    70% {
+      transform: scale(3) rotate(180deg);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(4) rotate(240deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes logo-bloom-petal-2 {
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 0;
+    }
+    40% {
+      transform: scale(2.2) rotate(-100deg);
+      opacity: 0.3;
+    }
+    70% {
+      transform: scale(3.2) rotate(-160deg);
+      opacity: 0.15;
+    }
+    100% {
+      transform: scale(4.2) rotate(-220deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes logo-bloom-petal-3 {
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 0;
+    }
+    40% {
+      transform: scale(2.5) rotate(90deg);
+      opacity: 0.35;
+    }
+    70% {
+      transform: scale(3.5) rotate(150deg);
+      opacity: 0.18;
+    }
+    100% {
+      transform: scale(4.5) rotate(210deg);
+      opacity: 0;
+    }
+  }
+  
+  .animate-logo-bloom {
+    animation: logo-bloom 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-logo-bloom-bg {
+    animation: logo-bloom-bg 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-logo-bloom-glow {
+    animation: logo-bloom-glow 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-logo-bloom-petal-1 {
+    animation: logo-bloom-petal-1 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-logo-bloom-petal-2 {
+    animation: logo-bloom-petal-2 1.2s cubic-bezier(0.34, 0, 0.15, 1) forwards;
+  }
+  
+  .animate-logo-bloom-petal-3 {
+    animation: logo-bloom-petal-3 1.2s cubic-bezier(0.45, 0, 0.25, 1) forwards;
+  }
 }

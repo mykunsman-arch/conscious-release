@@ -6,6 +6,7 @@ import StickyCTA from "@/components/StickyCTA";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FloatingWhatsAppCTA from "@/components/FloatingWhatsAppCTA";
 import FloatingBubbles from "@/components/FloatingBubbles";
+import LogoBloom from "@/components/LogoBloom";
 import HeroSection from "@/components/sections/HeroSection";
 import WhatIsSection from "@/components/sections/WhatIsSection";
 import TraumaConnectionSection from "@/components/sections/TraumaConnectionSection";
@@ -23,6 +24,7 @@ const Index = () => {
   
   return (
     <div className="min-h-screen snap-container">
+      <LogoBloom />
       <FloatingBubbles />
       <ScrollProgressBar />
       <ScrollProgressDots />
