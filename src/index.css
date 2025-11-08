@@ -112,9 +112,15 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-family: 'Assistant', 'Rubik', 'Noto Sans Hebrew', system-ui, sans-serif;
     position: relative;
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    min-height: 100%;
   }
   
-  body::before {
+  html::before {
     content: '';
     position: fixed;
     top: 0;
@@ -125,14 +131,9 @@ All colors MUST be HSL.
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     opacity: 0.15;
     z-index: -1;
     pointer-events: none;
-  }
-
-  html {
-    scroll-behavior: smooth;
   }
 }
 

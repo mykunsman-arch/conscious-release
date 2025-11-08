@@ -1,4 +1,5 @@
 import { Check, Flower2 } from "lucide-react";
+import healingHandsImage from "@/assets/healing-hands.jpg";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -10,6 +11,12 @@ const HowItWorksSection = () => {
 
   return (
     <section id="how-it-works" className="py-24 bg-card relative overflow-hidden" dir="rtl">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 opacity-[0.06] bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${healingHandsImage})` }}
+      ></div>
+      
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
 
