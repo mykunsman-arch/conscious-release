@@ -26,7 +26,7 @@ const HeroSection = () => {
       <div className="absolute top-20 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl floating"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>
 
-      <div className="container mx-auto max-w-5xl text-center space-y-6 md:space-y-10 relative z-10">
+      <div className="container mx-auto max-w-5xl text-center space-y-3 md:space-y-10 relative z-10">
         <div className="animate-scale-in">
           <img 
             src={logo} 
