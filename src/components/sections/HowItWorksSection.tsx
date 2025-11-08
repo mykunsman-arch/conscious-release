@@ -4,11 +4,17 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 import { useTilt } from "@/hooks/use-tilt";
 import { useImageReveal } from "@/hooks/use-image-reveal";
+import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const HowItWorksSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
+  const typingText = useTypingEffect({ 
+    text: "למי זה עשוי להתאים",
+    speed: 120,
+    delay: 300
+  });
   
   const challenges = [
     { text: "חרדות, חוסר שקט ופחדים", icon: "😰" },
@@ -45,8 +51,9 @@ const HowItWorksSection = () => {
             <span className="text-accent font-semibold">התהליך שלנו</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4">
-            למי זה עשוי להתאים
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4 min-h-[2em] flex items-center justify-center">
+            {typingText.displayedText}
+            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent mr-1 animate-pulse"></span>}
           </h2>
           
           <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>

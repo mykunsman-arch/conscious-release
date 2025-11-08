@@ -3,11 +3,17 @@ import healingWomanImage from "@/assets/healing-woman.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 import { useImageReveal } from "@/hooks/use-image-reveal";
+import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const WhatIsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
+  const typingText = useTypingEffect({ 
+    text: "מהו ריפוי תודעתי",
+    speed: 120,
+    delay: 300
+  });
   
   return (
     <section ref={ref} id="what-is" className="snap-section py-24 bg-card relative overflow-hidden" dir="rtl">
@@ -37,8 +43,9 @@ const WhatIsSection = () => {
             <span className="text-accent font-semibold">הבסיס שלנו</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-tight px-4">
-            מהו ריפוי תודעתי
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-tight px-4 min-h-[2em] flex items-center justify-center">
+            {typingText.displayedText}
+            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent mr-1 animate-pulse"></span>}
           </h2>
           
           <div className="flex items-center justify-center gap-4">

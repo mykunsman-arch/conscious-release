@@ -2,9 +2,15 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-full.png";
 import { Sparkles } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const HeroSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const typingText = useTypingEffect({ 
+    text: "ריפוי תודעתי, בגישה עדינה ומדויקת.",
+    speed: 100,
+    delay: 800
+  });
   
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -39,8 +45,9 @@ const HeroSection = () => {
         </div>
         
         <div className="space-y-4 md:space-y-6 animate-fade-in">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4">
-            ריפוי תודעתי, בגישה עדינה ומדויקת.
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4 min-h-[3em] flex items-center justify-center">
+            {typingText.displayedText}
+            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent ml-1 animate-pulse"></span>}
           </h1>
           
           <div className="flex items-center justify-center gap-2 md:gap-3 px-4">

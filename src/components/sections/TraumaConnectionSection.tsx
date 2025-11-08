@@ -3,11 +3,17 @@ import healingHandsImage from "@/assets/healing-hands.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 import { useImageReveal } from "@/hooks/use-image-reveal";
+import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const TraumaConnectionSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
+  const typingText = useTypingEffect({ 
+    text: "איך זה עובד",
+    speed: 150,
+    delay: 300
+  });
   
   return (
     <section ref={ref} className="snap-section py-24 bg-gradient-soft relative overflow-hidden" dir="rtl">
@@ -36,8 +42,9 @@ const TraumaConnectionSection = () => {
             <span className="text-accent font-semibold">התהליך שלנו</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4">
-            איך זה עובד
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4 min-h-[2em] flex items-center justify-center">
+            {typingText.displayedText}
+            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-accent mr-1 animate-pulse"></span>}
           </h2>
           
           <div className="h-1 w-32 bg-gradient-to-r from-accent via-peach to-accent mx-auto rounded-full"></div>
