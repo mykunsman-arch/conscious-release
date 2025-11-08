@@ -23,17 +23,17 @@ export const useTypingEffect = ({ text, speed = 80, delay = 0, loop = false }: T
   useEffect(() => {
     if (!shouldStart) return;
 
-    let currentIndex = 0;
     setDisplayedText("");
     setIsComplete(false);
+    let currentIndex = 0;
+    let interval: NodeJS.Timeout;
 
-    const interval = setInterval(() => {
+    const typeNextChar = () => {
       if (currentIndex < text.length) {
-        setDisplayedText((prev) => prev + text[currentIndex]);
+        setDisplayedText(text.substring(0, currentIndex + 1));
         currentIndex++;
       } else {
         setIsComplete(true);
-        clearInterval(interval);
         
         if (loop) {
           setTimeout(() => {
@@ -43,9 +43,13 @@ export const useTypingEffect = ({ text, speed = 80, delay = 0, loop = false }: T
           }, 2000);
         }
       }
-    }, speed);
+    };
 
-    return () => clearInterval(interval);
+    interval = setInterval(typeNextChar, speed);
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
   }, [text, speed, shouldStart, loop]);
 
   return { displayedText, isComplete };
