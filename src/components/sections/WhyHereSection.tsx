@@ -1,8 +1,15 @@
 import { Heart, Shield, Users, Sparkles } from "lucide-react";
+import healingHandsImage from "@/assets/healing-hands.jpg";
 
 const WhyHereSection = () => {
   return (
     <section className="py-24 bg-card relative overflow-hidden" dir="rtl">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 opacity-[0.06] md:opacity-[0.06] bg-contain md:bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${healingHandsImage})` }}
+      ></div>
+      
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
 

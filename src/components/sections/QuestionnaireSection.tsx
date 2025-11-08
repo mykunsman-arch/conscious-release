@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
 import { ClipboardCheck, Sparkles } from "lucide-react";
+import lotusImage from "@/assets/lotus-healing.jpg";
 
 const QuestionnaireSection = () => {
   const [answers, setAnswers] = useState<boolean[]>([false, false, false, false, false]);
@@ -43,6 +44,12 @@ const QuestionnaireSection = () => {
 
   return (
     <section id="questionnaire" className="py-24 bg-gradient-soft relative overflow-hidden" dir="rtl">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 opacity-[0.05] md:opacity-[0.05] bg-contain md:bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${lotusImage})` }}
+      ></div>
+      
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-64 h-64 bg-peach/5 rounded-full blur-3xl"></div>
