@@ -21,7 +21,7 @@ const TraumaConnectionSection = () => {
             <span className="text-accent font-semibold">התהליך שלנו</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gradient leading-tight px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight px-4">
             איך זה עובד
           </h2>
           

@@ -25,9 +25,9 @@ const Header = () => {
       }`}
       dir="rtl"
     >
-      <div className="container mx-auto px-4 py-4 md:py-8">
-        <div className="flex items-center justify-center mt-0 md:mt-8">
-          <nav className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-center">
+      <div className="container mx-auto px-4 py-3 md:py-8">
+        <div className="flex items-center justify-center mt-0 md:mt-4">
+          <nav className="flex flex-wrap gap-2 sm:gap-3 md:gap-6 lg:gap-8 justify-center">
             {[
               { id: "what-is", label: "מה זה ריפוי תודעתי" },
               { id: "how-it-works", label: "איך זה עובד" },
@@ -37,7 +37,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative text-sm sm:text-base lg:text-lg font-medium text-foreground/70 hover:text-accent transition-colors group whitespace-nowrap"
+                className="relative text-xs sm:text-sm md:text-base lg:text-lg font-medium text-foreground/70 hover:text-accent transition-colors group whitespace-nowrap px-1"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-peach group-hover:w-full transition-all duration-300"></span>

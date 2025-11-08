@@ -21,7 +21,7 @@ const WhyHereSection = () => {
               <span className="text-accent font-semibold">הייחודיות שלנו</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gradient leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient leading-tight">
               למה לבחור במרכז לריפוי תודעתי
             </h2>
             
