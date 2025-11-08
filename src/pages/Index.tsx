@@ -23,6 +23,7 @@ import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [showIntro, setShowIntro] = useState(true);
   useSmoothScroll();
   
   useEffect(() => {
@@ -32,31 +33,42 @@ const Index = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIntro(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   if (isLoading) {
     return <LoadingSkeleton />;
   }
   
   return (
     <div className="min-h-screen snap-container">
-      <FloatingBubbles />
       <LogoIntro />
-      <ScrollProgressBar />
-      <ScrollProgressDots />
-      <Header />
-      <MobileMenu />
-      <StickyCTA />
-      <WhatsAppButton />
-      <FloatingWhatsAppCTA />
-      <HeroSection />
-      <WhatIsSection />
-      <TraumaConnectionSection />
-      <HowItWorksSection />
-      <StatsSection />
-      <QuestionnaireSection />
-      <WhyHereSection />
-      <TestimonialsSection />
-      <FAQSection />
-      <ContactSection />
+      {!showIntro && (
+        <>
+          <FloatingBubbles />
+          <ScrollProgressBar />
+          <ScrollProgressDots />
+          <Header />
+          <MobileMenu />
+          <StickyCTA />
+          <WhatsAppButton />
+          <FloatingWhatsAppCTA />
+          <HeroSection />
+          <WhatIsSection />
+          <TraumaConnectionSection />
+          <HowItWorksSection />
+          <StatsSection />
+          <QuestionnaireSection />
+          <WhyHereSection />
+          <TestimonialsSection />
+          <FAQSection />
+          <ContactSection />
+        </>
+      )}
     </div>
   );
 };
