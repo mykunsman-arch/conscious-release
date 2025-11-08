@@ -15,7 +15,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-24" dir="rtl">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-32 md:pt-24" dir="rtl">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent"></div>
@@ -26,38 +26,38 @@ const HeroSection = () => {
       <div className="absolute top-20 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl floating"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>
 
-      <div className="container mx-auto max-w-5xl text-center space-y-10 relative z-10">
+      <div className="container mx-auto max-w-5xl text-center space-y-6 md:space-y-10 relative z-10">
         <div className="animate-scale-in">
           <img 
             src={logo} 
             alt="המרכז לריפוי תודעתי" 
-            className="h-auto w-96 max-w-full mx-auto object-contain drop-shadow-2xl" 
+            className="h-auto w-64 sm:w-80 md:w-96 max-w-full mx-auto object-contain drop-shadow-2xl" 
           />
         </div>
         
-        <div className="space-y-6 animate-fade-in">
-          <div className="flex items-center justify-center gap-3">
-            <Sparkles className="text-accent h-6 w-6 animate-pulse" />
-            <p className="text-3xl md:text-4xl font-semibold text-gradient-accent">
+        <div className="space-y-4 md:space-y-6 animate-fade-in">
+          <div className="flex items-center justify-center gap-2 md:gap-3 px-4">
+            <Sparkles className="text-accent h-5 w-5 md:h-6 md:w-6 animate-pulse flex-shrink-0" />
+            <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gradient-accent">
               להשתחרר. להתחבר. להתרפא.
             </p>
-            <Sparkles className="text-accent h-6 w-6 animate-pulse" />
+            <Sparkles className="text-accent h-5 w-5 md:h-6 md:w-6 animate-pulse flex-shrink-0" />
           </div>
         </div>
         
-        <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <p className="text-lg sm:text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed animate-fade-in px-4" style={{ animationDelay: '0.2s' }}>
           כל ריפוי אמיתי מתחיל בתודעה.
           <br />
           <span className="text-primary font-medium">מרחב רגוע ומכיל</span> שבו אפשר לשחרר עומסים רגשיים ודפוסים מעכבים,
-          <br />
+          <br className="hidden sm:block" />
           ולהתחבר מחדש לשקט ולחופש הפנימי.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-6 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4 md:pt-6 animate-fade-in px-4" style={{ animationDelay: '0.4s' }}>
           <Button
             size="lg"
             onClick={() => scrollToSection("questionnaire")}
-            className="group relative bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-7 text-xl rounded-2xl shadow-2xl hover:shadow-accent/20 transition-all duration-300 hover:scale-105 overflow-hidden"
+            className="w-full sm:w-auto group relative bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 md:px-10 py-5 md:py-7 text-lg md:text-xl rounded-2xl shadow-2xl hover:shadow-accent/20 transition-all duration-300 hover:scale-105 overflow-hidden"
           >
             <span className="relative z-10">בדקו אם התהליך מתאים לכם</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
@@ -67,7 +67,7 @@ const HeroSection = () => {
             size="lg"
             variant="outline"
             onClick={handleWhatsAppClick}
-            className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-10 py-7 text-xl rounded-2xl shadow-lg hover:shadow-accent/30 transition-all duration-300 hover:scale-105"
+            className="w-full sm:w-auto border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-6 sm:px-8 md:px-10 py-5 md:py-7 text-lg md:text-xl rounded-2xl shadow-lg hover:shadow-accent/30 transition-all duration-300 hover:scale-105"
           >
             שיחה בוואטסאפ
           </Button>
