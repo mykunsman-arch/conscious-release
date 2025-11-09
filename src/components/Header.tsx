@@ -36,7 +36,7 @@ const Header = () => {
       
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center relative">
-          <nav className="flex gap-1 md:gap-6 lg:gap-8 mx-auto flex-wrap justify-center ml-28 md:ml-0">
+          <nav className="flex gap-1 md:gap-6 lg:gap-8 mx-auto flex-wrap justify-center mr-28 md:mr-0">
             {[
               { id: "what-is", label: "מה זה ריפוי תודעתי" },
               { id: "how-it-works", label: "איך זה עובד" },
