@@ -42,8 +42,19 @@ const MusicPlayer = () => {
 
   const toggleMute = () => {
     if (audioRef.current) {
-      audioRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
+      // If music hasn't started yet, start it first
+      if (!hasStarted) {
+        audioRef.current.play().then(() => {
+          setHasStarted(true);
+          audioRef.current!.muted = !isMuted;
+          setIsMuted(!isMuted);
+        }).catch(err => {
+          console.log("Could not start music:", err);
+        });
+      } else {
+        audioRef.current.muted = !isMuted;
+        setIsMuted(!isMuted);
+      }
     }
   };
 
