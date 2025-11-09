@@ -38,7 +38,7 @@ const HeroSection = () => {
       <div className="absolute top-20 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl floating"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>
 
-      <div className="container mx-auto max-w-5xl text-center space-y-0 md:space-y-1 relative z-10">
+      <div className="container mx-auto max-w-5xl text-center space-y-0 relative z-10">
         <div className="animate-scale-in" id="hero">
           <img 
             src={logo} 
@@ -47,8 +47,8 @@ const HeroSection = () => {
           />
         </div>
         
-        <div className="space-y-1 md:space-y-2 animate-fade-in">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[3em] flex items-center justify-center font-varela">
+        <div className="space-y-1 animate-fade-in">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[2em] flex items-center justify-center font-varela">
             {typingText.displayedText}
             {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-sage ml-1 animate-pulse"></span>}
           </h1>
@@ -62,7 +62,7 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto animate-fade-in px-4 space-y-2 md:space-y-3" style={{ animationDelay: '0.2s' }}>
+        <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto animate-fade-in px-4 space-y-1" style={{ animationDelay: '0.2s' }}>
           <p className="leading-[1.7] md:leading-relaxed">
             כל תהליך של שינוי וריפוי אמיתי מתחיל בתודעה.
           </p>
@@ -71,7 +71,7 @@ const HeroSection = () => {
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center pt-4 md:pt-6 animate-fade-in px-4" style={{ animationDelay: '0.4s' }}>
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center pt-2 md:pt-3 animate-fade-in px-4" style={{ animationDelay: '0.4s' }}>
           <Button
             ref={magneticBtn1 as any}
             size="lg"
