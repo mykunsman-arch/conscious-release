@@ -24,7 +24,7 @@ const TraumaConnectionSection = () => {
         className="absolute inset-0 image-reveal-wrapper"
       >
         <div 
-          className={`absolute inset-0 opacity-[0.06] md:opacity-[0.06] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out image-reveal-diagonal ${imageReveal.isRevealed ? 'revealed' : ''}`}
+          className={`absolute inset-0 opacity-[0.20] md:opacity-[0.25] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out image-reveal-diagonal ${imageReveal.isRevealed ? 'revealed' : ''}`}
           style={{ 
             backgroundImage: `url(${healingHandsImage})`,
             transform: `translateY(${parallaxOffset}px)`

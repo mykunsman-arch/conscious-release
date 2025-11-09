@@ -23,7 +23,7 @@ const WhatIsSection = () => {
         className="absolute inset-0 image-reveal-wrapper"
       >
         <div 
-          className={`absolute inset-0 opacity-[0.08] md:opacity-[0.08] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out image-reveal ${imageReveal.isRevealed ? 'revealed' : ''}`}
+          className={`absolute inset-0 opacity-[0.20] md:opacity-[0.25] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out image-reveal ${imageReveal.isRevealed ? 'revealed' : ''}`}
           style={{ 
             backgroundImage: `url(${healingWomanImage})`,
             transform: `translateY(${parallaxOffset}px)`
