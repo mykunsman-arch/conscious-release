@@ -56,17 +56,18 @@ const WhatIsSection = () => {
           
           <div className={`space-y-8 pt-12 px-4 max-w-4xl mx-auto grid-stagger ${isVisible ? 'visible' : ''}`}>
             <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
-              <p className="text-base md:text-lg lg:text-xl text-foreground/80 leading-[1.9] text-center font-light">
-                ריפוי תודעתי <span className="text-primary font-semibold">רואה את האדם כמכלול של גוף, נפש ותודעה</span>.
-                <br />
-                חוויות, טראומות, דפוסים ואמונות שנצרבו בעבר עשויים להשפיע עלינו גם היום.
-                <br /><br />
-                באמצעות הקשבה עדינה, עבודה עם התודעה ותת־המודע,
-                <br />
-                התהליך מסייע בשחרור מטענים רגשיים ואנרגטיים וביצירת תחושת הקלה, איזון וחיבור פנימי.
-                <br />
-                התהליך עשוי לשמש תהליך תומך ומשלים לריפוי ולצמיחה אישית.
-              </p>
+              <div className="text-base md:text-lg lg:text-xl text-foreground/80 text-center font-light space-y-4 md:space-y-6">
+                <p className="leading-[1.8] md:leading-[1.9]">
+                  ריפוי תודעתי <span className="text-primary font-semibold">רואה את האדם כמכלול של גוף, נפש ותודעה</span>.
+                  <span className="block mt-3 md:mt-4">חוויות, טראומות, דפוסים ואמונות שנצרבו בעבר עשויים להשפיע עלינו גם היום.</span>
+                </p>
+                
+                <p className="leading-[1.8] md:leading-[1.9]">
+                  באמצעות הקשבה עדינה, עבודה עם התודעה ותת־המודע,
+                  <span className="block mt-3 md:mt-4">התהליך מסייע בשחרור מטענים רגשיים ואנרגטיים וביצירת תחושת הקלה, איזון וחיבור פנימי.</span>
+                  <span className="block mt-3 md:mt-4">התהליך עשוי לשמש תהליך תומך ומשלים לריפוי ולצמיחה אישית.</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>

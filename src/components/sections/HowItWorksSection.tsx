@@ -58,11 +58,14 @@ const HowItWorksSection = () => {
           
           <div className="h-1 w-32 bg-gradient-to-r from-sage via-primary to-sage mx-auto rounded-full"></div>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-[1.9] max-w-3xl mx-auto px-4 font-light">
-            התהליך מתאים למבוגרים, נוער וילדים,
-            <br />
-            ומסייע בהתמודדות עם אתגרים רגשיים, מנטליים ופיזיים כמו:
-          </p>
+          <div className="text-lg md:text-xl lg:text-2xl text-foreground/80 max-w-3xl mx-auto px-4 font-light space-y-2 md:space-y-3">
+            <p className="leading-[1.8] md:leading-[1.9]">
+              התהליך מתאים למבוגרים, נוער וילדים,
+            </p>
+            <p className="leading-[1.8] md:leading-[1.9]">
+              ומסייע בהתמודדות עם אתגרים רגשיים, מנטליים ופיזיים כמו:
+            </p>
+          </div>
           
           <div className={`grid md:grid-cols-2 gap-6 max-w-4xl mx-auto px-4 grid-stagger ${isVisible ? 'visible' : ''}`}>
             {challenges.map((challenge, index) => {

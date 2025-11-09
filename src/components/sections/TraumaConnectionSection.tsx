@@ -51,11 +51,14 @@ const TraumaConnectionSection = () => {
           <div className="h-1 w-32 bg-gradient-to-r from-sage via-primary to-sage mx-auto rounded-full"></div>
           
           <div className="space-y-6 pt-8 px-4 max-w-3xl mx-auto">
-          <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-[1.9] font-light">
-            בתהליך של ריפוי תודעתי אנחנו ניגשים למקום שבו נוצר הקושי – בתודעה, ברגש ובזיכרון.
-            <br />
-            באמצעות הקשבה עמוקה ותהליך מודע, המטופל לומד לזהות את המקור, לשחרר אותו ולהרגיש שינוי אמיתי.
-          </p>
+          <div className="text-lg md:text-xl lg:text-2xl text-foreground/80 font-light space-y-3 md:space-y-4">
+            <p className="leading-[1.8] md:leading-[1.9]">
+              בתהליך של ריפוי תודעתי אנחנו ניגשים למקום שבו נוצר הקושי – בתודעה, ברגש ובזיכרון.
+            </p>
+            <p className="leading-[1.8] md:leading-[1.9]">
+              באמצעות הקשבה עמוקה ותהליך מודע, המטופל לומד לזהות את המקור, לשחרר אותו ולהרגיש שינוי אמיתי.
+            </p>
+          </div>
             
             {/* Desktop List */}
             <div className="hidden md:block bg-gradient-to-br from-muted/50 to-background p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
