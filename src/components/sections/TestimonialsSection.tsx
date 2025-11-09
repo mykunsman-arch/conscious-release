@@ -16,6 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Star, Plus, Heart, CheckCheck, Forward } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 
 interface Testimonial {
   id: number;
@@ -155,6 +156,11 @@ const TestimonialsSection = () => {
               loop: true,
               direction: "rtl",
             }}
+            plugins={[
+              Autoplay({
+                delay: 10000,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
