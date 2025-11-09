@@ -3,13 +3,17 @@ import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const MusicPlayer = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = 0.3; // Set volume to 30%
+      audioRef.current.play().catch(err => {
+        console.log("Auto-play prevented:", err);
+        setIsPlaying(false);
+      });
     }
   }, []);
 
