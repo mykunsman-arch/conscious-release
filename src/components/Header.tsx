@@ -16,8 +16,7 @@ const Header = () => {
       <img 
         src={logoHeader} 
         alt="המרכז לריפוי תודעתי" 
-        className="h-60 w-auto object-contain fixed top-0 left-0 z-50"
-        style={{ marginLeft: '-2rem' }}
+        className="h-60 w-auto object-contain fixed top-0 right-0 z-50"
       />
       
       <div className="container mx-auto px-4 py-8">
