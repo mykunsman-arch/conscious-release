@@ -39,21 +39,22 @@ const Header = () => {
 
   return (
     <header
-      className="fixed top-0 w-full z-50 bg-transparent"
+      className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border/30"
       dir="rtl"
     >
-      <img 
-        src={logoHeader} 
-        alt="המרכז לריפוי תודעתי" 
-        className={`h-28 md:h-60 w-auto object-contain fixed z-50 transition-opacity duration-500 ${
-          showLogo ? "opacity-100" : "opacity-0"
-        }`}
-        style={{ top: '-1rem', right: '0rem' }}
-      />
-      
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-center relative">
-          <nav className="flex gap-1 md:gap-3 lg:gap-4 flex-wrap justify-center mr-28 md:mx-auto">
+      <div className="container mx-auto px-4 py-3 md:py-4">
+        <div className="flex items-center justify-between relative">
+          {/* Logo */}
+          <img 
+            src={logoHeader} 
+            alt="המרכז לריפוי תודעתי" 
+            className={`h-16 md:h-28 w-auto object-contain transition-opacity duration-500 ${
+              showLogo ? "opacity-100" : "opacity-0"
+            }`}
+          />
+          
+          {/* Navigation */}
+          <nav className="flex gap-1 md:gap-3 lg:gap-4 flex-wrap justify-center flex-1">
             {[
               { id: "what-is", label: "מה זה ריפוי תודעתי" },
               { id: "how-it-works", label: "איך זה עובד" },
