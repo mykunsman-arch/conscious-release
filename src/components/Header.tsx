@@ -16,7 +16,7 @@ const Header = () => {
       <img 
         src={logoHeader} 
         alt="המרכז לריפוי תודעתי" 
-        className="h-60 w-auto object-contain fixed top-0 right-0 z-50"
+        className="h-60 w-auto object-contain fixed top-0 right-4 z-50"
       />
       
       <div className="container mx-auto px-4 py-8">
