@@ -22,16 +22,21 @@ const ScrollToTop = () => {
   };
 
   return (
-    <Button
-      onClick={scrollToTop}
-      className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-50 h-12 w-12 rounded-full shadow-lg transition-all duration-300 ${
+    <div
+      className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2 transition-all duration-300 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16 pointer-events-none"
       }`}
-      size="icon"
-      aria-label="חזרה למעלה"
     >
-      <ArrowUp className="h-5 w-5" />
-    </Button>
+      <Button
+        onClick={scrollToTop}
+        className="h-12 w-12 rounded-full shadow-lg"
+        size="icon"
+        aria-label="חזרה למעלה"
+      >
+        <ArrowUp className="h-5 w-5" />
+      </Button>
+      <span className="text-sm font-medium text-foreground/80">חזור להתחלה</span>
+    </div>
   );
 };
 
