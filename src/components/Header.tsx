@@ -14,14 +14,14 @@ const Header = () => {
       dir="rtl"
     >
       <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center relative">
           <img 
             src={logoHeader} 
             alt="המרכז לריפוי תודעתי" 
-            className="h-20 w-auto object-contain"
+            className="h-20 w-auto object-contain absolute right-0"
           />
           
-          <nav className="flex gap-6 lg:gap-8">
+          <nav className="flex gap-6 lg:gap-8 mx-auto">
             {[
               { id: "what-is", label: "מה זה ריפוי תודעתי" },
               { id: "how-it-works", label: "איך זה עובד" },
