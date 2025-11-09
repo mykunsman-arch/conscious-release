@@ -130,7 +130,7 @@ const QuestionnaireSection = () => {
                       onClick={handleWhatsAppClick}
                       className="bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 md:px-10 py-6 md:py-7 text-lg md:text-xl font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 min-h-[56px] touch-manipulation active:scale-100"
                     >
-                      שיחה מיידית בוואטסאפ
+                      לפנייה ופרטים בווצאפ
                     </Button>
                     <Button
                       onClick={scrollToContact}

@@ -130,7 +130,7 @@ const ContactSection = () => {
                 style={{ transition: 'transform 0.2s ease-out' }}
               >
                 <MessageCircle className="ml-3 h-7 w-7 transition-all" />
-                שיחה מיידית בוואטסאפ
+                לפנייה ופרטים בווצאפ
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
               </Button>
               
