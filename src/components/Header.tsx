@@ -42,7 +42,7 @@ const Header = () => {
       className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border/30"
       dir="rtl"
     >
-      <div className="container mx-auto px-4 py-1">
+      <div className="container mx-auto px-4 py-0.5">
         <div className="flex items-center justify-between relative">
           {/* Logo */}
           <img 
