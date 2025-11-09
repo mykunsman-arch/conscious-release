@@ -13,14 +13,14 @@ const Header = () => {
       className="hidden md:block fixed top-0 w-full z-50 bg-transparent"
       dir="rtl"
     >
+      <img 
+        src={logoHeader} 
+        alt="המרכז לריפוי תודעתי" 
+        className="h-60 w-auto object-contain fixed top-8 right-0 z-50"
+      />
+      
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center relative">
-          <img 
-            src={logoHeader} 
-            alt="המרכז לריפוי תודעתי" 
-            className="h-60 w-auto object-contain absolute right-0"
-          />
-          
           <nav className="flex gap-6 lg:gap-8 mx-auto">
             {[
               { id: "what-is", label: "מה זה ריפוי תודעתי" },
