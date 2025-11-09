@@ -21,6 +21,7 @@ interface Testimonial {
   id: number;
   name: string;
   age?: number;
+  gender?: "male" | "female";
   issue: string;
   text: string;
   rating: number;
@@ -31,6 +32,7 @@ const initialTestimonials: Testimonial[] = [
     id: 1,
     name: "א.ש.",
     age: 35,
+    gender: "female",
     issue: "אלרגיות קלות",
     text: "אחרי שנים של אלרגיות עונתיות שלא הגיבו לשום דבר, הגעתי סקפטית. אחרי כחמישה טיפולים ההתקפים נעלמו כמעט לחלוטין. מרגישה שהגוף סוף־סוף נרגע מבפנים.",
     rating: 5,
@@ -39,6 +41,7 @@ const initialTestimonials: Testimonial[] = [
     id: 2,
     name: "מ.ד.",
     age: 11,
+    gender: "male",
     issue: "טיקים",
     text: "הגענו לטיפול בעקבות טיקים חוזרים. כבר אחרי ארבעה מפגשים ראינו שינוי ברור – הפנים רגועות יותר, הגוף שקט. זו הייתה הקלה עצומה גם לנו כהורים.",
     rating: 5,
@@ -47,6 +50,7 @@ const initialTestimonials: Testimonial[] = [
     id: 3,
     name: "נ.ל.",
     age: 22,
+    gender: "male",
     issue: "גמגום קל",
     text: "אחרי שלושה מפגשים בלבד הרגשתי שינוי אמיתי. לא רק בדיבור – גם בביטחון שלי. זה כאילו משהו השתחרר בפנים, והכל נהיה קל יותר.",
     rating: 5,
@@ -55,6 +59,7 @@ const initialTestimonials: Testimonial[] = [
     id: 4,
     name: "ש.ק.",
     age: 8,
+    gender: "female",
     issue: "הרטבה לילית",
     text: "לא האמנתי שזה יעבוד כל כך מהר. אחרי שני מפגשים בלבד היא קמה בבוקר יבשה, שמחה וגאה בעצמה. תודה על הרוך, הסבלנות והאמונה.",
     rating: 5,
@@ -63,6 +68,7 @@ const initialTestimonials: Testimonial[] = [
     id: 5,
     name: "ד.צ.",
     age: 41,
+    gender: "male",
     issue: "קושי להירדם",
     text: "אחרי תקופה ארוכה של לילות בלי שינה, מצאתי סוף־סוף שקט. שלושה מפגשים שבהם למדתי להרפות, להבין מאיפה זה בא, והלילות שלי השתנו לגמרי.",
     rating: 5,
@@ -71,6 +77,7 @@ const initialTestimonials: Testimonial[] = [
     id: 6,
     name: "ר.ח.",
     age: 28,
+    gender: "female",
     issue: "כאבי ראש ללא רקע רפואי",
     text: "כאב הראש שהיה איתי כמעט כל יום פשוט נעלם. שישה מפגשים עדינים ועמוקים שגרמו לי להבין שהגוף שלי רק ביקש הקשבה.",
     rating: 5,
@@ -171,7 +178,7 @@ const TestimonialsSection = () => {
                       <div>
                         <h3 className="font-bold text-lg text-primary">
                           {testimonial.name}
-                          {testimonial.age && `, בן/בת ${testimonial.age}`}
+                          {testimonial.age && `, ${testimonial.gender === "female" ? "בת" : "בן"} ${testimonial.age}`}
                         </h3>
                         <p className="text-sm text-accent font-semibold mt-1">
                           {testimonial.issue}
