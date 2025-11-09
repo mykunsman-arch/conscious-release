@@ -36,7 +36,7 @@ const Index = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 5000);
+    }, 4500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -46,29 +46,27 @@ const Index = () => {
   
   return (
     <div className="min-h-screen snap-container">
-      <LogoIntro />
-      {!showIntro && (
-        <>
-          <FloatingBubbles />
-          <ScrollProgressBar />
-          <ScrollProgressDots />
-          <Header />
-          <MobileMenu />
-          <StickyCTA />
-          <WhatsAppButton />
-          <FloatingWhatsAppCTA />
-          <HeroSection />
-          <WhatIsSection />
-          <TraumaConnectionSection />
-          <HowItWorksSection />
-          <StatsSection />
-          <QuestionnaireSection />
-          <WhyHereSection />
-          <TestimonialsSection />
-          <FAQSection />
-          <ContactSection />
-        </>
-      )}
+      <LogoIntro showIntro={showIntro} />
+      <div className={`transition-opacity duration-500 ${showIntro ? 'opacity-0' : 'opacity-100'}`}>
+        <FloatingBubbles />
+        <ScrollProgressBar />
+        <ScrollProgressDots />
+        <Header />
+        <MobileMenu />
+        <StickyCTA />
+        <WhatsAppButton />
+        <FloatingWhatsAppCTA />
+        <HeroSection />
+        <WhatIsSection />
+        <TraumaConnectionSection />
+        <HowItWorksSection />
+        <StatsSection />
+        <QuestionnaireSection />
+        <WhyHereSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <ContactSection />
+      </div>
     </div>
   );
 };
