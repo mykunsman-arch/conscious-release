@@ -39,16 +39,16 @@ const Header = () => {
 
   return (
     <header
-      className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border/30"
+      className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border/30 h-16 md:h-20"
       dir="rtl"
     >
-      <div className="container mx-auto px-4 py-0.5">
-        <div className="flex items-center justify-between relative">
+      <div className="container mx-auto px-4 h-full flex items-center">
+        <div className="flex items-center justify-between relative w-full">
           {/* Logo */}
           <img 
             src={logoHeader} 
             alt="המרכז לריפוי תודעתי" 
-            className={`h-14 md:h-24 w-auto object-contain transition-opacity duration-500 ${
+            className={`h-14 md:h-[4.5rem] w-auto object-contain transition-opacity duration-500 max-h-full ${
               showLogo ? "opacity-100" : "opacity-0"
             }`}
           />
