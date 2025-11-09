@@ -15,7 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Star, Plus, Heart, CheckCheck } from "lucide-react";
+import { Star, Plus, Heart, CheckCheck, Forward } from "lucide-react";
 
 interface Testimonial {
   id: number;
@@ -177,6 +177,11 @@ const TestimonialsSection = () => {
                       <div className="absolute left-0 top-3 w-0 h-0 border-t-[8px] border-t-transparent border-r-[12px] border-r-[#DCF8C6] border-b-[8px] border-b-transparent -translate-x-3"></div>
                       
                       <div className="space-y-3">
+                        {/* Forwarded indicator */}
+                        <div className="flex items-center gap-1 text-gray-500 text-xs pb-2 border-b border-gray-300/30">
+                          <Forward className="h-3 w-3" />
+                          <span className="font-medium">הועברה</span>
+                        </div>
                         {/* Name (like contact name in WhatsApp) */}
                         <div className="flex items-baseline gap-2">
                           <h3 className="font-bold text-base text-[#075E54]">
