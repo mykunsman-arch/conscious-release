@@ -1,16 +1,4 @@
-import { useState, useEffect } from "react";
-
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -20,20 +8,12 @@ const Header = () => {
 
   return (
     <header
-      className={`hidden md:block fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "glass-effect shadow-2xl border-b border-accent/20" : "bg-transparent"
-      }`}
+      className="hidden md:block fixed top-0 w-full z-50 bg-transparent"
       dir="rtl"
     >
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          {isScrolled && (
-            <div className="text-xl font-bold text-gradient-shimmer font-varela animate-slide-in-right">
-              המרכז לריפוי תודעתי
-            </div>
-          )}
-          
-          <nav className={`flex gap-6 lg:gap-8 ${isScrolled ? '' : 'mx-auto'}`}>
+        <div className="flex items-center justify-center">
+          <nav className="flex gap-6 lg:gap-8 mx-auto">
             {[
               { id: "what-is", label: "מה זה ריפוי תודעתי" },
               { id: "how-it-works", label: "איך זה עובד" },
