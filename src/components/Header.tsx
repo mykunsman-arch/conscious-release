@@ -22,21 +22,21 @@ const Header = () => {
 
   return (
     <header
-      className="hidden md:block fixed top-0 w-full z-50 bg-transparent"
+      className="fixed top-0 w-full z-50 bg-transparent"
       dir="rtl"
     >
       <img 
         src={logoHeader} 
         alt="המרכז לריפוי תודעתי" 
-        className={`h-60 w-auto object-contain fixed z-50 transition-opacity duration-500 ${
+        className={`h-40 md:h-60 w-auto object-contain fixed z-50 transition-opacity duration-500 ${
           showLogo ? "opacity-100" : "opacity-0"
         }`}
-        style={{ top: '-2rem', right: '-1rem' }}
+        style={{ top: '-1rem', right: '-0.5rem' }}
       />
       
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center relative">
-          <nav className="flex gap-6 lg:gap-8 mx-auto">
+          <nav className="flex gap-3 md:gap-6 lg:gap-8 mx-auto flex-wrap justify-center">
             {[
               { id: "what-is", label: "מה זה ריפוי תודעתי" },
               { id: "how-it-works", label: "איך זה עובד" },
@@ -46,7 +46,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative text-xl md:text-2xl font-medium text-foreground/70 hover:text-accent transition-colors group whitespace-nowrap"
+                className="relative text-base md:text-xl lg:text-2xl font-medium text-foreground/70 hover:text-accent transition-colors group whitespace-nowrap"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-sage to-primary group-hover:w-full transition-all duration-300"></span>
