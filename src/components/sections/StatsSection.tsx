@@ -1,8 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { useParallax } from "@/hooks/use-parallax";
 import { Users, Heart, Star, Award } from "lucide-react";
-import flowerImage from "@/assets/flower-pastel.jpg";
 
 interface CounterProps {
   end: number;
@@ -48,7 +46,6 @@ const Counter = ({ end, duration = 2000, suffix = "", isVisible }: CounterProps)
 
 const StatsSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "scale", threshold: 0.2 });
-  const parallaxOffset = useParallax(0.3);
 
   const stats = [
     { icon: Users, value: 500, suffix: "+", label: "לקוחות מרוצים", color: "text-sage" },
@@ -58,19 +55,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section ref={ref} className="snap-section py-16 md:py-20 bg-background/80 relative overflow-hidden" dir="rtl">
-      {/* Background image with parallax */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 opacity-[0.55] md:opacity-[0.70] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out"
-          style={{ 
-            backgroundImage: `url(${flowerImage})`,
-            transform: `translateY(${parallaxOffset}px)`,
-            filter: 'saturate(1.2) contrast(1.1)'
-          }}
-        ></div>
-      </div>
-      
+    <section ref={ref} className="snap-section py-16 md:py-20 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent"></div>
       

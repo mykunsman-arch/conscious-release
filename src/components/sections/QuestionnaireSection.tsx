@@ -3,13 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
 import { ClipboardCheck, Sparkles } from "lucide-react";
-import lotusImage from "@/assets/lotus-water.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { useParallax } from "@/hooks/use-parallax";
 
 const QuestionnaireSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "scale", threshold: 0.1 });
-  const parallaxOffset = useParallax(0.3);
   const [answers, setAnswers] = useState<boolean[]>([false, false, false, false, false]);
   const [showResult, setShowResult] = useState(false);
 
@@ -47,19 +44,7 @@ const QuestionnaireSection = () => {
   };
 
   return (
-    <section ref={ref} id="questionnaire" className="snap-section py-24 bg-background/80 relative overflow-hidden" dir="rtl">
-      {/* Background image with parallax */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 opacity-[0.55] md:opacity-[0.70] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out"
-          style={{ 
-            backgroundImage: `url(${lotusImage})`,
-            transform: `translateY(${parallaxOffset}px)`,
-            filter: 'saturate(1.2) contrast(1.1)'
-          }}
-        ></div>
-      </div>
-      
+    <section ref={ref} id="questionnaire" className="snap-section py-24 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-64 h-64 bg-peach/5 rounded-full blur-3xl"></div>

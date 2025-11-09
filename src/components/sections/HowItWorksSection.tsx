@@ -1,14 +1,11 @@
 import { Check, Flower2 } from "lucide-react";
-import healingHandsImage from "@/assets/hands-butterflies.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { useParallax } from "@/hooks/use-parallax";
 import { useTilt } from "@/hooks/use-tilt";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const HowItWorksSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "slide-left", threshold: 0.1 });
-  const parallaxOffset = useParallax(0.3);
-  const typingText = useTypingEffect({ 
+  const typingText = useTypingEffect({
     text: "למי זה עשוי להתאים",
     speed: 120,
     delay: 300
@@ -24,19 +21,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section ref={ref} id="how-it-works" className="snap-section py-24 bg-background/80 relative overflow-hidden" dir="rtl">
-      {/* Background image with parallax */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 opacity-[0.55] md:opacity-[0.70] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out"
-          style={{ 
-            backgroundImage: `url(${healingHandsImage})`,
-            transform: `translateY(${parallaxOffset}px)`,
-            filter: 'saturate(1.2) contrast(1.1)'
-          }}
-        ></div>
-      </div>
-      
+    <section ref={ref} id="how-it-works" className="snap-section py-24 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
 

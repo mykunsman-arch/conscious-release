@@ -5,16 +5,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
-import lotusImage from "@/assets/lotus-healing.jpg";
 import { Mail, Phone, Send, MessageCircle, MapPin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { useParallax } from "@/hooks/use-parallax";
 import { useMagnetic } from "@/hooks/use-magnetic";
 
 const ContactSection = () => {
   const { toast } = useToast();
   const { ref, isVisible } = useScrollAnimation({ variant: "fade-down", threshold: 0.1 });
-  const parallaxOffset = useParallax(0.3);
   const magneticSubmit = useMagnetic({ strength: 0.25, tolerance: 100 });
   const magneticWhatsApp = useMagnetic({ strength: 0.3, tolerance: 120 });
   const [formData, setFormData] = useState({
@@ -38,19 +35,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section ref={ref} id="contact" className="snap-section py-24 bg-background/80 relative overflow-hidden" dir="rtl">
-      {/* Background image with parallax */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 opacity-[0.55] md:opacity-[0.70] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out"
-          style={{ 
-            backgroundImage: `url(${lotusImage})`,
-            transform: `translateY(${parallaxOffset}px)`,
-            filter: 'saturate(1.2) contrast(1.1)'
-          }}
-        ></div>
-      </div>
-      
+    <section ref={ref} id="contact" className="snap-section py-24 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-peach/5 rounded-full blur-3xl"></div>

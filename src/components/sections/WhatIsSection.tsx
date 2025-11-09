@@ -1,13 +1,10 @@
 import { Heart, Brain, Sparkles } from "lucide-react";
-import healingWomanImage from "@/assets/flower-pastel.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { useParallax } from "@/hooks/use-parallax";
 import { useImageReveal } from "@/hooks/use-image-reveal";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const WhatIsSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "fade-up", threshold: 0.1 });
-  const parallaxOffset = useParallax(0.3);
   const imageReveal = useImageReveal(200);
   const typingText = useTypingEffect({ 
     text: "מהו ריפוי תודעתי",
@@ -16,19 +13,7 @@ const WhatIsSection = () => {
   });
   
   return (
-    <section ref={ref} id="what-is" className="snap-section py-24 bg-card relative overflow-hidden" dir="rtl">
-      {/* Background image with parallax */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 opacity-[0.35] md:opacity-[0.40] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out"
-          style={{ 
-            backgroundImage: `url(${healingWomanImage})`,
-            transform: `translateY(${parallaxOffset}px)`,
-            filter: 'saturate(1.2) contrast(1.1)'
-          }}
-        ></div>
-      </div>
-      
+    <section ref={ref} id="what-is" className="snap-section py-24 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-peach/5 rounded-full blur-3xl"></div>
