@@ -27,13 +27,10 @@ const HowItWorksSection = () => {
 
   return (
     <section ref={ref} id="how-it-works" className="snap-section py-24 bg-card relative overflow-hidden" dir="rtl">
-      {/* Background image with parallax and reveal */}
-      <div 
-        ref={imageReveal.ref}
-        className="absolute inset-0 image-reveal-wrapper"
-      >
+      {/* Background image with parallax */}
+      <div className="absolute inset-0">
         <div 
-          className={`absolute inset-0 opacity-[0.35] md:opacity-[0.40] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out image-reveal-center ${imageReveal.isRevealed ? 'revealed' : ''}`}
+          className="absolute inset-0 opacity-[0.35] md:opacity-[0.40] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out"
           style={{ 
             backgroundImage: `url(${healingHandsImage})`,
             transform: `translateY(${parallaxOffset}px)`,
