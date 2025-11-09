@@ -41,16 +41,14 @@ const ContactSection = () => {
 
   return (
     <section ref={ref} id="contact" className="snap-section py-24 bg-gradient-soft relative overflow-hidden" dir="rtl">
-      {/* Background image with parallax and reveal */}
-      <div 
-        ref={imageReveal.ref}
-        className="absolute inset-0 image-reveal-wrapper"
-      >
+      {/* Background image with parallax */}
+      <div className="absolute inset-0">
         <div 
-          className={`absolute inset-0 opacity-[0.05] md:opacity-[0.05] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out image-reveal-diagonal ${imageReveal.isRevealed ? 'revealed' : ''}`}
+          className="absolute inset-0 opacity-[0.35] md:opacity-[0.40] bg-contain md:bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out"
           style={{ 
             backgroundImage: `url(${lotusImage})`,
-            transform: `translateY(${parallaxOffset}px)`
+            transform: `translateY(${parallaxOffset}px)`,
+            filter: 'saturate(1.2) contrast(1.1)'
           }}
         ></div>
       </div>
