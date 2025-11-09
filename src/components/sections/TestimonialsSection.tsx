@@ -173,6 +173,9 @@ const TestimonialsSection = () => {
                   >
                     {/* Patient info above the message */}
                     <div className="text-right space-y-1 px-2">
+                      <p className="text-sm font-semibold text-accent">
+                        {testimonial.issue}
+                      </p>
                       <div className="flex items-baseline gap-2 justify-end">
                         <h3 className="font-bold text-lg text-foreground">
                           {testimonial.name}
@@ -183,9 +186,6 @@ const TestimonialsSection = () => {
                           </span>
                         )}
                       </div>
-                      <p className="text-sm font-semibold text-accent">
-                        {testimonial.issue}
-                      </p>
                     </div>
 
                     {/* WhatsApp-style message bubble */}
