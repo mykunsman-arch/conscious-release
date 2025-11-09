@@ -8,7 +8,7 @@ const LogoIntro = ({ showIntro }: LogoIntroProps) => {
   if (!showIntro) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm logo-intro-overlay pointer-events-none">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-background backdrop-blur-sm logo-intro-overlay">
       <div className="logo-intro-content">
         <img 
           src={logo} 
