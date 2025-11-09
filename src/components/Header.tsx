@@ -1,4 +1,4 @@
-import logoHeader from "@/assets/logo-header.png";
+import logoHeader from "@/assets/logo-header-new.png";
 
 const Header = () => {
   const scrollToSection = (id: string) => {
