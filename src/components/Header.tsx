@@ -10,16 +10,24 @@ const Header = () => {
       setShowLogo(window.scrollY > 100);
 
       // Detect which section is currently in view
-      const sections = ["what-is", "trauma-connection", "how-it-works", "questionnaire", "why-here", "testimonials", "faq", "contact"];
+      const sections = {
+        "what-is": ["what-is"],
+        "how-it-works": ["trauma-connection", "how-it-works", "questionnaire"],
+        "why-here": ["why-here", "testimonials"],
+        "next-steps": ["faq", "contact"]
+      };
+      
       const scrollPosition = window.scrollY + window.innerHeight / 2.5;
 
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(sectionId);
-            break;
+      for (const [groupId, sectionIds] of Object.entries(sections)) {
+        for (const sectionId of sectionIds) {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const { offsetTop, offsetHeight } = element;
+            if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+              setActiveSection(groupId);
+              return;
+            }
           }
         }
       }
@@ -57,17 +65,13 @@ const Header = () => {
           <nav className="grid grid-cols-4 md:flex gap-1 md:gap-3 lg:gap-4 justify-center flex-1 max-w-md md:max-w-none mx-auto">
             {[
               { id: "what-is", label: "מה זה ריפוי תודעתי" },
-              { id: "trauma-connection", label: "איך זה עובד" },
-              { id: "how-it-works", label: "למי זה מתאים" },
-              { id: "questionnaire", label: "שאלון" },
+              { id: "how-it-works", label: "איך זה עובד", scrollTo: "trauma-connection" },
               { id: "why-here", label: "למה כאן" },
-              { id: "testimonials", label: "המלצות" },
-              { id: "faq", label: "שאלות נפוצות" },
-              { id: "contact", label: "יצירת קשר" }
+              { id: "next-steps", label: "איך מתקדמים", scrollTo: "faq" }
             ].map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => scrollToSection(item.scrollTo || item.id)}
                 className={`relative text-[0.648rem] md:text-[1.05rem] lg:text-[1.2rem] transition-all group whitespace-nowrap px-0.5 md:px-0 ${
                   activeSection === item.id 
                     ? "text-foreground opacity-100 font-bold" 
