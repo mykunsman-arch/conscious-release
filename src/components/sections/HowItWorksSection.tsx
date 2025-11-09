@@ -3,13 +3,11 @@ import healingHandsImage from "@/assets/hands-butterflies.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 import { useTilt } from "@/hooks/use-tilt";
-import { useImageReveal } from "@/hooks/use-image-reveal";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const HowItWorksSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "slide-left", threshold: 0.1 });
   const parallaxOffset = useParallax(0.3);
-  const imageReveal = useImageReveal(200);
   const typingText = useTypingEffect({ 
     text: "למי זה עשוי להתאים",
     speed: 120,

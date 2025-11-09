@@ -3,13 +3,11 @@ import healingHandsImage from "@/assets/healing-hands.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
 import { useTilt } from "@/hooks/use-tilt";
-import { useImageReveal } from "@/hooks/use-image-reveal";
 import AccordionWhyHere from "./AccordionWhyHere";
 
 const WhyHereSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "diagonal", threshold: 0.1 });
   const parallaxOffset = useParallax(0.3);
-  const imageReveal = useImageReveal(200);
   const tilt1 = useTilt({ maxTilt: 8, scale: 1.03 });
   const tilt2 = useTilt({ maxTilt: 8, scale: 1.03 });
   const tilt3 = useTilt({ maxTilt: 8, scale: 1.03 });

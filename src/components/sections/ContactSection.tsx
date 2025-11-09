@@ -9,14 +9,12 @@ import lotusImage from "@/assets/lotus-healing.jpg";
 import { Mail, Phone, Send, MessageCircle, MapPin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useParallax } from "@/hooks/use-parallax";
-import { useImageReveal } from "@/hooks/use-image-reveal";
 import { useMagnetic } from "@/hooks/use-magnetic";
 
 const ContactSection = () => {
   const { toast } = useToast();
   const { ref, isVisible } = useScrollAnimation({ variant: "fade-down", threshold: 0.1 });
   const parallaxOffset = useParallax(0.3);
-  const imageReveal = useImageReveal(200);
   const magneticSubmit = useMagnetic({ strength: 0.25, tolerance: 100 });
   const magneticWhatsApp = useMagnetic({ strength: 0.3, tolerance: 120 });
   const [formData, setFormData] = useState({
