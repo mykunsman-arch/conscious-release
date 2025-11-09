@@ -5,10 +5,10 @@ const LogoIntro = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Hide the intro after 3 seconds
+    // Hide the intro after 5 seconds
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
