@@ -4,16 +4,41 @@ import { Button } from "@/components/ui/button";
 
 const MusicPlayer = () => {
   const [isMuted, setIsMuted] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = 0.3; // Set volume to 30%
-      audioRef.current.play().catch(err => {
-        console.log("Auto-play prevented:", err);
-      });
     }
-  }, []);
+
+    // Try to start music on any user interaction
+    const startMusic = () => {
+      if (audioRef.current && !hasStarted) {
+        audioRef.current.play().then(() => {
+          setHasStarted(true);
+          console.log("Music started");
+        }).catch(err => {
+          console.log("Auto-play prevented:", err);
+        });
+      }
+    };
+
+    // Listen for user interactions
+    const events = ['click', 'touchstart', 'scroll', 'keydown'];
+    events.forEach(event => {
+      document.addEventListener(event, startMusic, { once: true });
+    });
+
+    // Try to start immediately (works on desktop)
+    startMusic();
+
+    return () => {
+      events.forEach(event => {
+        document.removeEventListener(event, startMusic);
+      });
+    };
+  }, [hasStarted]);
 
   const toggleMute = () => {
     if (audioRef.current) {
