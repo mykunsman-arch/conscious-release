@@ -12,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[75vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden px-4 pt-20 pb-6 md:pt-24 md:pb-12" dir="rtl">
+    <section className="relative min-h-[60vh] md:min-h-[65vh] flex items-center justify-center overflow-hidden px-4 pt-16 pb-4 md:pt-20 md:pb-6" dir="rtl">
       {/* Clean gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-background"></div>
       <div className="absolute top-20 right-10 w-72 h-72 bg-sage/5 rounded-full blur-3xl"></div>

@@ -32,8 +32,8 @@ const CTAContactSection = () => {
   }, [location]);
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-br from-sage/5 to-primary/5" dir="rtl">
-      <div className="container mx-auto px-4 max-w-3xl text-center space-y-4 md:space-y-6">
+    <section className="py-6 md:py-8 bg-gradient-to-br from-sage/5 to-primary/5" dir="rtl">
+      <div className="container mx-auto max-w-4xl text-center space-y-3 md:space-y-4">
         <h2 className="text-2xl md:text-3xl font-bold text-foreground">
           מוכנים לצאת לדרך?
         </h2>

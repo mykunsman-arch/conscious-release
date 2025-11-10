@@ -29,9 +29,9 @@ const QuickContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-6 md:py-10 bg-muted/30" dir="rtl">
+    <section id="contact" className="py-4 md:py-6 bg-muted/30" dir="rtl">
       <div className="container mx-auto px-4 max-w-5xl">
-        <div className="text-center space-y-2 md:space-y-3 mb-6 md:mb-8">
+        <div className="text-center space-y-2 mb-4 md:mb-6">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground">
             בואו נדבר
           </h2>
@@ -124,7 +124,7 @@ const QuickContactSection = () => {
         </div>
 
         {/* Footer */}
-        <footer className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-border/50 text-center space-y-2 md:space-y-3">
+        <footer className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-border/50 text-center space-y-2">
           <p className="text-base md:text-lg font-semibold text-primary">המרכז לריפוי תודעתי</p>
           <p className="text-xs md:text-sm text-muted-foreground">
             © כל הזכויות שמורות • mindcenter.co.il

@@ -125,13 +125,13 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section ref={ref} id="testimonials" className="snap-section py-12 md:py-16 bg-gradient-soft relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="testimonials" className="snap-section py-6 md:py-8 bg-gradient-soft relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
       <div className="absolute top-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl floating"></div>
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        <div className={`text-center space-y-8 mb-16 section-scale ${isVisible ? 'visible' : ''}`}>
+        <div className={`text-center space-y-4 mb-8 section-scale ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full animate-fade-in">
             <Heart className="h-5 w-5 text-sage transition-all" />
             <span className="text-sage font-semibold">סיפורי הצלחה</span>
