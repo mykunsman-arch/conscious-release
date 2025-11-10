@@ -55,7 +55,7 @@ const LandingPage = () => {
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
           backgroundImage: `url(${landingBg})`,
-          opacity: 0.1,
+          opacity: 0.25,
           zIndex: -1
         }}
       />
