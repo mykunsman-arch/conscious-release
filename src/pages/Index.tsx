@@ -6,9 +6,9 @@ import StickyCTA from "@/components/StickyCTA";
 import FloatingWhatsAppCTA from "@/components/FloatingWhatsAppCTA";
 import FloatingBubbles from "@/components/FloatingBubbles";
 import LogoIntro from "@/components/LogoIntro";
+import IntroText from "@/components/IntroText";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 import ScrollToTop from "@/components/ScrollToTop";
-import HeroSection from "@/components/sections/HeroSection";
 import WhatIsSection from "@/components/sections/WhatIsSection";
 import TraumaConnectionSection from "@/components/sections/TraumaConnectionSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
@@ -21,6 +21,7 @@ import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [showIntro, setShowIntro] = useState(true);
+  const [showIntroText, setShowIntroText] = useState(false);
   useSmoothScroll();
   
   useEffect(() => {
@@ -33,9 +34,14 @@ const Index = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 6000);
+      setShowIntroText(true);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleContinue = () => {
+    setShowIntroText(false);
+  };
 
   if (isLoading) {
     return <LoadingSkeleton />;
@@ -44,7 +50,8 @@ const Index = () => {
   return (
     <div className="min-h-screen snap-container">
       <LogoIntro showIntro={showIntro} />
-      <div className={`transition-all duration-500 ${showIntro ? 'invisible pointer-events-none' : 'visible pointer-events-auto'}`}>
+      <IntroText showIntro={showIntroText} onContinue={handleContinue} />
+      <div className={`transition-all duration-500 ${showIntro || showIntroText ? 'invisible pointer-events-none' : 'visible pointer-events-auto'}`}>
         <FloatingBubbles />
         <ScrollProgressBar />
         <Header />
@@ -52,7 +59,6 @@ const Index = () => {
         <StickyCTA />
         <FloatingWhatsAppCTA />
         <ScrollToTop />
-        <HeroSection />
         <WhatIsSection />
         <TraumaConnectionSection />
         <HowItWorksSection />
