@@ -1,16 +1,10 @@
 import { Heart, Brain, Sparkles } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useImageReveal } from "@/hooks/use-image-reveal";
-import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const WhatIsSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "fade-up", threshold: 0.1 });
   const imageReveal = useImageReveal(200);
-  const typingText = useTypingEffect({ 
-    text: "מהו ריפוי תודעתי",
-    speed: 120,
-    delay: 10000
-  });
   
   return (
     <section ref={ref} className="snap-section py-3 md:py-4 bg-gradient-to-b from-background/30 to-background/10 relative overflow-hidden" dir="rtl">
@@ -26,8 +20,7 @@ const WhatIsSection = () => {
           </div>
 
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient-shimmer leading-tight px-4 flex items-center justify-center font-varela">
-            {typingText.displayedText}
-            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-sage mr-1 animate-pulse"></span>}
+            מהו ריפוי תודעתי
           </h2>
           
           <div className="flex items-center justify-center gap-3">

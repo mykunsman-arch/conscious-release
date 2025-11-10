@@ -1,17 +1,11 @@
 import { CircleDot, Sparkles } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useImageReveal } from "@/hooks/use-image-reveal";
-import { useTypingEffect } from "@/hooks/use-typing-effect";
 import AccordionHowItWorks from "./AccordionHowItWorks";
 
 const TraumaConnectionSection = () => {
   const { ref, isVisible } = useScrollAnimation({ variant: "slide-right", threshold: 0.1 });
   const imageReveal = useImageReveal(200);
-  const typingText = useTypingEffect({ 
-    text: "איך זה עובד",
-    speed: 150,
-    delay: 12000
-  });
   
   return (
     <section ref={ref} id="trauma-connection" className="snap-section py-3 md:py-4 bg-background/10 relative overflow-hidden" dir="rtl">
@@ -27,8 +21,7 @@ const TraumaConnectionSection = () => {
           </div>
 
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient-shimmer leading-tight px-4 flex items-center justify-center font-varela">
-            {typingText.displayedText}
-            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-sage mr-1 animate-pulse"></span>}
+            איך זה עובד
           </h2>
           
           <div className="h-0.5 w-24 bg-gradient-to-r from-sage via-primary to-sage mx-auto rounded-full"></div>
