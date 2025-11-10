@@ -1,6 +1,6 @@
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/972527176000", "_blank");
+    window.open("https://wa.me/972527176000?text=שלום%20🌿%20הגעתי%20מהאתר%20mindcenter.co.il%20ורציתי%20לשמוע%20פרטים%20על%20התהליך", "_blank");
   };
 
   return (

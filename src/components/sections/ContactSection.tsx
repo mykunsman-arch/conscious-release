@@ -31,7 +31,7 @@ const ContactSection = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/972527176000", "_blank");
+    window.open("https://wa.me/972527176000?text=שלום%20🌿%20הגעתי%20מהאתר%20mindcenter.co.il%20ורציתי%20לשמוע%20פרטים%20על%20התהליך", "_blank");
   };
 
   return (
@@ -175,7 +175,7 @@ const ContactSection = () => {
             <div className="text-base md:text-lg text-foreground/70 space-y-2">
               <p>כנרת 15, בני ברק</p>
               <p>📱 052-717-6000</p>
-              <p>💬 <a href="https://wa.me/972527176000" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">לחצו לשיחה בוואטסאפ</a></p>
+              <p>💬 <a href="https://wa.me/972527176000?text=שלום%20🌿%20הגעתי%20מהאתר%20mindcenter.co.il%20ורציתי%20לשמוע%20פרטים%20על%20התהליך" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">לחצו לשיחה בוואטסאפ</a></p>
             </div>
           </div>
           
@@ -184,11 +184,11 @@ const ContactSection = () => {
               <p>© כל הזכויות שמורות — המרכז לריפוי תודעתי 🌿</p>
               <p>mindcenter.co.il</p>
             </div>
-            <div className="text-xs text-muted-foreground/60 mt-4 space-y-2">
-              <p>התוכן והשירותים באתר נועדו לתמיכה רגשית ותודעתית בלבד, ואינם מהווים טיפול רפואי או התחייבות לתוצאה.</p>
+            <div className="text-xs text-muted-foreground/60 mt-4 space-y-2 max-w-4xl mx-auto">
+              <p className="font-medium">התוכן והשירותים באתר נועדו לתמיכה רגשית ותודעתית בלבד, ואינם מהווים טיפול רפואי או התחייבות לתוצאה.</p>
               <p>
-                <Link to="/terms-of-service" className="hover:text-accent transition-colors underline">
-                  הטיפול בהתאם לתנאי השימוש
+                <Link to="/terms-of-service" className="hover:text-accent transition-colors underline font-medium">
+                  תנאי שימוש
                 </Link>
               </p>
             </div>
