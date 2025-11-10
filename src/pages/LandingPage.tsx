@@ -3,6 +3,14 @@ import { MessageCircle } from "lucide-react";
 import landingBg from "@/assets/landing-background.jpg";
 import logoHeader from "@/assets/logo-header.png";
 import { Link } from "react-router-dom";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const LandingPage = () => {
   const handleWhatsAppClick = () => {
@@ -140,16 +148,38 @@ const LandingPage = () => {
           <p className="text-center text-foreground/60 mb-10 text-sm md:text-base">
             אנשים אמיתיים. תהליכים אמיתיים. תוצאות שמרגישים בלב ובגוף.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-border/30 shadow-sm space-y-3">
-                <div className="space-y-1">
-                  <p className="font-semibold text-foreground text-base">{testimonial.name}</p>
-                  <p className="text-sm text-sage">{testimonial.issue}</p>
-                </div>
-                <p className="text-foreground/80 italic leading-relaxed text-sm md:text-base">"{testimonial.text}"</p>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto px-4 md:px-12">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+                direction: "rtl",
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 5000,
+                })
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-2 h-full">
+                      <div className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-border/30 shadow-sm space-y-3 h-full">
+                        <div className="space-y-1">
+                          <p className="font-semibold text-foreground text-base">{testimonial.name}</p>
+                          <p className="text-sm text-sage">{testimonial.issue}</p>
+                        </div>
+                        <p className="text-foreground/80 italic leading-relaxed text-sm md:text-base">"{testimonial.text}"</p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </div>
         </section>
 
