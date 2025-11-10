@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Forward, CheckCheck } from "lucide-react";
 import landingBg from "@/assets/landing-background.jpg";
 import logoHeader from "@/assets/logo-header.png";
 import { Link } from "react-router-dom";
@@ -166,12 +166,41 @@ const LandingPage = () => {
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-2 h-full">
-                      <div className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-border/30 shadow-sm space-y-3 h-full">
-                        <div className="space-y-1">
-                          <p className="font-semibold text-foreground text-base">{testimonial.name}</p>
-                          <p className="text-sm text-sage">{testimonial.issue}</p>
+                      <div className="relative space-y-3">
+                        {/* Patient info above the message */}
+                        <div className="text-right space-y-1 px-2">
+                          <p className="text-sm font-semibold text-sage">
+                            {testimonial.issue}
+                          </p>
+                          <h3 className="font-bold text-base text-foreground">
+                            {testimonial.name}
+                          </h3>
                         </div>
-                        <p className="text-foreground/80 italic leading-relaxed text-sm md:text-base">"{testimonial.text}"</p>
+
+                        {/* WhatsApp-style message bubble */}
+                        <div className="bg-[#DCF8C6] rounded-lg p-4 shadow-lg relative hover:shadow-xl transition-shadow">
+                          {/* Tail/Triangle */}
+                          <div className="absolute left-0 top-3 w-0 h-0 border-t-[8px] border-t-transparent border-r-[12px] border-r-[#DCF8C6] border-b-[8px] border-b-transparent -translate-x-3"></div>
+                          
+                          <div className="space-y-3">
+                            {/* Forwarded indicator */}
+                            <div className="flex items-center gap-1 text-gray-500 text-xs pb-2 border-b border-gray-300/30">
+                              <Forward className="h-3 w-3" />
+                              <span className="font-medium">הועברה</span>
+                            </div>
+
+                            {/* Message text */}
+                            <p className="text-gray-800 leading-relaxed text-sm md:text-base text-right">
+                              {testimonial.text}
+                            </p>
+
+                            {/* Time and checkmarks (WhatsApp style) */}
+                            <div className="flex items-center justify-end gap-1 text-xs text-gray-600">
+                              <span>15:42</span>
+                              <CheckCheck className="h-4 w-4 text-[#53BDEB]" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </CarouselItem>
