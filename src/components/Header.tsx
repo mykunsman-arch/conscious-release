@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header
-      className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border/30 h-20 md:h-40"
+      className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border/30 h-14 md:h-16"
       dir="rtl"
     >
       <div className="container mx-auto px-4 h-full flex items-center">
