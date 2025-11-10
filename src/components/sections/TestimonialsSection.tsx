@@ -125,20 +125,20 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section ref={ref} id="testimonials" className="snap-section py-24 bg-gradient-soft relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="testimonials" className="snap-section py-4 md:py-5 bg-gradient-soft relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
       <div className="absolute top-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl floating"></div>
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        <div className={`text-center space-y-8 mb-16 section-scale ${isVisible ? 'visible' : ''}`}>
+        <div className={`text-center space-y-4 mb-8 section-scale ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full animate-fade-in">
             <Heart className="h-5 w-5 text-sage transition-all" />
             <span className="text-sage font-semibold">סיפורי הצלחה</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 animate-scale-in font-varela">
-            המלצות מלקוחות מרוצים
+            המלצות ממטופלים מרוצים
           </h2>
 
           <p className="text-base md:text-lg lg:text-xl text-foreground/70 max-w-3xl mx-auto">
@@ -179,15 +179,15 @@ const TestimonialsSection = () => {
                   >
                     {/* Patient info above the message */}
                     <div className="text-right space-y-1 px-2">
-                      <p className="text-sm font-semibold text-accent">
+                      <p className="text-base font-semibold text-accent">
                         {testimonial.issue}
                       </p>
                       <div className="flex items-baseline gap-2 justify-end">
-                        <h3 className="font-bold text-lg text-foreground">
+                        <h3 className="font-bold text-xl text-foreground">
                           {testimonial.name}
                         </h3>
                         {testimonial.age && (
-                          <span className="text-sm text-foreground/60">
+                          <span className="text-base text-foreground/60">
                             {testimonial.gender === "female" ? "בת" : "בן"} {testimonial.age}
                           </span>
                         )}
@@ -207,7 +207,7 @@ const TestimonialsSection = () => {
                         </div>
 
                         {/* Message text */}
-                        <p className="text-gray-800 leading-relaxed text-sm lg:text-base text-right">
+                        <p className="text-gray-800 leading-relaxed text-base lg:text-lg text-right">
                           {testimonial.text}
                         </p>
 

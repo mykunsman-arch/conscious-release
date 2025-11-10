@@ -38,7 +38,7 @@ const Counter = ({ end, duration = 2000, suffix = "", isVisible }: CounterProps)
   }, [isVisible, end, duration]);
 
   return (
-    <span className="text-gradient-shimmer font-black text-5xl md:text-6xl lg:text-7xl">
+    <span className="text-gradient-shimmer font-bold text-3xl md:text-4xl">
       {count}{suffix}
     </span>
   );
@@ -55,23 +55,23 @@ const StatsSection = () => {
   ];
 
   return (
-    <section ref={ref} className="snap-section py-16 md:py-20 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} className="snap-section py-6 md:py-8 bg-background/10 relative overflow-hidden" dir="rtl">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
       
-      <div className="container mx-auto px-4 max-w-6xl relative z-10">
-        <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 section-scale ${isVisible ? 'visible' : ''}`}>
+      <div className="container mx-auto px-4 max-w-5xl relative z-10">
+        <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 section-scale ${isVisible ? 'visible' : ''}`}>
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="glass-effect p-6 md:p-8 rounded-3xl text-center space-y-3 md:space-y-4 hover:scale-105 transition-transform duration-300 group"
+              className="glass-effect p-4 md:p-5 rounded-2xl text-center space-y-2 hover:scale-105 transition-transform duration-300 group"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <stat.icon className={`h-10 w-10 md:h-12 md:w-12 mx-auto ${stat.color} transition-all`} />
+              <stat.icon className={`h-8 w-8 md:h-10 md:w-10 mx-auto ${stat.color} transition-all`} />
               <div>
                 <Counter end={stat.value} suffix={stat.suffix} isVisible={isVisible} />
               </div>
-              <p className="text-sm md:text-base font-semibold text-foreground/70">
+              <p className="text-sm md:text-base font-medium text-foreground/60">
                 {stat.label}
               </p>
             </div>

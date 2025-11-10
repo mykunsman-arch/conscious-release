@@ -357,32 +357,42 @@ All colors MUST be HSL.
     }
     
     body {
-      font-size: 16px;
+      font-size: 18px;
       -webkit-text-size-adjust: 100%;
     }
     
     h1 {
-      @apply leading-tight;
+      @apply leading-tight text-4xl;
       letter-spacing: -0.02em;
     }
     
     h2 {
-      @apply leading-tight;
+      @apply leading-tight text-3xl;
       letter-spacing: -0.01em;
     }
     
+    h3 {
+      @apply leading-snug text-xl;
+    }
+    
     p, li {
-      line-height: 1.8;
+      @apply text-base;
+      line-height: 1.9;
       letter-spacing: 0.01em;
     }
     
-    /* Improved spacing for mobile - reduced by 20% */
+    /* Improved spacing for mobile */
     section {
-      @apply py-12;
+      @apply py-16;
     }
     
     .container {
-      @apply px-4;
+      @apply px-6;
+    }
+    
+    /* Button sizes */
+    button {
+      @apply text-base min-h-[48px] px-6;
     }
   }
 
@@ -402,7 +412,7 @@ All colors MUST be HSL.
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.15;
+    opacity: 0.08;
     z-index: -1;
     pointer-events: none;
   }
