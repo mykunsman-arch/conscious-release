@@ -11,7 +11,6 @@ const WhyHereSection = () => {
   const tilt4 = useTilt({ maxTilt: 8, scale: 1.03 });
   const tilt5 = useTilt({ maxTilt: 8, scale: 1.03 });
   const tilt6 = useTilt({ maxTilt: 8, scale: 1.03 });
-  const tilt7 = useTilt({ maxTilt: 8, scale: 1.03 });
   
   return (
     <section ref={ref} id="why-here" className="snap-section py-4 md:py-6 bg-background/20 relative overflow-hidden" dir="rtl">
@@ -131,24 +130,7 @@ const WhyHereSection = () => {
                 </div>
                 <div className="flex-1 text-right">
                   <p className="text-sm md:text-base text-foreground/80 font-semibold">
-                    מומלץ על־ידי אנשי מקצוע מתחום הנפש והבריאות
-                  </p>
-                </div>
-              </div>
-
-              <div 
-                ref={tilt7.ref}
-                onMouseMove={tilt7.handleMouseMove}
-                onMouseLeave={tilt7.handleMouseLeave}
-                style={tilt7.tiltStyle}
-                className="flex items-start gap-2 md:gap-3 p-3 md:p-4 bg-gradient-to-br from-muted/50 to-background rounded-xl border border-border/50 hover:border-accent/30 transition-colors shadow-lg group"
-              >
-                <div className="bg-accent/10 p-1.5 md:p-2 rounded-lg flex-shrink-0 group-hover:bg-accent/20 transition-all">
-                  <Sparkles className="h-4 w-4 md:h-5 md:w-5 text-accent group-hover:scale-110 group-hover:rotate-12 transition-all" />
-                </div>
-                <div className="flex-1 text-right">
-                  <p className="text-sm md:text-base text-foreground/80 font-semibold">
-                    ברכות והמלצות התקבלו מרבנים ויועצים רוחניים
+                    מומלץ על־ידי רבנים ואנשי מקצוע
                   </p>
                 </div>
               </div>
