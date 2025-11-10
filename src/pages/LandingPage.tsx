@@ -66,7 +66,7 @@ const LandingPage = () => {
       {/* Header with logo */}
       <header className="py-6 px-4 md:px-8">
         <Link to="/" className="inline-block">
-          <img src={logoHeader} alt="המרכז לריפוי תודעתי" className="h-16 md:h-20 hover:opacity-80 transition-opacity" />
+          <img src={logoHeader} alt="המרכז לריפוי תודעתי" className="h-48 md:h-60 hover:opacity-80 transition-opacity" />
         </Link>
       </header>
 
