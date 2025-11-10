@@ -1,13 +1,34 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MessageCircle, MapPin } from "lucide-react";
+import { Mail, Phone, Send, MessageCircle, MapPin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useMagnetic } from "@/hooks/use-magnetic";
 
 const ContactSection = () => {
+  const { toast } = useToast();
   const { ref, isVisible } = useScrollAnimation({ variant: "fade-down", threshold: 0.1 });
+  const magneticSubmit = useMagnetic({ strength: 0.25, tolerance: 100 });
   const magneticWhatsApp = useMagnetic({ strength: 0.3, tolerance: 120 });
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "הטופס נשלח בהצלחה",
+      description: "נחזור אליכם בהקדם האפשרי",
+    });
+    setFormData({ name: "", phone: "", email: "", message: "" });
+  };
 
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/972527176000?text=שלום%20🌿%20הגעתי%20מהאתר%20mindcenter.co.il%20ורציתי%20לשמוע%20פרטים%20על%20התהליך", "_blank");
@@ -32,9 +53,75 @@ const ContactSection = () => {
           
           <div className="h-0.5 w-24 bg-gradient-to-r from-sage via-peach to-sage mx-auto rounded-full"></div>
           
-          <div className={`grid-stagger ${isVisible ? 'visible' : ''}`}>
+          <div className={`grid md:grid-cols-2 gap-4 md:gap-6 pt-4 px-4 grid-stagger ${isVisible ? 'visible' : ''}`}>
+            {/* Form */}
+            <Card className="p-4 md:p-6 bg-card/80 backdrop-blur-sm shadow-2xl rounded-2xl border-2 border-border/50 hover:border-accent/30 transition-all">
+              <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4 text-right">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold mb-2 text-foreground/80">
+                    שם מלא
+                  </label>
+                  <Input
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                    className="text-right text-base p-4 rounded-xl border-2 focus:border-sage transition-all min-h-[48px] touch-manipulation"
+                    dir="rtl"
+                    placeholder="הכנס את שמך המלא"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold mb-2 text-foreground/80">
+                    טלפון
+                  </label>
+                  <div className="relative group">
+                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-sage transition-all pointer-events-none" />
+                    <Input
+                      id="phone"
+                      type="tel"
+                      inputMode="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      required
+                      className="text-right text-base p-4 pl-12 rounded-xl border-2 focus:border-sage transition-all min-h-[48px] touch-manipulation"
+                      dir="rtl"
+                      placeholder="05X-XXX-XXXX"
+                    />
+                  </div>
+                </div>
+                
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-semibold mb-2 text-foreground/80">
+                    הודעה
+                  </label>
+                  <Textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    rows={4}
+                    className="text-right text-base p-4 rounded-xl border-2 focus:border-sage transition-all resize-none min-h-[120px] touch-manipulation"
+                    dir="rtl"
+                    placeholder="ספרו לנו על מה שמעניין אתכם..."
+                  />
+                </div>
+                
+                <Button 
+                  ref={magneticSubmit as any}
+                  type="submit" 
+                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-5 md:py-6 text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all group min-h-[48px] touch-manipulation active:scale-95"
+                  style={{ transition: 'transform 0.2s ease-out' }}
+                >
+                  <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  שלחו ונחזור אליכם
+                </Button>
+              </form>
+            </Card>
+            
             {/* Contact info and WhatsApp */}
-            <div className="space-y-3 md:space-y-4 flex flex-col justify-center max-w-2xl mx-auto">
+            <div className="space-y-3 md:space-y-4 flex flex-col justify-center">
               <Button
                 ref={magneticWhatsApp as any}
                 onClick={handleWhatsAppClick}

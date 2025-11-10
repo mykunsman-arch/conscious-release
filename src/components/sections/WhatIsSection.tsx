@@ -7,7 +7,7 @@ const WhatIsSection = () => {
   const imageReveal = useImageReveal(200);
   
   return (
-    <section ref={ref} className="snap-section py-3 md:py-4 bg-gradient-to-b from-background/30 to-background/10 relative overflow-hidden mt-14 md:mt-16 md:pt-8" dir="rtl">
+    <section ref={ref} className="snap-section py-3 md:py-4 bg-gradient-to-b from-background/30 to-background/10 relative overflow-hidden" dir="rtl">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-peach/5 rounded-full blur-3xl"></div>

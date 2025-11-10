@@ -53,12 +53,12 @@ const FloatingWhatsAppCTA = () => {
       
       {/* Elegant prompt message */}
       {showPrompt && !isExpanded && (
-        <div className="absolute bottom-full left-0 mb-3 animate-fade-in">
-          <div className="relative bg-[#25D366] backdrop-blur-sm px-5 py-3 rounded-2xl shadow-xl border border-[#20BA5A]">
-            <p className="text-base font-bold text-white whitespace-nowrap">
+        <div className="absolute bottom-full right-0 mb-3 animate-fade-in">
+          <div className="relative bg-gradient-to-br from-accent/95 to-peach/95 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-xl border border-white/20">
+            <p className="text-sm font-medium text-white whitespace-nowrap">
               לפניה בוואטסאפ 💬
             </p>
-            <div className="absolute -bottom-2 left-6 w-4 h-4 bg-[#25D366] rotate-45"></div>
+            <div className="absolute -bottom-2 right-6 w-4 h-4 bg-gradient-to-br from-accent/95 to-peach/95 rotate-45"></div>
           </div>
         </div>
       )}

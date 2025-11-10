@@ -5,9 +5,10 @@ import ScrollProgressBar from "@/components/ScrollProgressBar";
 import StickyCTA from "@/components/StickyCTA";
 import FloatingWhatsAppCTA from "@/components/FloatingWhatsAppCTA";
 import FloatingBubbles from "@/components/FloatingBubbles";
-import CombinedIntro from "@/components/CombinedIntro";
+import LogoIntro from "@/components/LogoIntro";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 import ScrollToTop from "@/components/ScrollToTop";
+import HeroSection from "@/components/sections/HeroSection";
 import WhatIsSection from "@/components/sections/WhatIsSection";
 import TraumaConnectionSection from "@/components/sections/TraumaConnectionSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
@@ -29,9 +30,12 @@ const Index = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleContinue = () => {
-    setShowIntro(false);
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIntro(false);
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, []);
 
   if (isLoading) {
     return <LoadingSkeleton />;
@@ -39,7 +43,7 @@ const Index = () => {
   
   return (
     <div className="min-h-screen snap-container">
-      <CombinedIntro showIntro={showIntro} onContinue={handleContinue} />
+      <LogoIntro showIntro={showIntro} />
       <div className={`transition-all duration-500 ${showIntro ? 'invisible pointer-events-none' : 'visible pointer-events-auto'}`}>
         <FloatingBubbles />
         <ScrollProgressBar />
@@ -48,6 +52,7 @@ const Index = () => {
         <StickyCTA />
         <FloatingWhatsAppCTA />
         <ScrollToTop />
+        <HeroSection />
         <WhatIsSection />
         <TraumaConnectionSection />
         <HowItWorksSection />
