@@ -2,113 +2,151 @@ import { Heart, Brain, Sparkles, CheckCircle2 } from "lucide-react";
 import CTAContactSection from "@/components/sections/CTAContactSection";
 
 const HowItWorksPage = () => {
-  const steps = [
-    {
-      title: "פגישת היכרות",
-      description: "נתחיל בשיחה פתוחה ומכילה כדי להבין את המצב והצרכים שלך"
-    },
-    {
-      title: "זיהוי המקור",
-      description: "יחד נאתר את העומסים הרגשיים והדפוסים המעכבים"
-    },
-    {
-      title: "תהליך השחרור",
-      description: "עבודה עדינה עם התודעה לשחרור עומסים ויצירת שינוי"
-    },
-    {
-      title: "אינטגרציה",
-      description: "ליווי והטמעה של השינוי בחיי היומיום"
-    }
-  ];
-
-  const benefits = [
-    "שחרור מתחים וחרדות",
-    "הקלה בכאבים פיזיים",
-    "שיפור איכות השינה",
-    "חיזוק הביטחון העצמי",
-    "יצירת איזון רגשי",
-    "שיפור קשרים בינאישיים"
-  ];
-
   return (
     <div className="pt-20" dir="rtl">
-      {/* Hero Section */}
-      <section className="py-3 md:py-4 bg-gradient-to-br from-background via-muted/20 to-background">
-        <div className="container mx-auto px-4 max-w-4xl text-center space-y-1 md:space-y-2">
+      {/* What Is Section */}
+      <section className="py-6 md:py-8 bg-gradient-to-br from-background via-muted/20 to-background">
+        <div className="container mx-auto px-4 max-w-4xl text-center space-y-4 md:space-y-6">
           <div className="inline-flex items-center gap-2 bg-sage/10 px-4 py-2 rounded-full">
-            <Brain className="h-4 w-4 text-sage" />
-            <span className="text-sage font-semibold text-sm">איך זה עובד</span>
+            <Sparkles className="h-4 w-4 text-sage" />
+            <span className="text-sage font-semibold text-sm">הבסיס שלנו</span>
           </div>
           
-          <h1 className="text-xl md:text-2xl font-bold text-foreground">
-            תהליך הריפוי התודעתי
+          <h1 className="text-2xl md:text-3xl font-bold text-foreground">
+            מהו ריפוי תודעתי
           </h1>
           
-          <p className="text-sm md:text-base text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            ריפוי תודעתי הוא תהליך עדין ומכיל שעוזר לשחרר עומסים רגשיים ודפוסים מעכבים שנוצרו במהלך החיים. 
-            דרך עבודה עם התודעה והתת-מודע, אנחנו יוצרים שינוי אמיתי ומתמשך.
-          </p>
+          <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg border border-border/50 max-w-3xl mx-auto">
+            <div className="text-sm md:text-base text-foreground/80 space-y-3 leading-relaxed text-center">
+              <p>
+                ריפוי תודעתי רואה את האדם כמכלול של גוף, נפש ותודעה.
+              </p>
+              <p>
+                חוויות, טראומות, דפוסים ואמונות שנצרבו בעבר עשויים להשפיע עלינו גם היום.
+              </p>
+              <p>
+                באמצעות הקשבה עדינה, עבודה עם התודעה ותת־המודע, התהליך מסייע בשחרור מטענים רגשיים ואנרגטיים וביצירת תחושת הקלה, איזון וחיבור פנימי.
+              </p>
+              <p>
+                התהליך עשוי לשמש תהליך תומך ומשלים לריפוי ולצמיחה אישית.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Process Steps */}
-      <section className="py-3 md:py-4 bg-background">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-lg md:text-xl font-bold text-center mb-3 md:mb-4 text-foreground">
-            שלבי התהליך
+      {/* Process Section */}
+      <section className="py-6 md:py-8 bg-background">
+        <div className="container mx-auto px-4 max-w-4xl text-center space-y-4 md:space-y-6">
+          <div className="inline-flex items-center gap-2 bg-peach/20 px-4 py-2 rounded-full">
+            <Brain className="h-4 w-4 text-sage" />
+            <span className="text-sage font-semibold text-sm">התהליך שלנו</span>
+          </div>
+          
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            איך זה עובד
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-3 md:gap-4">
-            {steps.map((step, index) => (
-              <div 
-                key={index}
-                className="bg-gradient-to-br from-sage/5 to-primary/5 p-4 md:p-6 rounded-2xl border border-sage/20 relative">
-                <div className="absolute -top-3 -right-3 bg-sage text-white rounded-full w-7 h-7 md:w-9 md:h-9 flex items-center justify-center font-bold text-sm">
-                  {index + 1}
-                </div>
-                <h3 className="text-base md:text-lg font-bold mb-1 text-foreground">
-                  {step.title}
-                </h3>
-                <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+          <div className="max-w-3xl mx-auto space-y-3 text-sm md:text-base text-foreground/80">
+            <p className="leading-relaxed">
+              בתהליך של ריפוי תודעתי אנחנו ניגשים למקום שבו נוצר הקושי – בתודעה, ברגש ובזיכרון.
+            </p>
+            <p className="leading-relaxed">
+              באמצעות הקשבה עמוקה ותהליך מודע, המטופל לומד לזהות את המקור, לשחרר אותו ולהרגיש שינוי אמיתי.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-8 rounded-3xl shadow-lg border border-border/50 max-w-3xl mx-auto">
+            <ul className="space-y-3 text-right text-sm md:text-base text-foreground/80">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span>זיהוי דפוסים רגשיים ומחשבתיים חוזרים</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span>עבודה עם תת־המודע לשחרור עומסים ואמונות מגבילות</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span>איזון בין גוף, רגש ותודעה</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span>תמיכה בצמיחה רגשית, זוגית ופיזית</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span>התאמה אישית של השיטה לפי הצורך</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* What to Expect */}
-      <section className="py-3 md:py-4 bg-gradient-to-br from-primary/5 to-peach/5">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-3 md:mb-4 space-y-1">
-            <div className="inline-flex items-center gap-2 bg-sage/10 px-4 py-2 rounded-full">
-              <Sparkles className="h-4 w-4 text-sage" />
-              <span className="text-sage font-semibold text-sm">תוצאות</span>
-            </div>
-            <h2 className="text-lg md:text-xl font-bold text-foreground">
-              מה אפשר לצפות מהתהליך?
-            </h2>
+      {/* Who Is It For Section */}
+      <section className="py-6 md:py-8 bg-gradient-to-br from-primary/5 to-peach/5">
+        <div className="container mx-auto px-4 max-w-4xl text-center space-y-4 md:space-y-6">
+          <div className="inline-flex items-center gap-2 bg-peach/20 px-4 py-2 rounded-full">
+            <Heart className="h-4 w-4 text-sage" />
+            <span className="text-sage font-semibold text-sm">התהליך שלנו</span>
+          </div>
+          
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            למי זה עשוי להתאים
+          </h2>
+          
+          <div className="max-w-3xl mx-auto space-y-2 text-sm md:text-base text-foreground/80">
+            <p className="leading-relaxed">
+              התהליך מתאים למבוגרים, נוער וילדים,
+            </p>
+            <p className="leading-relaxed">
+              ומסייע בהתמודדות עם אתגרים רגשיים, מנטליים ופיזיים כמו:
+            </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-3">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index}
-                className="flex items-center gap-3 bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-sage/10"
-              >
-                <div className="bg-sage/10 p-2 rounded-lg">
-                  <CheckCircle2 className="h-5 w-5 text-sage" />
-                </div>
-                <span className="text-sm md:text-base text-foreground/80">{benefit}</span>
+          <div className="grid sm:grid-cols-2 gap-3 md:gap-4 max-w-3xl mx-auto">
+            <div className="bg-gradient-to-br from-muted/50 to-background p-4 md:p-6 rounded-2xl shadow-lg border border-border/50 text-right">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span className="text-sm md:text-base text-foreground/80">חרדות, חוסר שקט ופחדים</span>
               </div>
-            ))}
+            </div>
+            <div className="bg-gradient-to-br from-muted/50 to-background p-4 md:p-6 rounded-2xl shadow-lg border border-border/50 text-right">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span className="text-sm md:text-base text-foreground/80">כאבים פיזיים, מתח כרוני או עייפות</span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-muted/50 to-background p-4 md:p-6 rounded-2xl shadow-lg border border-border/50 text-right">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span className="text-sm md:text-base text-foreground/80">קשיים בזוגיות ותקשורת בין־אישית</span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-muted/50 to-background p-4 md:p-6 rounded-2xl shadow-lg border border-border/50 text-right">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span className="text-sm md:text-base text-foreground/80">חוסר איזון הורמונלי, קשיי שינה או עייפות מתמשכת</span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-muted/50 to-background p-4 md:p-6 rounded-2xl shadow-lg border border-border/50 text-right">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span className="text-sm md:text-base text-foreground/80">תופעות כמו טיקים, הרטבה, או קשיים רגשיים אצל ילדים</span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-muted/50 to-background p-4 md:p-6 rounded-2xl shadow-lg border border-border/50 text-right">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-sage flex-shrink-0 mt-0.5" />
+                <span className="text-sm md:text-base text-foreground/80">תחושת תקיעות, בלבול או חוסר חיבור פנימי</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Additional Info */}
-      <section className="py-3 md:py-4 bg-background">
+      <section className="py-6 md:py-8 bg-background">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="bg-gradient-to-br from-sage/5 to-primary/5 p-3 md:p-4 rounded-2xl border border-sage/20 space-y-2">
             <div className="flex items-center gap-3">
