@@ -21,7 +21,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section ref={ref} id="how-it-works" className="snap-section py-24 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="how-it-works" className="snap-section py-6 md:py-8 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
 

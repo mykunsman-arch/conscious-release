@@ -14,7 +14,7 @@ const WhyHereSection = () => {
   const tilt7 = useTilt({ maxTilt: 8, scale: 1.03 });
   
   return (
-    <section ref={ref} id="why-here" className="snap-section py-24 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="why-here" className="snap-section py-6 md:py-8 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
 

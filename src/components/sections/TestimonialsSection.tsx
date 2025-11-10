@@ -125,7 +125,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section ref={ref} id="testimonials" className="snap-section py-24 bg-gradient-soft relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="testimonials" className="snap-section py-6 md:py-8 bg-gradient-soft relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
       <div className="absolute top-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl floating"></div>
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>

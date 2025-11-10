@@ -38,7 +38,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section ref={ref} id="faq" className="py-20 bg-card relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="faq" className="py-5 md:py-6 bg-card relative overflow-hidden" dir="rtl">
       <div className="absolute top-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 max-w-4xl relative z-10">

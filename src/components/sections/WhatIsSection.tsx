@@ -13,7 +13,7 @@ const WhatIsSection = () => {
   });
   
   return (
-    <section ref={ref} id="what-is" className="snap-section py-24 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="what-is" className="snap-section py-6 md:py-8 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-peach/5 rounded-full blur-3xl"></div>

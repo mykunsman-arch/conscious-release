@@ -55,7 +55,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section ref={ref} className="snap-section py-16 md:py-20 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} className="snap-section py-4 md:py-5 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent"></div>
       
