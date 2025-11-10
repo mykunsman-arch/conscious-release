@@ -268,7 +268,10 @@ const LandingPage = () => {
               >
                 📱 052-717-6000
               </a>
-              <p>💬 <a href="https://wa.me/972527176000" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">לחצו לשיחה בוואטסאפ</a></p>
+              <p>💬 <a href="https://wa.me/972527176000" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1">
+                <MessageCircle className="h-4 w-4 inline" />
+                לחצו לשיחה בוואטסאפ
+              </a></p>
             </div>
           </div>
           
