@@ -61,7 +61,7 @@ const LandingPage = () => {
       />
       
       {/* Gradient overlay */}
-      <div className="fixed inset-0 bg-gradient-to-b from-background/60 via-background/60 to-background/60 backdrop-blur-sm" style={{ zIndex: -1 }} />
+      <div className="fixed inset-0 bg-gradient-to-b from-background/70 via-background/70 to-background/70 backdrop-blur-sm" style={{ zIndex: -1 }} />
 
       {/* Header with logo */}
       <header className="py-6 px-4 md:px-8">
