@@ -36,6 +36,7 @@ const Header = () => {
           <nav className="flex gap-1.5 md:gap-2 justify-center flex-1 max-w-md md:max-w-none mx-auto">
             {[
               { path: "/", label: "דף הבית" },
+              { path: "/how-it-works", label: "איך זה עובד" },
               { path: "/questionnaire", label: "שאלון התאמה" },
               { path: "/faq", label: "שאלות נפוצות" }
             ].map((item) => (

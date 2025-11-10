@@ -73,14 +73,14 @@ const QuickInfoSection = () => {
           <div className="text-center space-y-2 md:space-y-3">
             <p className="text-sm md:text-base text-foreground/70">רוצים לדעת עוד?</p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center">
-              <Link to="/questionnaire" className="w-full sm:w-auto">
+              <Link to="/how-it-works" className="w-full sm:w-auto">
                 <Button className="w-full bg-sage hover:bg-sage/90 text-white px-6 py-4 md:py-5 text-sm md:text-base rounded-xl">
-                  שאלון התאמה
+                  איך זה עובד
                 </Button>
               </Link>
-              <Link to="/faq" className="w-full sm:w-auto">
+              <Link to="/questionnaire" className="w-full sm:w-auto">
                 <Button variant="outline" className="w-full border-2 border-sage text-sage hover:bg-sage hover:text-white px-6 py-4 md:py-5 text-sm md:text-base rounded-xl">
-                  שאלות נפוצות
+                  שאלון התאמה
                 </Button>
               </Link>
             </div>

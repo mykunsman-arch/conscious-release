@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import HomePage from "./pages/HomePage";
 import QuestionnairePage from "./pages/QuestionnairePage";
 import FAQPage from "./pages/FAQPage";
+import HowItWorksPage from "./pages/HowItWorksPage";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
@@ -21,6 +22,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />}>
             <Route index element={<HomePage />} />
+            <Route path="how-it-works" element={<HowItWorksPage />} />
             <Route path="questionnaire" element={<QuestionnairePage />} />
             <Route path="faq" element={<FAQPage />} />
           </Route>
