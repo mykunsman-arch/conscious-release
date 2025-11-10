@@ -38,7 +38,7 @@ const TraumaConnectionSection = () => {
             
             {/* Desktop List */}
             <div className="hidden md:block bg-gradient-to-br from-muted/50 to-background p-4 md:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
-              <ul className={`space-y-2 md:space-y-3 text-right grid-stagger ${isVisible ? 'visible' : ''}`}>
+              <ul className={`grid grid-cols-2 gap-x-6 gap-y-2 md:gap-y-3 text-right grid-stagger ${isVisible ? 'visible' : ''}`}>
                 <li className="flex items-start gap-2 group">
                   <CircleDot className="h-5 w-5 text-sage flex-shrink-0 mt-0.5 transition-all" />
                   <span className="text-sm md:text-base text-foreground/80 leading-relaxed">זיהוי דפוסים רגשיים ומחשבתיים חוזרים</span>
@@ -55,7 +55,7 @@ const TraumaConnectionSection = () => {
                   <CircleDot className="h-5 w-5 text-sage flex-shrink-0 mt-0.5 transition-all" />
                   <span className="text-sm md:text-base text-foreground/80 leading-relaxed">תמיכה בצמיחה רגשית, זוגית ופיזית</span>
                 </li>
-                <li className="flex items-start gap-2 group">
+                <li className="flex items-start gap-2 group col-span-2">
                   <CircleDot className="h-5 w-5 text-sage flex-shrink-0 mt-0.5 transition-all" />
                   <span className="text-sm md:text-base text-foreground/80 leading-relaxed">התאמה אישית של השיטה לפי הצורך</span>
                 </li>
