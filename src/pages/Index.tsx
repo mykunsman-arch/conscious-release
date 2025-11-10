@@ -5,8 +5,7 @@ import ScrollProgressBar from "@/components/ScrollProgressBar";
 import StickyCTA from "@/components/StickyCTA";
 import FloatingWhatsAppCTA from "@/components/FloatingWhatsAppCTA";
 import FloatingBubbles from "@/components/FloatingBubbles";
-import LogoIntro from "@/components/LogoIntro";
-import IntroText from "@/components/IntroText";
+import CombinedIntro from "@/components/CombinedIntro";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatIsSection from "@/components/sections/WhatIsSection";
@@ -21,7 +20,6 @@ import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [showIntro, setShowIntro] = useState(true);
-  const [showIntroText, setShowIntroText] = useState(false);
   useSmoothScroll();
   
   useEffect(() => {
@@ -31,16 +29,8 @@ const Index = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIntro(false);
-      setShowIntroText(true);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
-
   const handleContinue = () => {
-    setShowIntroText(false);
+    setShowIntro(false);
   };
 
   if (isLoading) {
@@ -49,9 +39,8 @@ const Index = () => {
   
   return (
     <div className="min-h-screen snap-container">
-      <LogoIntro showIntro={showIntro} />
-      <IntroText showIntro={showIntroText} onContinue={handleContinue} />
-      <div className={`transition-all duration-500 ${showIntro || showIntroText ? 'invisible pointer-events-none' : 'visible pointer-events-auto'}`}>
+      <CombinedIntro showIntro={showIntro} onContinue={handleContinue} />
+      <div className={`transition-all duration-500 ${showIntro ? 'invisible pointer-events-none' : 'visible pointer-events-auto'}`}>
         <FloatingBubbles />
         <ScrollProgressBar />
         <Header />
