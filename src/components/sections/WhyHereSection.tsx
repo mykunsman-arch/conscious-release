@@ -13,7 +13,7 @@ const WhyHereSection = () => {
   const tilt6 = useTilt({ maxTilt: 8, scale: 1.03 });
   
   return (
-    <section ref={ref} id="why-here" className="snap-section py-4 md:py-6 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="why-here" className="snap-section py-4 md:py-6 bg-background/10 relative overflow-hidden" dir="rtl">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
 
@@ -32,7 +32,7 @@ const WhyHereSection = () => {
             <div className="h-0.5 w-20 bg-gradient-to-r from-sage to-peach rounded-full"></div>
 
             {/* Desktop Grid */}
-            <div className={`hidden md:grid md:grid-cols-2 gap-2 md:gap-3 grid-stagger ${isVisible ? 'visible' : ''}`}>
+            <div className={`hidden md:grid md:grid-cols-2 gap-3 grid-stagger ${isVisible ? 'visible' : ''}`}>
               <div 
                 ref={tilt1.ref}
                 onMouseMove={tilt1.handleMouseMove}

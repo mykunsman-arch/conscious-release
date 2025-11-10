@@ -44,7 +44,7 @@ const QuestionnaireSection = () => {
   };
 
   return (
-    <section ref={ref} id="questionnaire" className="snap-section py-4 md:py-6 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="questionnaire" className="snap-section py-4 md:py-6 bg-gradient-to-b from-background/30 to-background/10 relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-64 h-64 bg-peach/5 rounded-full blur-3xl"></div>
@@ -70,7 +70,7 @@ const QuestionnaireSection = () => {
             {questions.map((question, index) => (
               <div
                 key={index}
-                className="group relative flex items-center gap-3 md:gap-4 p-4 md:p-5 hover:bg-gradient-to-r hover:from-sage/10 hover:to-primary/10 rounded-xl transition-all duration-500 border-2 border-border/30 hover:border-sage/40 hover:shadow-xl hover:scale-[1.02] cursor-pointer min-h-[64px] touch-manipulation active:scale-100"
+                className="group relative flex items-center gap-3 md:gap-4 p-4 md:p-5 hover:bg-gradient-to-r hover:from-sage/10 hover:to-primary/10 rounded-2xl transition-all duration-500 border-2 border-border/30 hover:border-sage/40 hover:shadow-xl hover:scale-[1.02] cursor-pointer min-h-[72px] touch-manipulation active:scale-100"
                 onClick={() => handleCheckboxChange(index, !answers[index])}
               >
                 {/* Decorative Number */}
@@ -91,7 +91,7 @@ const QuestionnaireSection = () => {
                 />
                 <label
                   htmlFor={`question-${index}`}
-                  className="text-sm md:text-base lg:text-lg text-foreground group-hover:text-foreground cursor-pointer flex-1 leading-relaxed transition-all duration-300 pr-12 md:pr-14 font-['Assistant'] font-medium"
+                  className="text-base md:text-lg text-foreground group-hover:text-foreground cursor-pointer flex-1 leading-relaxed transition-all duration-300 pr-12 md:pr-14 font-['Assistant'] font-medium"
                   onClick={(e) => e.stopPropagation()}
                 >
                   {question}
@@ -101,7 +101,7 @@ const QuestionnaireSection = () => {
             
             <Button
               onClick={handleSubmit}
-              className="w-full bg-gradient-to-r from-primary via-sage to-primary hover:from-primary/90 hover:via-sage/90 hover:to-primary/90 text-primary-foreground py-5 md:py-6 text-lg md:text-xl font-bold rounded-2xl shadow-2xl hover:shadow-sage/50 transition-all duration-500 hover:scale-[1.03] border-2 border-sage/30 min-h-[48px] touch-manipulation active:scale-100"
+              className="w-full bg-gradient-to-r from-primary via-sage to-primary hover:from-primary/90 hover:via-sage/90 hover:to-primary/90 text-primary-foreground py-6 text-lg md:text-xl font-bold rounded-2xl shadow-2xl hover:shadow-sage/50 transition-all duration-500 hover:scale-[1.03] border-2 border-sage/30 min-h-[56px] touch-manipulation active:scale-100"
             >
               <Sparkles className="ml-2 h-5 w-5" />
               הצג תוצאה
@@ -125,17 +125,17 @@ const QuestionnaireSection = () => {
                       : "זו הזמנה להקשבה פנימה."}
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center pt-3">
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center pt-3">
                     <Button
                       onClick={handleWhatsAppClick}
-                      className="bg-[#25D366] hover:bg-[#20BA5A] text-white px-5 md:px-8 py-5 md:py-6 text-base md:text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 min-h-[48px] touch-manipulation active:scale-100"
+                      className="bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 md:px-8 py-6 text-base md:text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 min-h-[56px] touch-manipulation active:scale-100"
                     >
                       לפנייה ופרטים בווצאפ
                     </Button>
                     <Button
                       onClick={scrollToContact}
                       variant="outline"
-                      className="border-2 border-sage text-sage hover:bg-sage hover:text-white px-5 md:px-8 py-5 md:py-6 text-base md:text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 min-h-[48px] touch-manipulation active:scale-100"
+                      className="border-2 border-sage text-sage hover:bg-sage hover:text-white px-6 md:px-8 py-6 text-base md:text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 min-h-[56px] touch-manipulation active:scale-100"
                     >
                       להשארת פרטים לחזרה
                     </Button>

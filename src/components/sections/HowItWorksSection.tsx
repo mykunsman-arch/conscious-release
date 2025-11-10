@@ -21,7 +21,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section ref={ref} id="how-it-works" className="snap-section py-4 md:py-6 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="how-it-works" className="snap-section py-4 md:py-6 bg-gradient-to-b from-background/10 to-background/30 relative overflow-hidden" dir="rtl">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
 
@@ -39,7 +39,7 @@ const HowItWorksSection = () => {
           
           <div className="h-0.5 w-24 bg-gradient-to-r from-sage via-primary to-sage mx-auto rounded-full"></div>
           
-          <div className="text-sm md:text-base lg:text-lg text-foreground/80 max-w-3xl mx-auto px-4 font-light space-y-1 md:space-y-2">
+          <div className="text-sm md:text-base lg:text-lg text-foreground/80 max-w-3xl mx-auto px-4 font-light space-y-2">
             <p className="leading-[1.7] md:leading-[1.8]">
               התהליך מתאים למבוגרים, נוער וילדים,
             </p>
@@ -48,7 +48,7 @@ const HowItWorksSection = () => {
             </p>
           </div>
           
-          <div className={`grid md:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto px-4 grid-stagger ${isVisible ? 'visible' : ''}`}>
+          <div className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto px-4 grid-stagger ${isVisible ? 'visible' : ''}`}>
             {challenges.map((challenge, index) => {
               // eslint-disable-next-line react-hooks/rules-of-hooks
               const tilt = useTilt({ maxTilt: 10, scale: 1.05 });

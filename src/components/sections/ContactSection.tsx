@@ -35,7 +35,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section ref={ref} id="contact" className="snap-section py-4 md:py-6 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="contact" className="snap-section py-4 md:py-6 bg-gradient-to-b from-background/10 to-background/30 relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-peach/5 rounded-full blur-3xl"></div>

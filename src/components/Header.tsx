@@ -28,7 +28,7 @@ const Header = () => {
             <img 
               src={logoHeader} 
               alt="המרכז לריפוי תודעתי" 
-              className={`h-[5.46875rem] md:h-[7.03125rem] w-auto object-contain transition-opacity duration-500 max-h-full ${
+              className={`h-12 md:h-16 w-auto object-contain transition-opacity duration-500 max-h-full ${
                 showLogo ? "opacity-100" : "opacity-0"
               }`}
             />
@@ -44,7 +44,7 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative text-[0.75rem] md:text-[1.1rem] lg:text-[1.3rem] transition-all group whitespace-nowrap px-1 md:px-2 text-center ${
+                className={`relative text-sm md:text-base lg:text-lg transition-all group whitespace-nowrap px-1 md:px-2 text-center ${
                   location.pathname === item.path
                     ? "text-foreground opacity-100 font-bold" 
                     : "text-foreground/70 opacity-60 hover:opacity-90 hover:text-accent font-medium"

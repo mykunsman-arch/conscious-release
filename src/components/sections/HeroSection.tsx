@@ -27,7 +27,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section ref={ref} className="snap-section relative min-h-[70vh] flex items-center justify-center overflow-hidden px-4 py-3 md:py-4" dir="rtl">
+    <section ref={ref} className="snap-section relative min-h-[85vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden px-4 py-3 md:py-4" dir="rtl">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent"></div>
@@ -48,17 +48,17 @@ const HeroSection = () => {
         </div>
         
         <div className="space-y-0.5 animate-fade-in pt-0">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[2em] flex items-center justify-center font-varela">
+          <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[2em] flex items-center justify-center font-varela">
             {typingText.displayedText}
             {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-sage ml-1 animate-pulse"></span>}
           </h1>
           
           <div className="flex items-center justify-center gap-2 px-4">
-            <Sparkles className="text-sage h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 flex-shrink-0" />
-            <p className="text-lg sm:text-xl md:text-2xl font-semibold text-gradient-accent">
+            <Sparkles className="text-sage h-4 w-4 sm:h-5 sm:w-5 md:h-5 md:w-5 flex-shrink-0" />
+            <p className="text-xl sm:text-2xl md:text-2xl font-semibold text-gradient-accent">
               להשתחרר. להתחבר. להתרפא.
             </p>
-            <Sparkles className="text-sage h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 flex-shrink-0" />
+            <Sparkles className="text-sage h-4 w-4 sm:h-5 sm:w-5 md:h-5 md:w-5 flex-shrink-0" />
           </div>
         </div>
         

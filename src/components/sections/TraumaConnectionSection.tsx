@@ -14,7 +14,7 @@ const TraumaConnectionSection = () => {
   });
   
   return (
-    <section ref={ref} id="trauma-connection" className="snap-section py-4 md:py-6 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="trauma-connection" className="snap-section py-4 md:py-6 bg-background/10 relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
       <div className="absolute top-1/2 right-10 w-2 h-32 bg-gradient-to-b from-accent to-transparent rounded-full"></div>
       <div className="absolute top-1/2 left-10 w-2 h-32 bg-gradient-to-b from-peach to-transparent rounded-full"></div>
