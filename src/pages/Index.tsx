@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import StickyCTA from "@/components/StickyCTA";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import FloatingWhatsAppCTA from "@/components/FloatingWhatsAppCTA";
 import FloatingBubbles from "@/components/FloatingBubbles";
 import LogoIntro from "@/components/LogoIntro";
@@ -51,7 +50,6 @@ const Index = () => {
         <Header />
         <MobileMenu />
         <StickyCTA />
-        <WhatsAppButton />
         <FloatingWhatsAppCTA />
         <ScrollToTop />
         <HeroSection />

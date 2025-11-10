@@ -29,7 +29,7 @@ const FloatingWhatsAppCTA = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 flex items-end gap-3" dir="rtl">
+    <div className="fixed bottom-4 left-4 md:bottom-8 md:left-8 z-50 flex items-end gap-3" dir="rtl">
       {isExpanded && (
         <div className="glass-effect p-4 rounded-2xl shadow-2xl max-w-xs animate-slide-in-left">
           <button
@@ -64,8 +64,8 @@ const FloatingWhatsAppCTA = () => {
       )}
       
       <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="relative bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all group min-h-[56px] min-w-[56px] touch-manipulation active:scale-95 flex items-center justify-center"
+        onClick={handleClick}
+        className="relative bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 md:p-5 rounded-full shadow-2xl hover:scale-110 transition-all group min-h-[56px] min-w-[56px] touch-manipulation active:scale-95 flex items-center justify-center"
       >
         <svg 
           className="h-6 w-6 transition-transform group-hover:scale-110" 

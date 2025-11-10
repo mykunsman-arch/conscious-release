@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
 import ScrollToTop from "@/components/ScrollToTop";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import FloatingWhatsAppCTA from "@/components/FloatingWhatsAppCTA";
 import FAQSection from "@/components/sections/FAQSection";
 import ContactSection from "@/components/sections/ContactSection";
@@ -14,7 +13,6 @@ const FAQPage = () => {
     <div className="min-h-screen">
       <Header />
       <MobileMenu />
-      <WhatsAppButton />
       <FloatingWhatsAppCTA />
       <ScrollToTop />
       
