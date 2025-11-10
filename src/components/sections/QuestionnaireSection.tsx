@@ -44,106 +44,98 @@ const QuestionnaireSection = () => {
   };
 
   return (
-    <section ref={ref} id="questionnaire" className="py-3 md:py-4 bg-background relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="questionnaire" className="py-12 md:py-16 bg-background/20 relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
-      <div className="absolute top-20 right-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-64 h-64 bg-peach/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-peach/5 rounded-full blur-3xl"></div>
 
-      <div className="container mx-auto px-4 max-w-4xl relative z-10">
-        <div className={`text-center space-y-2 md:space-y-3 section-scale ${isVisible ? 'visible' : ''}`}>
+      <div className="container mx-auto px-4 max-w-5xl relative z-10">
+        <div className={`text-center space-y-8 section-scale ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full">
             <ClipboardCheck className="h-5 w-5 text-sage" />
             <span className="text-sage font-semibold">זה בשבילכם?</span>
           </div>
 
-          <h2 className="text-xl md:text-2xl font-bold text-gradient-shimmer leading-tight px-4 font-varela">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 font-varela">
             שאלון קצר להקשבה פנימה
           </h2>
           
-          <p className="text-sm md:text-base text-foreground/60 max-w-2xl mx-auto px-4 font-light">
-            בחרו את התשובות המתאימות לכם
-          </p>
+          <div className="h-1 w-24 bg-gradient-to-r from-sage to-peach rounded-full"></div>
           
-          <div className="h-1 w-32 bg-gradient-to-r from-sage via-peach to-sage mx-auto rounded-full shadow-lg"></div>
-          
-          <Card className="p-4 md:p-6 space-y-3 md:space-y-4 text-right bg-card/90 backdrop-blur-md shadow-2xl rounded-[2.5rem] border-2 border-border/30">
-            {questions.map((question, index) => (
-              <div
-                key={index}
-                className="group relative flex items-center gap-3 md:gap-4 p-3 md:p-4 hover:bg-gradient-to-r hover:from-sage/10 hover:to-primary/10 rounded-3xl transition-all duration-500 border-2 border-border/30 hover:border-sage/40 hover:shadow-xl hover:scale-[1.02] cursor-pointer min-h-[50px] touch-manipulation active:scale-100"
-                onClick={() => handleCheckboxChange(index, !answers[index])}
+          <div className="space-y-6 pt-8 px-4 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-muted/50 to-background p-6 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50">
+              <div className="space-y-4 text-right">
+                {questions.map((question, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-all duration-300 shadow-lg group cursor-pointer"
+                    onClick={() => handleCheckboxChange(index, !answers[index])}
+                  >
+                    <Checkbox
+                      id={`question-${index}`}
+                      checked={answers[index]}
+                      onCheckedChange={(checked) => handleCheckboxChange(index, checked as boolean)}
+                      className="mt-1 w-6 h-6 data-[state=checked]:bg-sage data-[state=checked]:border-sage border-2 flex-shrink-0 transition-all duration-300"
+                      onClick={(e) => e.stopPropagation()}
+                    />
+                    <label
+                      htmlFor={`question-${index}`}
+                      className="text-base md:text-lg text-foreground/80 group-hover:text-foreground cursor-pointer flex-1 leading-relaxed transition-all duration-300 font-semibold"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {question}
+                    </label>
+                  </div>
+                ))}
+              
+              </div>
+              
+              <Button
+                onClick={handleSubmit}
+                className="w-full bg-gradient-to-r from-primary via-sage to-primary hover:from-primary/90 hover:via-sage/90 hover:to-primary/90 text-primary-foreground py-6 text-lg font-bold rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl mt-6"
               >
-                {/* Decorative Number */}
-                <div className={`absolute top-4 left-4 md:top-6 md:left-6 w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl transition-all duration-500 ${
-                  answers[index] 
-                    ? 'bg-gradient-to-br from-sage to-primary text-white shadow-lg scale-110' 
-                    : 'bg-muted/30 text-muted-foreground/40 group-hover:bg-sage/20 group-hover:text-sage'
-                }`}>
-                  {index + 1}
-                </div>
-                
-                <Checkbox
-                  id={`question-${index}`}
-                  checked={answers[index]}
-                  onCheckedChange={(checked) => handleCheckboxChange(index, checked as boolean)}
-                  className="mt-1 w-7 h-7 md:w-8 md:h-8 data-[state=checked]:bg-sage data-[state=checked]:border-sage border-2 flex-shrink-0 transition-all duration-300"
-                  onClick={(e) => e.stopPropagation()}
-                />
-                <label
-                  htmlFor={`question-${index}`}
-                  className="text-base md:text-lg text-foreground group-hover:text-foreground cursor-pointer flex-1 leading-relaxed transition-all duration-300 pr-12 md:pr-16 font-['Assistant'] font-medium"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {question}
-                </label>
-              </div>
-            ))}
-            
-            <Button
-              onClick={handleSubmit}
-              className="w-full bg-gradient-to-r from-primary via-sage to-primary hover:from-primary/90 hover:via-sage/90 hover:to-primary/90 text-primary-foreground py-4 md:py-5 text-base md:text-lg font-bold rounded-3xl shadow-2xl hover:shadow-sage/50 transition-all duration-500 hover:scale-[1.03] border-2 border-sage/30 min-h-[44px] touch-manipulation active:scale-100"
-            >
-              <Sparkles className="ml-2 h-6 w-6" />
-              הצג תוצאה
-            </Button>
-            
-            {showResult && (
-              <div className="mt-4 p-4 md:p-6 bg-gradient-to-br from-accent/10 to-peach/10 rounded-3xl border-2 border-accent/30 shadow-xl animate-scale-in">
-                <div className="text-center space-y-2 md:space-y-3">
-                  <div className="inline-flex items-center gap-2 bg-sage/20 px-6 py-3 rounded-full">
-                    <Sparkles className="h-5 w-5 text-sage" />
-                  </div>
-                  
-                  <p className="text-lg md:text-xl font-bold text-primary">
-                    {isMatch
-                      ? "אם עניתם \"כן\" על יותר משתי שאלות —"
-                      : "תודה שמילאתם את השאלון."}
-                  </p>
-                  <p className="text-sm md:text-base text-foreground/70">
-                    {isMatch 
-                      ? "ייתכן שתהליך של ריפוי תודעתי יכול לסייע לכם. זו אינה אבחנה רפואית אלא הזמנה להקשיב לעצמכם."
-                      : "זו הזמנה להקשבה פנימה."}
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center pt-2">
-                    <Button
-                      onClick={handleWhatsAppClick}
-                      className="bg-[#25D366] hover:bg-[#20BA5A] text-white px-4 md:px-6 py-3 md:py-4 text-base md:text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 min-h-[44px] touch-manipulation active:scale-100"
-                    >
-                      לפנייה ופרטים בווצאפ
-                    </Button>
-                    <Button
-                      onClick={scrollToContact}
-                      variant="outline"
-                      className="border-2 border-sage text-sage hover:bg-sage hover:text-white px-4 md:px-6 py-3 md:py-4 text-base md:text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 min-h-[44px] touch-manipulation active:scale-100"
-                    >
-                      להשארת פרטים לחזרה
-                    </Button>
+                <Sparkles className="ml-2 h-5 w-5" />
+                הצג תוצאה
+              </Button>
+              
+              {showResult && (
+                <div className="mt-6 p-6 md:p-8 bg-gradient-to-br from-accent/10 to-peach/10 rounded-3xl border border-accent/30 shadow-lg animate-scale-in">
+                  <div className="text-center space-y-4">
+                    <div className="inline-flex items-center gap-2 bg-sage/20 px-6 py-3 rounded-full">
+                      <Sparkles className="h-5 w-5 text-sage" />
+                    </div>
+                    
+                    <p className="text-xl md:text-2xl font-bold text-primary">
+                      {isMatch
+                        ? "אם עניתם \"כן\" על יותר משתי שאלות —"
+                        : "תודה שמילאתם את השאלון."}
+                    </p>
+                    <p className="text-base md:text-lg text-foreground/70">
+                      {isMatch 
+                        ? "ייתכן שתהליך של ריפוי תודעתי יכול לסייע לכם. זו אינה אבחנה רפואית אלא הזמנה להקשיב לעצמכם."
+                        : "זו הזמנה להקשבה פנימה."}
+                    </p>
+                    
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
+                      <Button
+                        onClick={handleWhatsAppClick}
+                        className="bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 py-4 text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all"
+                      >
+                        לפנייה ופרטים בווצאפ
+                      </Button>
+                      <Button
+                        onClick={scrollToContact}
+                        variant="outline"
+                        className="border-2 border-sage text-sage hover:bg-sage hover:text-white px-6 py-4 text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all"
+                      >
+                        להשארת פרטים לחזרה
+                      </Button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </Card>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>
