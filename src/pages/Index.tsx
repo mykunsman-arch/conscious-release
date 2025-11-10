@@ -34,7 +34,7 @@ const Index = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 4500);
+    }, 6000);
     return () => clearTimeout(timer);
   }, []);
 
