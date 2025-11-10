@@ -33,25 +33,22 @@ const Header = () => {
           />
           
           {/* Navigation Tabs */}
-          <nav className="flex gap-2 md:gap-4 justify-center flex-1 max-w-md md:max-w-none mx-auto">
+          <nav className="flex gap-2 md:gap-3 justify-center flex-1 max-w-md md:max-w-none mx-auto">
             {[
               { path: "/", label: "עמוד ראשי" },
-              { path: "/questionnaire", label: "שאלון" },
-              { path: "/faq", label: "שאלות נפוצות" }
+              { path: "/questionnaire", label: "שאלון התאמה" },
+              { path: "/faq", label: "שאלות ותשובות" }
             ].map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative text-sm md:text-base lg:text-lg transition-all group whitespace-nowrap px-3 md:px-4 py-2 rounded-lg ${
+                className={`relative text-sm md:text-base transition-all whitespace-nowrap px-3 md:px-5 py-2.5 rounded-full ${
                   location.pathname === item.path
-                    ? "text-foreground bg-sage/10 font-bold" 
-                    : "text-foreground/70 hover:text-foreground hover:bg-accent/5 font-medium"
+                    ? "text-white bg-sage font-semibold shadow-md" 
+                    : "text-foreground/70 hover:text-foreground hover:bg-sage/10 font-medium"
                 }`}
               >
                 {item.label}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-sage to-primary transition-all duration-300 ${
-                  location.pathname === item.path ? "w-full" : "w-0 group-hover:w-full"
-                }`}></span>
               </Link>
             ))}
           </nav>

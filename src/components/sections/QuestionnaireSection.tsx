@@ -44,7 +44,7 @@ const QuestionnaireSection = () => {
   };
 
   return (
-    <section ref={ref} id="questionnaire" className="snap-section py-12 md:py-16 bg-background/20 relative overflow-hidden" dir="rtl">
+    <section ref={ref} id="questionnaire" className="py-16 md:py-20 bg-background relative overflow-hidden" dir="rtl">
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-64 h-64 bg-peach/5 rounded-full blur-3xl"></div>
