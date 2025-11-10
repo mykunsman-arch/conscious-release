@@ -236,12 +236,14 @@ const LandingPage = () => {
             אפשר להתחיל בשיחה קצרה או בהודעה, ללא התחייבות:
           </p>
           <div className="space-y-3">
-            <a 
-              href="tel:052-717-6000"
-              className="inline-block text-xl font-semibold text-foreground hover:text-sage transition-colors cursor-pointer"
+            <Button
+              onClick={() => window.location.href = 'tel:052-717-6000'}
+              size="lg"
+              variant="outline"
+              className="px-10 py-6 text-lg font-semibold rounded-2xl border-2 hover:bg-accent/10 transition-all"
             >
               📱 052-717-6000
-            </a>
+            </Button>
             <Button
               onClick={handleWhatsAppClick}
               size="lg"
