@@ -37,7 +37,7 @@ const Header = () => {
           {/* Navigation */}
           <nav className="grid grid-cols-3 md:flex gap-2 md:gap-4 lg:gap-6 justify-center flex-1 max-w-md md:max-w-none mx-auto">
             {[
-              { path: "/", label: "עמוד ראשי" },
+              { path: "/", label: "ריפוי תודעתי" },
               { path: "/questionnaire", label: "שאלון התאמה" },
               { path: "/faq", label: "שאלות נפוצות" }
             ].map((item) => (
