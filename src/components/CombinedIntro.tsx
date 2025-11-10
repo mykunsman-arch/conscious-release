@@ -24,7 +24,7 @@ const CombinedIntro = ({ showIntro, onContinue }: CombinedIntroProps) => {
         setFadeOut(true);
       }, 12500);
 
-      // Auto-continue after 13 seconds total (3 for logo + 10 for text)
+      // Auto-continue after 13 seconds total
       const autoTimer = setTimeout(() => {
         onContinue();
       }, 13000);
@@ -47,25 +47,45 @@ const CombinedIntro = ({ showIntro, onContinue }: CombinedIntroProps) => {
   if (!showIntro) return null;
 
   return (
-    <div className={`fixed inset-0 z-[60] flex items-center justify-center bg-background backdrop-blur-sm px-4 transition-opacity duration-700 ${fadeOut ? 'opacity-0' : 'opacity-100'}`} dir="rtl">
-      <div className="flex flex-col items-center justify-center max-w-4xl">
-        {/* Logo - stays visible throughout with fade-in */}
-        <div className="mb-6 md:mb-8 transition-opacity duration-1000 animate-fade-in">
+    <div 
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-background backdrop-blur-sm px-4"
+      style={{
+        opacity: fadeOut ? 0 : 1,
+        transition: 'opacity 700ms ease-in-out'
+      }}
+      dir="rtl"
+    >
+      <div className="flex flex-col items-center justify-center w-full max-w-4xl">
+        {/* Logo - always visible, just fades in at start */}
+        <div 
+          className="mb-6 md:mb-8"
+          style={{
+            opacity: 1,
+            transition: 'opacity 1000ms ease-in-out'
+          }}
+        >
           <img 
             src={logo} 
             alt="המרכז לריפוי תודעתי" 
-            className="w-48 md:w-64 h-auto object-contain"
+            className="w-48 md:w-64 h-auto object-contain mx-auto"
           />
         </div>
 
-        {/* Text - appears after 3 seconds with fade-in */}
-        <div className={`text-center space-y-4 md:space-y-6 transition-opacity duration-1000 ${showText ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        {/* Text - appears after 3 seconds */}
+        <div 
+          className="text-center space-y-4 md:space-y-6 w-full"
+          style={{
+            opacity: showText ? 1 : 0,
+            transition: 'opacity 1000ms ease-in-out',
+            pointerEvents: showText ? 'auto' : 'none'
+          }}
+        >
           <div className="space-y-3 md:space-y-4">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-shimmer leading-tight font-varela">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-shimmer leading-tight font-varela px-4">
               ריפוי תודעתי, בגישה עדינה ומדויקת.
             </h1>
             
-            <div className="flex items-center justify-center gap-2 md:gap-3">
+            <div className="flex items-center justify-center gap-2 md:gap-3 px-4">
               <Sparkles className="text-sage h-4 w-4 md:h-5 md:w-5 flex-shrink-0" />
               <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-gradient-accent">
                 להשתחרר. להתחבר. להתרפא.
@@ -74,7 +94,7 @@ const CombinedIntro = ({ showIntro, onContinue }: CombinedIntroProps) => {
             </div>
           </div>
           
-          <div className="text-sm sm:text-base md:text-lg text-foreground/80 max-w-3xl mx-auto space-y-3">
+          <div className="text-sm sm:text-base md:text-lg text-foreground/80 max-w-3xl mx-auto space-y-3 px-4">
             <p className="leading-[1.6] md:leading-[1.7]">
               כל תהליך של שינוי וריפוי אמיתי מתחיל בתודעה.
             </p>
