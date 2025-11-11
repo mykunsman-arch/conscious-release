@@ -19,7 +19,6 @@ const Header = () => {
 
       // Detect which section is currently in view
       const sections = {
-        "about": ["about"],
         "what-is": ["what-is"],
         "how-it-works": ["trauma-connection", "how-it-works", "questionnaire"],
         "why-here": ["why-here", "testimonials"],
