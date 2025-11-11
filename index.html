@@ -14,6 +14,46 @@
     
     <link rel="icon" href="/favicon.png" type="image/png" />
 
+    <!-- Structured Data for Google Sitelinks -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "המרכז לריפוי תודעתי",
+      "url": "https://www.yoursite.com",
+      "logo": "https://www.yoursite.com/favicon.png",
+      "description": "מרכז לריפוי תודעתי המציע תהליך עדין לשחרור עומסים רגשיים ודפוסים מעכבים",
+      "sameAs": [],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.yoursite.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "המרכז לריפוי תודעתי",
+      "url": "https://www.yoursite.com",
+      "potentialAction": [{
+        "@type": "ReadAction",
+        "target": "https://www.yoursite.com/",
+        "name": "ריפוי תודעתי"
+      }, {
+        "@type": "ReadAction",
+        "target": "https://www.yoursite.com/landing",
+        "name": "ריפוי תודעתי בקצרה"
+      }, {
+        "@type": "ReadAction",
+        "target": "https://www.yoursite.com/#contact",
+        "name": "צור קשר"
+      }]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
