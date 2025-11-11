@@ -77,10 +77,10 @@ const LandingPage = () => {
       </header>
 
       {/* Main content */}
-      <div className="container mx-auto px-4 py-8 md:py-12 max-w-5xl">
+      <div className="container mx-auto px-4 py-4 md:py-6 max-w-5xl">
         
         {/* Hero Section */}
-        <section className="text-center space-y-6 mb-16 md:mb-24">
+        <section className="text-center space-y-4 mb-8 md:mb-12">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
             🌿 המרכז לריפוי תודעתי
           </h1>
@@ -89,7 +89,7 @@ const LandingPage = () => {
             להשתחרר. להתחבר. להתרפא.
           </p>
           
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto space-y-3">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
               🩵 <strong>כשהגוף מבקש שקט, והנפש רוצה ריפוי.</strong>
             </p>
@@ -105,7 +105,7 @@ const LandingPage = () => {
             </p>
           </div>
           
-          <div className="pt-6">
+          <div className="pt-4">
             <Button
               onClick={handleWhatsAppClick}
               size="lg"
@@ -118,11 +118,11 @@ const LandingPage = () => {
         </section>
 
         {/* How it works */}
-        <section className="mb-16 md:mb-20 bg-sage/5 rounded-3xl p-6 md:p-10 border border-sage/20">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-sage">
+        <section className="mb-8 md:mb-12 bg-sage/5 rounded-3xl p-4 md:p-6 border border-sage/20">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-sage">
             💫 איך זה עובד
           </h2>
-          <div className="space-y-4 max-w-3xl mx-auto text-center">
+          <div className="space-y-3 max-w-3xl mx-auto text-center">
             <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
               בתהליך אישי נזהה את שורש הקושי – בתודעה, ברגש ובזיכרון –
               נשחרר את המטען שמנהל את הגוף, וניצור רוגע ואיזון אמיתי מבפנים.
@@ -133,7 +133,7 @@ const LandingPage = () => {
               חרדה, מתח, כאבים גופניים ללא סיבה רפואית, בעיות שינה,
               חוסר איזון הורמונלי, תקיעות רגשית, קשיים בזוגיות או פחדים אצל ילדים.
             </p>
-            <p className="text-sm md:text-base text-foreground/60 italic mt-6">
+            <p className="text-sm md:text-base text-foreground/60 italic mt-4">
               התהליך נועד לתמיכה רגשית ותודעתית ואינו מהווה טיפול רפואי.
             </p>
           </div>
@@ -141,11 +141,11 @@ const LandingPage = () => {
 
 
         {/* Testimonials */}
-        <section className="mb-16 md:mb-20">
+        <section className="mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-foreground">
             💬 סיפורי הצלחה
           </h2>
-          <p className="text-center text-foreground/60 mb-10 text-sm md:text-base">
+          <p className="text-center text-foreground/60 mb-6 text-sm md:text-base">
             אנשים אמיתיים. תהליכים אמיתיים. תוצאות שמרגישים בלב ובגוף.
           </p>
           <div className="max-w-4xl mx-auto px-4 md:px-12">
@@ -213,8 +213,8 @@ const LandingPage = () => {
         </section>
 
         {/* Why choose us */}
-        <section className="mb-16 md:mb-20">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-foreground">
+        <section className="mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-foreground">
             🌸 למה לבחור במרכז לריפוי תודעתי
           </h2>
           <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
@@ -228,7 +228,7 @@ const LandingPage = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="text-center space-y-6 mb-12 bg-gradient-to-br from-sage/10 to-peach/10 rounded-3xl p-8 md:p-12 border-2 border-sage/20">
+        <section className="text-center space-y-4 mb-8 bg-gradient-to-br from-sage/10 to-peach/10 rounded-3xl p-6 md:p-8 border-2 border-sage/20">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground">
             📞 רוצים לדעת אם זה מתאים לכם?
           </h2>
@@ -258,8 +258,8 @@ const LandingPage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="mt-16 md:mt-24 pt-12 md:pt-16 border-t border-border/50" dir="rtl">
-        <div className="container mx-auto px-4 text-center space-y-6 md:space-y-8 relative z-10 max-w-5xl">
+      <footer className="mt-8 md:mt-12 pt-8 md:pt-10 border-t border-border/50" dir="rtl">
+        <div className="container mx-auto px-4 text-center space-y-4 md:space-y-6 relative z-10 max-w-5xl">
           <div className="space-y-4 text-center">
             <p className="text-lg md:text-xl font-semibold text-primary">המרכז לריפוי תודעתי</p>
             <div className="text-base md:text-lg text-foreground/70 space-y-2">
@@ -277,7 +277,7 @@ const LandingPage = () => {
             </div>
           </div>
           
-          <div className="pt-6 md:pt-8 pb-4 border-t border-border/30 mt-8">
+          <div className="pt-4 md:pt-6 pb-3 border-t border-border/30 mt-6">
             <div className="text-sm text-muted-foreground space-y-1">
               <p>© כל הזכויות שמורות — המרכז לריפוי תודעתי 🌿</p>
               <p>mindcenter.co.il</p>
