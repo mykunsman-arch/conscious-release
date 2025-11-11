@@ -23,17 +23,8 @@ import ContactSection from "@/components/sections/ContactSection";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const Index = () => {
-  // Version checkpoint
-  const [isLoading, setIsLoading] = useState(true);
   const [showIntro, setShowIntro] = useState(true);
   useSmoothScroll();
-  
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -41,15 +32,11 @@ const Index = () => {
     }, 4500);
     return () => clearTimeout(timer);
   }, []);
-
-  if (isLoading) {
-    return <LoadingSkeleton />;
-  }
   
   return (
     <div className="min-h-screen snap-container">
       <LogoIntro showIntro={showIntro} />
-      <div className={`transition-all duration-500 ${showIntro ? 'invisible pointer-events-none' : 'visible pointer-events-auto'}`}>
+      <div className={showIntro ? 'opacity-0 invisible pointer-events-none' : 'opacity-100 visible pointer-events-auto'}>
         <FloatingBubbles />
         <ScrollProgressBar />
         <ScrollProgressDots />

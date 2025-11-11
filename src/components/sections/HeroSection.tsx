@@ -7,11 +7,7 @@ import { useMagnetic } from "@/hooks/use-magnetic";
 
 const HeroSection = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const typingText = useTypingEffect({ 
-    text: "ריפוי תודעתי, בגישה עדינה ומדויקת.",
-    speed: 100,
-    delay: 0
-  });
+  const heroText = "ריפוי תודעתי, בגישה עדינה ומדויקת.";
   const magneticBtn1 = useMagnetic({ strength: 0.25, tolerance: 120 });
   const magneticBtn2 = useMagnetic({ strength: 0.25, tolerance: 120 });
   
@@ -47,10 +43,9 @@ const HeroSection = () => {
           />
         </div>
         
-        <div className="space-y-1 animate-fade-in">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 min-h-[2em] flex items-center justify-center font-varela">
-            {typingText.displayedText}
-            {!typingText.isComplete && <span className="inline-block w-1 h-[0.8em] bg-sage ml-1 animate-pulse"></span>}
+        <div className="space-y-1">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-shimmer leading-tight px-4 flex items-center justify-center font-varela">
+            {heroText}
           </h1>
           
           <div className="flex items-center justify-center gap-2 md:gap-3 px-4">
@@ -62,7 +57,7 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto animate-fade-in px-4 space-y-1" style={{ animationDelay: '0.2s' }}>
+        <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto px-4 space-y-1">
           <p className="leading-[1.7] md:leading-relaxed">
             כל תהליך של שינוי וריפוי אמיתי מתחיל בתודעה.
           </p>
@@ -71,7 +66,7 @@ const HeroSection = () => {
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center pt-2 md:pt-3 animate-fade-in px-4" style={{ animationDelay: '0.4s' }}>
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center pt-2 md:pt-3 px-4">
           <Button
             ref={magneticBtn1 as any}
             size="lg"
