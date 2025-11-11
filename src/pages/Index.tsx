@@ -38,8 +38,14 @@ const Index = () => {
       const currentScroll = window.scrollY;
       
       if (currentScroll >= maxScroll) {
-        // Reload page when reaching the end
-        window.location.reload();
+        // Stop scrolling when reaching the end
+        if (scrollIntervalRef.current) {
+          clearInterval(scrollIntervalRef.current);
+        }
+        // Wait 5 seconds before reloading
+        setTimeout(() => {
+          window.location.reload();
+        }, 5000);
       } else {
         // Scroll down by 2 pixels for smooth movement
         window.scrollBy({ top: 2, behavior: "auto" });
