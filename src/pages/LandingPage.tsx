@@ -11,8 +11,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 const LandingPage = () => {
+  const heroText = "🌿 המרכז לריפוי תודעתי";
+  const { displayedText } = useTypingEffect({ text: heroText, speed: 80, delay: 1800 });
+  
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/972527176000?text=שלום 🌿 ראיתי את הפרסום ואשמח לקבל מידע נוסף על התהליך", "_blank");
   };
@@ -70,7 +74,7 @@ const LandingPage = () => {
       <div className="fixed inset-0 bg-gradient-to-b from-background/70 via-background/70 to-background/70 backdrop-blur-sm" style={{ zIndex: -1 }} />
 
       {/* Header with logo */}
-      <header className="py-6 px-4 md:px-8">
+      <header className="py-6 px-4 md:px-8 opacity-0" style={{ animation: 'fade-in 1.5s ease-out forwards' }}>
         <Link to="/" className="inline-block">
           <img src={logoHeader} alt="המרכז לריפוי תודעתי" className="h-48 md:h-60 hover:opacity-80 transition-opacity" />
         </Link>
@@ -81,15 +85,15 @@ const LandingPage = () => {
         
         {/* Hero Section */}
         <section className="text-center space-y-4 mb-8 md:mb-12">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-            🌿 המרכז לריפוי תודעתי
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight opacity-0 min-h-[1.2em]" style={{ animation: 'fade-in 1s ease-out 1.8s forwards' }}>
+            {displayedText}
           </h1>
           
-          <p className="text-2xl md:text-4xl font-semibold text-sage">
+          <p className="text-2xl md:text-4xl font-semibold text-sage opacity-0" style={{ animation: 'fade-in 1s ease-out 2s forwards' }}>
             להשתחרר. להתחבר. להתרפא.
           </p>
           
-          <div className="max-w-3xl mx-auto space-y-3">
+          <div className="max-w-3xl mx-auto space-y-3 opacity-0" style={{ animation: 'fade-in 1s ease-out 2.3s forwards' }}>
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
               🩵 <strong>כשהגוף מבקש שקט, והנפש רוצה ריפוי.</strong>
             </p>
@@ -105,7 +109,7 @@ const LandingPage = () => {
             </p>
           </div>
           
-          <div className="pt-4">
+          <div className="pt-4 opacity-0" style={{ animation: 'fade-in 1s ease-out 2.8s forwards' }}>
             <Button
               onClick={handleWhatsAppClick}
               size="lg"
