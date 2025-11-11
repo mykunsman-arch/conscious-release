@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
@@ -7,7 +6,6 @@ import StickyCTA from "@/components/StickyCTA";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FloatingWhatsAppCTA from "@/components/FloatingWhatsAppCTA";
 import FloatingBubbles from "@/components/FloatingBubbles";
-import LogoIntro from "@/components/LogoIntro";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 import ScrollToTop from "@/components/ScrollToTop";
 import HeroSection from "@/components/sections/HeroSection";
@@ -23,43 +21,29 @@ import ContactSection from "@/components/sections/ContactSection";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const Index = () => {
-  const [showIntro, setShowIntro] = useState(true);
   useSmoothScroll();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIntro(false);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
   
   return (
     <div className="min-h-screen snap-container">
-      {showIntro ? (
-        <LogoIntro showIntro={true} />
-      ) : (
-        <>
-          <HeroSection />
-          <FloatingBubbles />
-          <ScrollProgressBar />
-          <ScrollProgressDots />
-          <Header />
-          <MobileMenu />
-          <StickyCTA />
-          <WhatsAppButton />
-          <FloatingWhatsAppCTA />
-          <ScrollToTop />
-          <WhatIsSection />
-          <TraumaConnectionSection />
-          <HowItWorksSection />
-          <StatsSection />
-          <QuestionnaireSection />
-          <WhyHereSection />
-          <TestimonialsSection />
-          <FAQSection />
-          <ContactSection />
-        </>
-      )}
+      <HeroSection />
+      <FloatingBubbles />
+      <ScrollProgressBar />
+      <ScrollProgressDots />
+      <Header />
+      <MobileMenu />
+      <StickyCTA />
+      <WhatsAppButton />
+      <FloatingWhatsAppCTA />
+      <ScrollToTop />
+      <WhatIsSection />
+      <TraumaConnectionSection />
+      <HowItWorksSection />
+      <StatsSection />
+      <QuestionnaireSection />
+      <WhyHereSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <ContactSection />
     </div>
   );
 };

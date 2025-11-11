@@ -8,7 +8,7 @@ import { useMagnetic } from "@/hooks/use-magnetic";
 const HeroSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const heroText = "ריפוי תודעתי, בגישה עדינה ומדויקת.";
-  const { displayedText } = useTypingEffect({ text: heroText, speed: 80, delay: 3000 });
+  const { displayedText } = useTypingEffect({ text: heroText, speed: 80, delay: 1800 });
   const magneticBtn1 = useMagnetic({ strength: 0.25, tolerance: 120 });
   const magneticBtn2 = useMagnetic({ strength: 0.25, tolerance: 120 });
   
@@ -24,19 +24,20 @@ const HeroSection = () => {
   };
 
   return (
-    <section ref={ref} className="snap-section relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-4 pb-12 md:pt-6 md:pb-0 opacity-0" style={{ animation: 'fade-in 5s ease-out forwards' }} dir="rtl">
+    <section ref={ref} className="snap-section relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-4 pb-12 md:pt-6 md:pb-0" dir="rtl">
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background">
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background opacity-0" style={{ animation: 'fade-in 1s ease-out 2s forwards' }}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-peach/10 via-transparent to-transparent"></div>
       </div>
 
       {/* Decorative floating elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl floating"></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-20 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl floating opacity-0" style={{ animation: 'fade-in 1s ease-out 2s forwards' }}></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-peach/5 rounded-full blur-3xl floating opacity-0" style={{ animation: 'fade-in 1s ease-out 2.5s forwards', animationDelay: '1s' }}></div>
 
       <div className="container mx-auto max-w-5xl text-center space-y-0 relative z-10">
-        <div id="hero">
+        {/* Logo - fades in first */}
+        <div id="hero" className="opacity-0" style={{ animation: 'fade-in 1.5s ease-out forwards' }}>
           <img 
             src={logo} 
             alt="המרכז לריפוי תודעתי" 
@@ -44,7 +45,8 @@ const HeroSection = () => {
           />
         </div>
         
-        <div className="space-y-1">
+        {/* Content - fades in after logo */}
+        <div className="space-y-1 opacity-0" style={{ animation: 'fade-in 1s ease-out 1.8s forwards' }}>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-tight px-4 flex items-center justify-center font-varela min-h-[1.2em]">
             {displayedText}
           </h1>
@@ -58,7 +60,7 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto px-4 space-y-1">
+        <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto px-4 space-y-1 opacity-0" style={{ animation: 'fade-in 1s ease-out 2.3s forwards' }}>
           <p className="leading-[1.7] md:leading-relaxed">
             כל תהליך של שינוי וריפוי אמיתי מתחיל בתודעה.
           </p>
@@ -67,7 +69,7 @@ const HeroSection = () => {
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center pt-2 md:pt-3 px-4">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center pt-2 md:pt-3 px-4 opacity-0" style={{ animation: 'fade-in 1s ease-out 2.8s forwards' }}>
           <Button
             ref={magneticBtn1 as any}
             size="lg"
@@ -93,7 +95,7 @@ const HeroSection = () => {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-card to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-card to-transparent opacity-0" style={{ animation: 'fade-in 1s ease-out 2s forwards' }}></div>
     </section>
   );
 };
