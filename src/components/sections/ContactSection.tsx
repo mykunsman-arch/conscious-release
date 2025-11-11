@@ -181,7 +181,7 @@ const ContactSection = () => {
           
           <div className="pt-6 md:pt-8 pb-4 border-t border-border/30 mt-8">
             <div className="text-sm text-muted-foreground space-y-1">
-              <p>© כל הזכויות שמורות — המרכז לריפוי תודעתי 🌿</p>
+              <p>© כל הזכויות שמורות — המרכז לריפוי תודעתי</p>
               <p>mindcenter.co.il</p>
             </div>
             <div className="text-xs text-muted-foreground/60 mt-4 space-y-2">
