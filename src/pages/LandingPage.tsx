@@ -12,10 +12,19 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
+import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import FloatingBubbles from "@/components/FloatingBubbles";
 
 const LandingPage = () => {
+  useSmoothScroll();
   const heroText = "🌿 המרכז לריפוי תודעתי";
   const { displayedText } = useTypingEffect({ text: heroText, speed: 80, delay: 1800 });
+  
+  const howItWorksRef = useScrollAnimation({ threshold: 0.2, variant: "fade-up" });
+  const testimonialsRef = useScrollAnimation({ threshold: 0.2, variant: "fade-up" });
+  const whyUsRef = useScrollAnimation({ threshold: 0.2, variant: "scale" });
+  const ctaRef = useScrollAnimation({ threshold: 0.2, variant: "zoom" });
   
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/972527176000?text=שלום 🌿 ראיתי את הפרסום ואשמח לקבל מידע נוסף על התהליך", "_blank");
@@ -60,6 +69,8 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden font-assistant" dir="rtl">
+      <FloatingBubbles />
+      
       {/* Background with 20% opacity */}
       <div 
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
@@ -122,7 +133,12 @@ const LandingPage = () => {
         </section>
 
         {/* How it works */}
-        <section className="mb-8 md:mb-12 bg-sage/5 rounded-3xl p-4 md:p-6 border border-sage/20">
+        <section 
+          ref={howItWorksRef.ref}
+          className={`mb-8 md:mb-12 bg-sage/5 rounded-3xl p-4 md:p-6 border border-sage/20 transition-all duration-700 ${
+            howItWorksRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-sage">
             💫 איך זה עובד
           </h2>
@@ -145,7 +161,12 @@ const LandingPage = () => {
 
 
         {/* Testimonials */}
-        <section className="mb-8 md:mb-12">
+        <section 
+          ref={testimonialsRef.ref}
+          className={`mb-8 md:mb-12 transition-all duration-700 ${
+            testimonialsRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-foreground">
             💬 סיפורי הצלחה
           </h2>
@@ -217,7 +238,12 @@ const LandingPage = () => {
         </section>
 
         {/* Why choose us */}
-        <section className="mb-8 md:mb-12">
+        <section 
+          ref={whyUsRef.ref}
+          className={`mb-8 md:mb-12 transition-all duration-700 ${
+            whyUsRef.isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}
+        >
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-foreground">
             🌸 למה לבחור במרכז לריפוי תודעתי
           </h2>
@@ -232,7 +258,12 @@ const LandingPage = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="text-center space-y-4 mb-8 bg-gradient-to-br from-sage/10 to-peach/10 rounded-3xl p-6 md:p-8 border-2 border-sage/20">
+        <section 
+          ref={ctaRef.ref}
+          className={`text-center space-y-4 mb-8 bg-gradient-to-br from-sage/10 to-peach/10 rounded-3xl p-6 md:p-8 border-2 border-sage/20 transition-all duration-700 ${
+            ctaRef.isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+          }`}
+        >
           <h2 className="text-2xl md:text-3xl font-bold text-foreground">
             📞 רוצים לדעת אם זה מתאים לכם?
           </h2>
