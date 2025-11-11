@@ -180,6 +180,7 @@ const LandingPage = () => {
               plugins={[
                 Autoplay({
                   delay: 5000,
+                  stopOnInteraction: false,
                 })
               ]}
               className="w-full"
