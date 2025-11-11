@@ -1,5 +1,6 @@
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Forward, CheckCheck } from "lucide-react";
+import { MessageCircle, Forward, CheckCheck, Maximize2, Minimize2 } from "lucide-react";
 import landingBg from "@/assets/landing-background.jpg";
 import logoHeader from "@/assets/logo-header.png";
 import { Link } from "react-router-dom";
@@ -17,6 +18,10 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import FloatingBubbles from "@/components/FloatingBubbles";
 
 const LandingPage = () => {
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useSmoothScroll();
   const heroText = "המרכז לריפוי תודעתי";
   const { displayedText } = useTypingEffect({ text: heroText, speed: 80, delay: 1800 });
@@ -26,6 +31,70 @@ const LandingPage = () => {
   const whyUsRef = useScrollAnimation({ threshold: 0.2, variant: "scale" });
   const ctaRef = useScrollAnimation({ threshold: 0.2, variant: "zoom" });
   
+  useEffect(() => {
+    // Start continuous smooth scroll after 2 seconds
+    const startDelay = setTimeout(() => {
+      startAutoScroll();
+    }, 2000);
+
+    return () => {
+      clearTimeout(startDelay);
+      if (scrollIntervalRef.current) {
+        clearInterval(scrollIntervalRef.current);
+      }
+    };
+  }, []);
+
+  const startAutoScroll = () => {
+    // Continuous smooth scroll - 1 pixel every 50ms = very slow and readable
+    scrollIntervalRef.current = setInterval(() => {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const currentScroll = window.scrollY;
+      
+      if (currentScroll >= maxScroll) {
+        // Stop scrolling when reaching the end
+        if (scrollIntervalRef.current) {
+          clearInterval(scrollIntervalRef.current);
+        }
+        // Wait 5 seconds before reloading
+        setTimeout(() => {
+          window.location.reload();
+        }, 5000);
+      } else {
+        // Scroll down by 2 pixels for smooth movement
+        window.scrollBy({ top: 2, behavior: "auto" });
+      }
+    }, 50); // 50ms interval = smooth 20fps scrolling
+  };
+
+  const toggleFullscreen = async () => {
+    if (!document.fullscreenElement) {
+      try {
+        await document.documentElement.requestFullscreen();
+        setIsFullscreen(true);
+      } catch (err) {
+        console.error("Error entering fullscreen:", err);
+      }
+    } else {
+      try {
+        await document.exitFullscreen();
+        setIsFullscreen(false);
+      } catch (err) {
+        console.error("Error exiting fullscreen:", err);
+      }
+    }
+  };
+
+  // Listen for fullscreen changes
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/972527176000?text=שלום ראיתי את הפרסום ואשמח לקבל מידע נוסף על התהליך", "_blank");
   };
@@ -68,7 +137,23 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden font-assistant" dir="rtl">
+    <div ref={containerRef} className="min-h-screen relative overflow-hidden font-assistant" dir="rtl">
+      {/* Fullscreen Button - subtle and non-intrusive */}
+      <div className="fixed bottom-6 left-6 z-[200]">
+        <Button
+          onClick={toggleFullscreen}
+          variant="ghost"
+          size="icon"
+          className="bg-background/50 backdrop-blur-sm hover:bg-background/80 border border-border/30 shadow-lg transition-all h-9 w-9 opacity-30 hover:opacity-100"
+        >
+          {isFullscreen ? (
+            <Minimize2 className="h-4 w-4" />
+          ) : (
+            <Maximize2 className="h-4 w-4" />
+          )}
+        </Button>
+      </div>
+
       <FloatingBubbles />
       
       {/* Background with 20% opacity */}
