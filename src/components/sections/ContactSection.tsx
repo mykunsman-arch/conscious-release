@@ -1,37 +1,21 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, Send, MessageCircle, MapPin } from "lucide-react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useMagnetic } from "@/hooks/use-magnetic";
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const { ref, isVisible } = useScrollAnimation({ variant: "fade-down", threshold: 0.1 });
-  const magneticSubmit = useMagnetic({ strength: 0.25, tolerance: 100 });
   const magneticWhatsApp = useMagnetic({ strength: 0.3, tolerance: 120 });
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "הטופס נשלח בהצלחה",
-      description: "נחזור אליכם בהקדם האפשרי",
-    });
-    setFormData({ name: "", phone: "", email: "", message: "" });
-  };
+  const magneticPhone = useMagnetic({ strength: 0.3, tolerance: 120 });
 
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/972527176000", "_blank");
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = "tel:052-717-6000";
   };
 
   return (
@@ -53,116 +37,68 @@ const ContactSection = () => {
           
           <div className="h-1 w-32 bg-gradient-to-r from-sage via-peach to-sage mx-auto rounded-full"></div>
           
-          <div className={`grid md:grid-cols-2 gap-6 md:gap-8 pt-12 px-4 grid-stagger ${isVisible ? 'visible' : ''}`}>
-            {/* Form */}
-            <Card className="p-6 md:p-10 bg-card/80 backdrop-blur-sm shadow-2xl rounded-3xl border-2 border-border/50 hover:border-accent/30 transition-all">
-              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 text-right">
-                <div>
-                  <label htmlFor="name" className="block text-base font-semibold mb-3 text-foreground/80">
-                    שם מלא
-                  </label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="text-right text-lg p-6 rounded-xl border-2 focus:border-sage transition-all min-h-[56px] touch-manipulation"
-                    dir="rtl"
-                    placeholder="הכנס את שמך המלא"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-base font-semibold mb-3 text-foreground/80">
-                    טלפון
-                  </label>
-                  <div className="relative group">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground group-focus-within:text-sage transition-all pointer-events-none" />
-                    <Input
-                      id="phone"
-                      type="tel"
-                      inputMode="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      required
-                      className="text-right text-lg p-6 pl-14 rounded-xl border-2 focus:border-sage transition-all min-h-[56px] touch-manipulation"
-                      dir="rtl"
-                      placeholder="05X-XXX-XXXX"
-                    />
-                  </div>
-                </div>
-                
-                
-                <div>
-                  <label htmlFor="message" className="block text-base font-semibold mb-3 text-foreground/80">
-                    הודעה
-                  </label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={5}
-                    className="text-right text-lg p-6 rounded-xl border-2 focus:border-sage transition-all resize-none min-h-[140px] touch-manipulation"
-                    dir="rtl"
-                    placeholder="ספרו לנו על מה שמעניין אתכם..."
-                  />
-                </div>
-                
-                <Button 
-                  ref={magneticSubmit as any}
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-7 md:py-8 text-xl font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all group min-h-[56px] touch-manipulation active:scale-95"
-                  style={{ transition: 'transform 0.2s ease-out' }}
-                >
-                  <Send className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-                  שלחו ונחזור אליכם
-                </Button>
-              </form>
-            </Card>
-            
-            {/* Contact info and WhatsApp */}
-            <div className="space-y-4 md:space-y-6 flex flex-col justify-center">
+          <p className="text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            צרו איתנו קשר בדרך שהכי נוחה לכם
+          </p>
+
+          {/* Contact Buttons */}
+          <div className={`max-w-4xl mx-auto pt-8 px-4 grid-stagger ${isVisible ? 'visible' : ''}`}>
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+              {/* WhatsApp Button */}
               <Button
                 ref={magneticWhatsApp as any}
                 onClick={handleWhatsAppClick}
                 size="lg"
-                className="group relative bg-[#25D366] hover:bg-[#20BA5A] text-white w-full py-8 md:py-10 text-xl md:text-2xl font-semibold rounded-2xl shadow-2xl hover:shadow-[#25D366]/30 transition-all overflow-hidden min-h-[56px] touch-manipulation active:scale-95"
+                className="group relative bg-[#25D366] hover:bg-[#20BA5A] text-white w-full py-10 md:py-12 text-xl md:text-2xl font-semibold rounded-3xl shadow-2xl hover:shadow-[#25D366]/40 transition-all overflow-hidden min-h-[80px] touch-manipulation active:scale-95"
                 style={{ transition: 'transform 0.2s ease-out' }}
               >
-                <MessageCircle className="ml-3 h-7 w-7 transition-all" />
-                לפנייה ופרטים בווצאפ
+                <div className="flex flex-col items-center gap-3">
+                  <MessageCircle className="h-10 w-10 md:h-12 md:w-12 group-hover:scale-110 transition-all" />
+                  <div className="flex flex-col gap-1">
+                    <span className="text-2xl md:text-3xl font-bold">וואטסאפ</span>
+                    <span className="text-sm md:text-base font-normal opacity-90">לשיחה מהירה</span>
+                  </div>
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
               </Button>
-              
-              <Card className="p-6 md:p-8 bg-gradient-to-br from-sage/10 to-primary/10 rounded-3xl border-2 border-sage/20 shadow-xl group">
-                <div className="space-y-4 md:space-y-6 text-center">
-                  <MapPin className="h-10 w-10 md:h-12 md:w-12 text-sage mx-auto transition-all" />
-                  <div>
-                    <p className="text-lg md:text-xl font-semibold text-primary mb-3">איך מתחילים</p>
-                    <div className="text-base md:text-lg text-foreground/70 space-y-3 md:space-y-4">
-                      <p className="leading-[1.7] md:leading-relaxed">
-                        הטיפול מתקיים בקליניקה או בזום, באווירה רגועה, בטוחה ומלאת אמון.
-                      </p>
-                      <p className="leading-[1.7] md:leading-relaxed">
-                        אפשר להתחיל בשיחה קצרה ללא התחייבות, כדי להבין יחד מה מתאים לכם.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Card>
 
-              <Card className="p-6 md:p-8 bg-card/80 backdrop-blur-sm rounded-3xl border-2 border-border/50 shadow-xl group">
-                <div className="space-y-3 md:space-y-4 text-center">
-                  <Phone className="h-8 w-8 md:h-10 md:w-10 text-sage mx-auto transition-all" />
-                  <div>
-                    <p className="text-sm font-semibold text-muted-foreground mb-2">צרו קשר</p>
-                    <a href="tel:052-717-6000" className="text-lg md:text-xl font-bold text-primary hover:text-sage transition-colors">
-                      052-717-6000
-                    </a>
+              {/* Phone Button */}
+              <Button
+                ref={magneticPhone as any}
+                onClick={handlePhoneClick}
+                size="lg"
+                className="group relative bg-gradient-to-br from-primary via-sage to-primary hover:from-primary/90 hover:via-sage/90 hover:to-primary/90 text-primary-foreground w-full py-10 md:py-12 text-xl md:text-2xl font-semibold rounded-3xl shadow-2xl hover:shadow-primary/40 transition-all overflow-hidden min-h-[80px] touch-manipulation active:scale-95"
+                style={{ transition: 'transform 0.2s ease-out' }}
+              >
+                <div className="flex flex-col items-center gap-3">
+                  <Phone className="h-10 w-10 md:h-12 md:w-12 group-hover:scale-110 group-hover:rotate-12 transition-all" />
+                  <div className="flex flex-col gap-1">
+                    <span className="text-2xl md:text-3xl font-bold">052-717-6000</span>
+                    <span className="text-sm md:text-base font-normal opacity-90">התקשרו עכשיו</span>
                   </div>
                 </div>
-              </Card>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+              </Button>
             </div>
+
+            {/* Info Card */}
+            <Card className="mt-8 md:mt-10 p-8 md:p-10 bg-gradient-to-br from-sage/10 to-primary/10 rounded-3xl border-2 border-sage/20 shadow-xl">
+              <div className="text-center space-y-4 md:space-y-5">
+                <p className="text-xl md:text-2xl font-semibold text-primary">איך מתחילים?</p>
+                <div className="text-base md:text-lg text-foreground/70 space-y-4 max-w-2xl mx-auto leading-relaxed">
+                  <p>
+                    הטיפול מתקיים בקליניקה או בזום, באווירה רגועה, בטוחה ומלאת אמון.
+                  </p>
+                  <p>
+                    אפשר להתחיל בשיחה קצרה ללא התחייבות, כדי להבין יחד מה מתאים לכם.
+                  </p>
+                  <div className="pt-4 space-y-2 text-base text-foreground/60">
+                    <p>📍 כנרת 15, בני ברק</p>
+                    <p>⏰ ימים א'-ה': 9:00-20:00</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </div>
