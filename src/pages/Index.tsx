@@ -29,7 +29,7 @@ const Index = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 4500);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
   

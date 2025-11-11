@@ -23,7 +23,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section ref={ref} className="snap-section relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-4 pb-12 md:pt-6 md:pb-0" style={{ animation: 'fade-in 5s ease-out forwards', opacity: 0 }} dir="rtl">
+    <section ref={ref} className="snap-section relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-4 pb-12 md:pt-6 md:pb-0 opacity-0" style={{ animation: 'fade-in 5s ease-out forwards' }} dir="rtl">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent"></div>
