@@ -164,13 +164,13 @@ const LandingPage = () => {
             testimonialsRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-foreground">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-foreground opacity-0" style={{ animation: 'fade-in 1s ease-out 4.3s forwards' }}>
             💬 סיפורי הצלחה
           </h2>
-          <p className="text-center text-foreground/60 mb-6 text-sm md:text-base">
+          <p className="text-center text-foreground/60 mb-6 text-sm md:text-base opacity-0" style={{ animation: 'fade-in 1s ease-out 4.8s forwards' }}>
             אנשים אמיתיים. תהליכים אמיתיים. תוצאות שמרגישים בלב ובגוף.
           </p>
-          <div className="max-w-4xl mx-auto px-4 md:px-12">
+          <div className="max-w-4xl mx-auto px-4 md:px-12 opacity-0" style={{ animation: 'fade-in 1s ease-out 5.3s forwards' }}>
             <Carousel
               opts={{
                 align: "start",
