@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import TermsOfService from "./pages/TermsOfService";
 import LandingPage from "./pages/LandingPage";
 import NotFound from "./pages/NotFound";
+import ScrollToTopOnRouteChange from "@/components/ScrollToTopOnRouteChange";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTopOnRouteChange />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/landing" element={<LandingPage />} />
