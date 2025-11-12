@@ -414,10 +414,6 @@ const LandingPage = () => {
                 <Link to="/terms-of-service" className="hover:text-accent transition-colors underline">
                   הטיפול בהתאם לתנאי השימוש
                 </Link>
-                <span>•</span>
-                <Link to="/landing" className="hover:text-accent transition-colors underline">
-                  נחיתה
-                </Link>
               </p>
             </div>
           </div>

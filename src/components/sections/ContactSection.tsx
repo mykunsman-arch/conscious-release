@@ -130,10 +130,6 @@ const ContactSection = () => {
                 <Link to="/landing" className="hover:text-accent transition-colors underline">
                   נחיתה
                 </Link>
-                <span>•</span>
-                <Link to="/auto-display" className="hover:text-sage transition-colors underline font-semibold">
-                  מצב תצוגה אוטומטי
-                </Link>
               </p>
             </div>
           </div>
