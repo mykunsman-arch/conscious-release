@@ -20,7 +20,7 @@ const WhyHereSection = () => {
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className={`space-y-8 section-diagonal ${isVisible ? 'visible' : ''}`}>
+          <div className={`text-center space-y-8 section-diagonal ${isVisible ? 'visible' : ''}`}>
             <div className="inline-flex items-center gap-2 bg-peach/20 px-6 py-3 rounded-full">
               <Heart className="h-5 w-5 text-sage transition-all" />
               <span className="text-sage font-semibold">הייחודיות שלנו</span>
@@ -30,7 +30,7 @@ const WhyHereSection = () => {
             למה לבחור במרכז לריפוי תודעתי
           </h2>
             
-            <div className="h-1 w-24 bg-gradient-to-r from-sage to-peach rounded-full"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-sage to-peach rounded-full mx-auto"></div>
 
             {/* Desktop List */}
             <div className={`hidden md:block space-y-4 md:space-y-6 grid-stagger ${isVisible ? 'visible' : ''}`}>
