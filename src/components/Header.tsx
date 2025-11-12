@@ -77,7 +77,13 @@ const Header = () => {
           {/* Logo - right side (first in RTL) */}
           <div className="flex-shrink-0">
             <button 
-              onClick={() => navigate('/')}
+              onClick={() => {
+                if (location.pathname === '/') {
+                  window.location.reload();
+                } else {
+                  navigate('/');
+                }
+              }}
               className="cursor-pointer hover:opacity-80 transition-opacity"
               aria-label="חזרה לדף הבית"
             >
