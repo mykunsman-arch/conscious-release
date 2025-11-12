@@ -18,10 +18,12 @@ import ContactSection from "@/components/sections/ContactSection";
 
 const Index = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [showWhatsAppTooltip, setShowWhatsAppTooltip] = useState(false);
   const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const resumeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const reloadTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const tooltipTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     // Start continuous smooth scroll after 2 seconds
@@ -136,6 +138,40 @@ const Index = () => {
     return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
   }, []);
 
+  // Show WhatsApp tooltip after 15 seconds of scrolling
+  useEffect(() => {
+    let hasScrolled = false;
+
+    const handleScroll = () => {
+      if (!hasScrolled) {
+        hasScrolled = true;
+        
+        // Clear any existing timeout
+        if (tooltipTimeoutRef.current) {
+          clearTimeout(tooltipTimeoutRef.current);
+        }
+
+        // Show tooltip after 15 seconds
+        tooltipTimeoutRef.current = setTimeout(() => {
+          setShowWhatsAppTooltip(true);
+          
+          // Hide after 10 seconds
+          setTimeout(() => {
+            setShowWhatsAppTooltip(false);
+          }, 10000);
+        }, 15000);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (tooltipTimeoutRef.current) {
+        clearTimeout(tooltipTimeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div ref={containerRef} className="min-h-screen relative">
       {/* Fullscreen Button */}
@@ -174,13 +210,23 @@ const Index = () => {
       </div>
 
       {/* Floating WhatsApp Button */}
-      <button
-        onClick={() => window.open("https://wa.me/972527176000?text=שלום ראיתי את האתר ואשמח לקבל מידע נוסף על התהליך", "_blank")}
-        className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-2xl hover:shadow-[#25D366]/50 transition-all hover:scale-110 active:scale-95 group"
-        aria-label="שלח הודעת וואטסאפ"
-      >
-        <MessageCircle className="h-6 w-6 md:h-7 md:w-7 group-hover:animate-pulse" />
-      </button>
+      <div className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50">
+        {/* Tooltip */}
+        {showWhatsAppTooltip && (
+          <div className="absolute bottom-full left-0 mb-2 px-4 py-2 bg-foreground text-background rounded-lg shadow-xl whitespace-nowrap text-sm md:text-base font-medium animate-fade-in">
+            לחצו לשיחה בוואטסאפ
+            <div className="absolute top-full left-6 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-foreground"></div>
+          </div>
+        )}
+        
+        <button
+          onClick={() => window.open("https://wa.me/972527176000?text=שלום ראיתי את האתר ואשמח לקבל מידע נוסף על התהליך", "_blank")}
+          className="bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-2xl hover:shadow-[#25D366]/50 transition-all hover:scale-110 active:scale-95 group"
+          aria-label="שלח הודעת וואטסאפ"
+        >
+          <MessageCircle className="h-6 w-6 md:h-7 md:w-7 group-hover:animate-pulse" />
+        </button>
+      </div>
     </div>
   );
 };
