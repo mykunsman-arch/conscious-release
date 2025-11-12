@@ -79,7 +79,8 @@ const Header = () => {
             <button 
               onClick={() => {
                 if (location.pathname === '/') {
-                  window.location.reload();
+                  // Force reload from top by navigating to the same URL
+                  window.location.href = window.location.pathname;
                 } else {
                   navigate('/');
                 }
