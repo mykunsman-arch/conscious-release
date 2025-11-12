@@ -76,13 +76,19 @@ const Header = () => {
         <div className="flex items-center justify-between h-full gap-4">
           {/* Logo - right side (first in RTL) */}
           <div className="flex-shrink-0">
-            <img 
-              src={logoHeader} 
-              alt="המרכז לריפוי תודעתי" 
-              className={`h-[5.46875rem] md:h-[7.03125rem] w-auto object-contain transition-opacity duration-500 max-h-full ${
-                showLogo ? "opacity-100" : "opacity-0"
-              }`}
-            />
+            <button 
+              onClick={() => navigate('/')}
+              className="cursor-pointer hover:opacity-80 transition-opacity"
+              aria-label="חזרה לדף הבית"
+            >
+              <img 
+                src={logoHeader} 
+                alt="המרכז לריפוי תודעתי" 
+                className={`h-[5.46875rem] md:h-[7.03125rem] w-auto object-contain transition-opacity duration-500 max-h-full ${
+                  showLogo ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            </button>
           </div>
           
           {/* Navigation - centered */}
