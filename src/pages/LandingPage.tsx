@@ -78,7 +78,10 @@ const LandingPage = () => {
         }
         // Wait 5 seconds before reloading
         setTimeout(() => {
-          window.location.reload();
+          window.scrollTo({ top: 0, behavior: 'instant' });
+          setTimeout(() => {
+            window.location.reload();
+          }, 100);
         }, 5000);
       } else {
         // Scroll down by 2 pixels for smooth movement
