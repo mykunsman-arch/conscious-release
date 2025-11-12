@@ -91,7 +91,7 @@ const Header = () => {
               { id: "what-is", label: "ריפוי תודעתי" },
               { id: "how-it-works", label: "איך זה עובד", scrollTo: "trauma-connection" },
               { id: "why-here", label: "למה כאן" },
-              { id: "next-steps", label: "איך מתקדמים", scrollTo: "faq" }
+              { id: "next-steps", label: "איך מתקדמים", scrollTo: "contact" }
             ].map((item) => (
               <button
                 key={item.id}
