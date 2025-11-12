@@ -191,7 +191,7 @@ const LandingPage = () => {
   return (
     <div ref={containerRef} className="min-h-screen relative overflow-hidden font-assistant" dir="rtl">
       {/* Fullscreen Button */}
-      <div className="fixed top-6 left-6 z-[200]">
+      <div className="fixed top-6 left-6 z-[200] hidden md:block">
         <Button
           onClick={toggleFullscreen}
           variant="outline"

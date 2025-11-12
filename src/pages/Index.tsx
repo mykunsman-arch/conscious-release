@@ -139,7 +139,7 @@ const Index = () => {
   return (
     <div ref={containerRef} className="min-h-screen relative">
       {/* Fullscreen Button */}
-      <div className="fixed top-6 left-6 z-[200]">
+      <div className="fixed top-6 left-6 z-[200] hidden md:block">
         <Button
           onClick={toggleFullscreen}
           variant="outline"
