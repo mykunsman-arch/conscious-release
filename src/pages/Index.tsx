@@ -20,6 +20,7 @@ const Index = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isPausedRef = useRef(false);
 
   useEffect(() => {
     // Start continuous smooth scroll after 2 seconds
@@ -27,17 +28,38 @@ const Index = () => {
       startAutoScroll();
     }, 2000);
 
+    // Pause scrolling on any user interaction
+    const pauseScrolling = () => {
+      isPausedRef.current = true;
+      setTimeout(() => {
+        isPausedRef.current = false;
+      }, 3000); // Resume after 3 seconds of no interaction
+    };
+
+    // Add listeners for user interactions
+    document.addEventListener('mousedown', pauseScrolling);
+    document.addEventListener('touchstart', pauseScrolling);
+    document.addEventListener('wheel', pauseScrolling);
+
     return () => {
       clearTimeout(startDelay);
       if (scrollIntervalRef.current) {
         clearInterval(scrollIntervalRef.current);
       }
+      document.removeEventListener('mousedown', pauseScrolling);
+      document.removeEventListener('touchstart', pauseScrolling);
+      document.removeEventListener('wheel', pauseScrolling);
     };
   }, []);
 
   const startAutoScroll = () => {
     // Continuous smooth scroll - 1 pixel every 50ms = very slow and readable
     scrollIntervalRef.current = setInterval(() => {
+      // Skip if paused
+      if (isPausedRef.current) {
+        return;
+      }
+
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
       const currentScroll = window.scrollY;
       
