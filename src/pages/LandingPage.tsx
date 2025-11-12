@@ -22,6 +22,7 @@ const LandingPage = () => {
   const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const resumeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const reloadTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useSmoothScroll();
   const heroText = "המרכז לריפוי תודעתי";
@@ -40,6 +41,11 @@ const LandingPage = () => {
 
     // Stop scrolling on any user interaction and resume after delay
     const stopScrolling = () => {
+      // Don't interrupt if we're already at the end and waiting to reload
+      if (reloadTimeoutRef.current) {
+        return;
+      }
+      
       // Clear existing interval
       if (scrollIntervalRef.current) {
         clearInterval(scrollIntervalRef.current);
@@ -71,6 +77,9 @@ const LandingPage = () => {
       if (resumeTimeoutRef.current) {
         clearTimeout(resumeTimeoutRef.current);
       }
+      if (reloadTimeoutRef.current) {
+        clearTimeout(reloadTimeoutRef.current);
+      }
       document.removeEventListener('mousedown', stopScrolling);
       document.removeEventListener('touchstart', stopScrolling);
       document.removeEventListener('wheel', stopScrolling);
@@ -96,7 +105,7 @@ const LandingPage = () => {
           scrollIntervalRef.current = null;
         }
         // Wait 5 seconds before reloading
-        setTimeout(() => {
+        reloadTimeoutRef.current = setTimeout(() => {
           window.scrollTo({ top: 0, behavior: 'instant' });
           setTimeout(() => {
             window.location.reload();
