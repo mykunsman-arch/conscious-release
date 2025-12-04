@@ -108,8 +108,9 @@ const ContactSection = () => {
         <div className="container mx-auto px-4 text-center space-y-6 md:space-y-8 relative z-10">
           <div className="space-y-4 text-center">
             <p className="text-lg md:text-xl font-semibold text-primary">המרכז לריפוי תודעתי</p>
+            <p className="text-base text-sage font-medium">בניהול טל אסתר קונסמן</p>
             <div className="text-base md:text-lg text-foreground/70 space-y-2">
-              <p>כנרת 15, בני ברק</p>
+              <p>📍 כנרת 15, בני ברק</p>
               <p>📱 052-717-6000</p>
               <p>💬 <a href="https://wa.me/972527176000" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">לחצו לשיחה בוואטסאפ</a></p>
             </div>
@@ -117,7 +118,7 @@ const ContactSection = () => {
           
           <div className="pt-6 md:pt-8 pb-4 border-t border-border/30 mt-8">
             <div className="text-sm text-muted-foreground space-y-1">
-              <p>© כל הזכויות שמורות — המרכז לריפוי תודעתי</p>
+              <p>© כל הזכויות שמורות — המרכז לריפוי תודעתי | טל אסתר קונסמן</p>
               <p>mindcenter.co.il</p>
             </div>
             <div className="text-xs text-muted-foreground/60 mt-4 space-y-2">
