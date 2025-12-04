@@ -12,6 +12,7 @@ import TraumaConnectionSection from "@/components/sections/TraumaConnectionSecti
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import StatsSection from "@/components/sections/StatsSection";
 import WhyHereSection from "@/components/sections/WhyHereSection";
+import AboutSection from "@/components/sections/AboutSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import ContactSection from "@/components/sections/ContactSection";
@@ -204,6 +205,7 @@ const Index = () => {
         <HowItWorksSection />
         <StatsSection />
         <WhyHereSection />
+        <AboutSection />
         <TestimonialsSection />
         <FAQSection />
         <ContactSection />
