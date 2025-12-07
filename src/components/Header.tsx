@@ -85,16 +85,24 @@ const Header = () => {
                   navigate('/');
                 }
               }}
-              className="cursor-pointer hover:opacity-80 transition-opacity"
+              className="cursor-pointer hover:opacity-80 transition-opacity flex flex-col items-center"
               aria-label="חזרה לדף הבית"
             >
               <img 
                 src={logoHeader} 
                 alt="המרכז לריפוי תודעתי" 
-                className={`h-[5.46875rem] md:h-[7.03125rem] w-auto object-contain transition-opacity duration-500 max-h-full ${
+                className={`h-[4.5rem] md:h-[5.5rem] w-auto object-contain transition-opacity duration-500 max-h-full ${
                   showLogo ? "opacity-100" : "opacity-0"
                 }`}
               />
+              <span 
+                className={`text-[0.6rem] md:text-[0.7rem] tracking-[0.2em] text-primary/80 font-light uppercase transition-opacity duration-500 -mt-1 ${
+                  showLogo ? "opacity-100" : "opacity-0"
+                }`}
+                style={{ fontFamily: 'inherit' }}
+              >
+                by Tal Ester Kunsman
+              </span>
             </button>
           </div>
           
