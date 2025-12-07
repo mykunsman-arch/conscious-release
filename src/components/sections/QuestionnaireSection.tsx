@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
-import { ClipboardCheck, Sparkles } from "lucide-react";
+import { ClipboardCheck, Flower2 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const QuestionnaireSection = () => {
@@ -103,7 +103,7 @@ const QuestionnaireSection = () => {
               onClick={handleSubmit}
               className="w-full bg-gradient-to-r from-primary via-sage to-primary hover:from-primary/90 hover:via-sage/90 hover:to-primary/90 text-primary-foreground py-7 md:py-9 text-xl md:text-2xl font-bold rounded-3xl shadow-2xl hover:shadow-sage/50 transition-all duration-500 hover:scale-[1.03] border-2 border-sage/30 min-h-[56px] touch-manipulation active:scale-100"
             >
-              <Sparkles className="ml-2 h-6 w-6" />
+              <Flower2 className="ml-2 h-6 w-6" />
               הצג תוצאה
             </Button>
             
@@ -111,7 +111,7 @@ const QuestionnaireSection = () => {
               <div className="mt-8 p-6 md:p-8 bg-gradient-to-br from-accent/10 to-peach/10 rounded-3xl border-2 border-accent/30 shadow-xl animate-scale-in">
                 <div className="text-center space-y-4 md:space-y-6">
                   <div className="inline-flex items-center gap-2 bg-sage/20 px-6 py-3 rounded-full">
-                    <Sparkles className="h-5 w-5 text-sage" />
+                    <Flower2 className="h-5 w-5 text-sage" />
                   </div>
                   
                   <p className="text-xl md:text-2xl font-bold text-primary">

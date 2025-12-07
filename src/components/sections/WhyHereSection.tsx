@@ -1,4 +1,4 @@
-import { Heart, Shield, Users, Sparkles } from "lucide-react";
+import { Heart, Shield, Users, Sun, Feather } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useTilt } from "@/hooks/use-tilt";
 import AccordionWhyHere from "./AccordionWhyHere";
@@ -93,7 +93,7 @@ const WhyHereSection = () => {
                 className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-accent/10 to-peach/10 rounded-2xl border border-accent/20 hover:border-accent/40 transition-colors shadow-lg group"
               >
                 <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-all">
-                  <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 group-hover:rotate-12 transition-all" />
+                  <Sun className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 group-hover:rotate-12 transition-all" />
                 </div>
                 <div className="flex-1 text-right">
                   <p className="text-base md:text-lg text-foreground/80 font-semibold">
@@ -144,7 +144,7 @@ const WhyHereSection = () => {
                 className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-br from-muted/50 to-background rounded-2xl border border-border/50 hover:border-accent/30 transition-colors shadow-lg group"
               >
                 <div className="bg-accent/10 p-2 md:p-3 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-all">
-                  <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 group-hover:rotate-12 transition-all" />
+                  <Feather className="h-5 w-5 md:h-6 md:w-6 text-accent group-hover:scale-110 group-hover:rotate-12 transition-all" />
                 </div>
                 <div className="flex-1 text-right">
                   <p className="text-base md:text-lg text-foreground/80 font-semibold">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Home, Sparkles, Heart, MessageCircle, User } from "lucide-react";
+import { Home, Flower2, Heart, MessageCircle, User } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 interface NavItem {
@@ -18,7 +18,7 @@ const MobileBottomNav = () => {
   const navItems: NavItem[] = [
     { id: "home", label: "בית", icon: Home, scrollTo: "hero" },
     { id: "about", label: "אודות", icon: User, scrollTo: "about" },
-    { id: "what-is", label: "ריפוי", icon: Sparkles, scrollTo: "what-is" },
+    { id: "what-is", label: "ריפוי", icon: Flower2, scrollTo: "what-is" },
     { id: "why-here", label: "למה כאן", icon: Heart, scrollTo: "why-here" },
     { id: "contact", label: "צור קשר", icon: MessageCircle, scrollTo: "contact" },
   ];

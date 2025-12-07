@@ -1,4 +1,4 @@
-import { Heart, Brain, Sparkles } from "lucide-react";
+import { Heart, Brain, Flower2 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useImageReveal } from "@/hooks/use-image-reveal";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
@@ -21,7 +21,7 @@ const WhatIsSection = () => {
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
         <div className={`text-center space-y-8 section-slide-up ${isVisible ? 'visible' : ''}`}>
           <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full">
-            <Sparkles className="h-5 w-5 text-sage transition-all" />
+            <Flower2 className="h-5 w-5 text-sage transition-all" />
             <span className="text-sage font-semibold">הבסיס שלנו</span>
           </div>
 
