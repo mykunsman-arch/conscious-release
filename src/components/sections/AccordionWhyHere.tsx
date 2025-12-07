@@ -1,4 +1,4 @@
-import { Heart, Shield, Users, Sparkles } from "lucide-react";
+import { Heart, Shield, Users, Sun, Feather } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -24,7 +24,7 @@ const AccordionWhyHere = () => {
       content: "גמישות מלאה בבחירת צורת הטיפול - פנים אל פנים בקליניקה או בנוחות של הבית דרך זום, בהתאם להעדפותיכם."
     },
     { 
-      icon: Sparkles, 
+      icon: Sun, 
       title: "תוצאות עמוקות ומחזיקות לאורך זמן",
       content: "עבודה על השורש של הבעיה ולא רק על התסמינים, מה שמביא לשינוי מתמשך ועמוק שנשמר לאורך זמן."
     },
@@ -39,7 +39,7 @@ const AccordionWhyHere = () => {
       content: "המרכז מומלץ על ידי אנשי מקצוע מתחום הנפש והבריאות, המכירים את היעילות של הגישה."
     },
     { 
-      icon: Sparkles, 
+      icon: Feather, 
       title: "ברכות והמלצות מרבנים ויועצים רוחניים",
       content: "קיבלנו ברכות והמלצות מרבנים ויועצים רוחניים המעריכים את הגישה העדינה והמכבדת."
     },

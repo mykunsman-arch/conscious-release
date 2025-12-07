@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-main.png";
-import { Sparkles } from "lucide-react";
+import { Leaf } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
 import { useMagnetic } from "@/hooks/use-magnetic";
@@ -57,11 +57,11 @@ const HeroSection = () => {
           </h1>
           
           <div className="flex items-center justify-center gap-2 md:gap-3 px-4">
-            <Sparkles className="text-sage h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
+            <Leaf className="text-sage h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
             <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gradient-accent">
               להשתחרר. להתחבר. להתרפא.
             </p>
-            <Sparkles className="text-sage h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
+            <Leaf className="text-sage h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0 scale-x-[-1]" />
           </div>
         </div>
         
