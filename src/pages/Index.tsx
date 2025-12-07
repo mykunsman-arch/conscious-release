@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import ScrollProgressDots from "@/components/ScrollProgressDots";
 import StickyCTA from "@/components/StickyCTA";
+import MobileBottomNav from "@/components/MobileBottomNav";
 import HeroSection from "@/components/sections/HeroSection";
 import WhatIsSection from "@/components/sections/WhatIsSection";
 import TraumaConnectionSection from "@/components/sections/TraumaConnectionSection";
@@ -211,8 +212,8 @@ const Index = () => {
         <ContactSection />
       </div>
 
-      {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50">
+      {/* Floating WhatsApp Button - adjusted for mobile bottom nav */}
+      <div className="fixed bottom-20 left-4 md:bottom-6 md:left-6 z-50">
         {/* Tooltip */}
         {showWhatsAppTooltip && (
           <div className="absolute bottom-full left-0 mb-2 px-4 py-2 bg-foreground text-background rounded-lg shadow-xl whitespace-nowrap text-sm md:text-base font-medium animate-fade-in">
@@ -229,6 +230,12 @@ const Index = () => {
           <MessageCircle className="h-6 w-6 md:h-7 md:w-7 group-hover:animate-pulse" />
         </button>
       </div>
+
+      {/* Mobile Bottom Navigation */}
+      <MobileBottomNav />
+
+      {/* Bottom padding for mobile nav */}
+      <div className="h-16 md:hidden" />
     </div>
   );
 };
