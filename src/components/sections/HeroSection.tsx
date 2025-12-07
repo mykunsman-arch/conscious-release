@@ -44,7 +44,7 @@ const HeroSection = () => {
               alt="המרכז לריפוי תודעתי" 
               className="h-auto w-48 sm:w-64 md:w-80 lg:w-96 max-w-full mx-auto object-contain drop-shadow-2xl" 
             />
-            <span className="absolute bottom-[22%] sm:bottom-[20%] md:bottom-[18%] left-1/2 -translate-x-1/2 text-[0.55rem] sm:text-[0.65rem] md:text-[0.75rem] tracking-[0.2em] text-foreground/50 font-normal uppercase whitespace-nowrap" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+            <span className="absolute bottom-[25%] sm:bottom-[23%] md:bottom-[21%] left-1/2 -translate-x-1/2 text-[0.55rem] sm:text-[0.65rem] md:text-[0.75rem] tracking-[0.2em] text-foreground/70 font-medium uppercase whitespace-nowrap" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               BY TAL ESTER KUNSMAN
             </span>
           </div>
