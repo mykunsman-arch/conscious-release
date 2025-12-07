@@ -37,12 +37,15 @@ const HeroSection = () => {
 
       <div className="container mx-auto max-w-5xl text-center space-y-0 relative z-10">
         {/* Logo - fades in first */}
-        <div id="hero" className="opacity-0" style={{ animation: 'fade-in 1.5s ease-out forwards' }}>
+        <div id="hero" className="opacity-0 flex flex-col items-center" style={{ animation: 'fade-in 1.5s ease-out forwards' }}>
           <img 
             src={logo} 
             alt="המרכז לריפוי תודעתי" 
             className="h-auto w-48 sm:w-64 md:w-80 lg:w-96 max-w-full mx-auto object-contain drop-shadow-2xl" 
           />
+          <span className="text-[0.65rem] sm:text-xs md:text-sm tracking-[0.2em] text-primary/60 font-light uppercase mt-1">
+            by Tal Ester Kunsman
+          </span>
         </div>
         
         {/* Content - fades in after logo */}
