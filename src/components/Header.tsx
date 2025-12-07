@@ -91,15 +91,10 @@ const Header = () => {
               <img 
                 src={logoHeader} 
                 alt="המרכז לריפוי תודעתי" 
-                className={`h-[4.5rem] md:h-[5.5rem] w-auto object-contain transition-opacity duration-500 max-h-full ${
-                  showLogo ? "opacity-100" : "opacity-0"
-                }`}
+                className="h-[4.5rem] md:h-[5.5rem] w-auto object-contain max-h-full"
               />
               <span 
-                className={`text-[0.6rem] md:text-[0.7rem] tracking-[0.2em] text-primary/80 font-light uppercase transition-opacity duration-500 -mt-1 ${
-                  showLogo ? "opacity-100" : "opacity-0"
-                }`}
-                style={{ fontFamily: 'inherit' }}
+                className="text-[0.55rem] md:text-[0.65rem] tracking-[0.15em] text-primary/70 font-light uppercase -mt-1"
               >
                 by Tal Ester Kunsman
               </span>
