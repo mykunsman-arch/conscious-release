@@ -17,9 +17,9 @@ const MobileBottomNav = () => {
 
   const navItems: NavItem[] = [
     { id: "home", label: "בית", icon: Home, scrollTo: "hero" },
+    { id: "about", label: "אודות", icon: User, scrollTo: "about" },
     { id: "what-is", label: "ריפוי", icon: Sparkles, scrollTo: "what-is" },
     { id: "why-here", label: "למה כאן", icon: Heart, scrollTo: "why-here" },
-    { id: "about", label: "אודות", icon: User, scrollTo: "about" },
     { id: "contact", label: "צור קשר", icon: MessageCircle, scrollTo: "contact" },
   ];
 
@@ -29,7 +29,7 @@ const MobileBottomNav = () => {
       setLastScrollY(currentScrollY);
 
       // Detect active section
-      const sections = ["hero", "what-is", "trauma-connection", "how-it-works", "why-here", "about", "testimonials", "faq", "contact"];
+      const sections = ["hero", "about", "what-is", "trauma-connection", "how-it-works", "why-here", "testimonials", "faq", "contact"];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (const sectionId of sections) {
@@ -39,9 +39,9 @@ const MobileBottomNav = () => {
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             // Map sections to nav items
             if (sectionId === "hero") setActiveSection("home");
+            else if (sectionId === "about") setActiveSection("about");
             else if (["what-is", "trauma-connection", "how-it-works"].includes(sectionId)) setActiveSection("what-is");
             else if (["why-here", "testimonials"].includes(sectionId)) setActiveSection("why-here");
-            else if (sectionId === "about") setActiveSection("about");
             else if (["faq", "contact"].includes(sectionId)) setActiveSection("contact");
             break;
           }

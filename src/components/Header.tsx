@@ -15,8 +15,8 @@ const Header = () => {
 
       // Detect which section is currently in view
       const sections = {
-        "what-is": ["what-is"],
-        "how-it-works": ["trauma-connection", "how-it-works", "questionnaire"],
+        "about": ["about"],
+        "what-is": ["what-is", "trauma-connection", "how-it-works", "questionnaire"],
         "why-here": ["why-here", "testimonials"],
         "next-steps": ["faq", "contact"]
       };
@@ -101,8 +101,8 @@ const Header = () => {
           {/* Navigation - centered */}
           <nav className="grid grid-cols-4 md:flex gap-1 md:gap-3 lg:gap-4 justify-center flex-1 max-w-md md:max-w-none relative pointer-events-auto">
             {[
+              { id: "about", label: "הכירו אותנו" },
               { id: "what-is", label: "ריפוי תודעתי" },
-              { id: "how-it-works", label: "איך זה עובד", scrollTo: "trauma-connection" },
               { id: "why-here", label: "למה כאן" },
               { id: "next-steps", label: "איך מתקדמים", scrollTo: "contact" }
             ].map((item) => (
