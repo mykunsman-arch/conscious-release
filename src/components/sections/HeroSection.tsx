@@ -43,7 +43,7 @@ const HeroSection = () => {
             alt="המרכז לריפוי תודעתי" 
             className="h-auto w-48 sm:w-64 md:w-80 lg:w-96 max-w-full mx-auto object-contain drop-shadow-2xl" 
           />
-          <span className="text-[0.65rem] sm:text-xs md:text-sm tracking-[0.2em] text-primary/60 font-light uppercase mt-1">
+          <span className="text-[0.6rem] sm:text-[0.7rem] md:text-xs tracking-[0.25em] text-primary/50 font-light uppercase -mt-2 sm:-mt-3 md:-mt-4">
             by Tal Ester Kunsman
           </span>
         </div>
