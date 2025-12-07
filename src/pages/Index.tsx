@@ -201,12 +201,12 @@ const Index = () => {
       <div className="snap-container">
         <HeroSection />
         <FloatingBubbles />
+        <AboutSection />
         <WhatIsSection />
         <TraumaConnectionSection />
         <HowItWorksSection />
         <StatsSection />
         <WhyHereSection />
-        <AboutSection />
         <TestimonialsSection />
         <FAQSection />
         <ContactSection />
