@@ -91,13 +91,10 @@ const Header = () => {
               <img 
                 src={logoHeader} 
                 alt="המרכז לריפוי תודעתי" 
-                className="h-[4.5rem] md:h-[5.5rem] w-auto object-contain max-h-full"
+                className={`h-[5.46875rem] md:h-[7.03125rem] w-auto object-contain transition-opacity duration-500 max-h-full ${
+                  showLogo ? "opacity-100" : "opacity-0"
+                }`}
               />
-              <span 
-                className="text-[0.55rem] md:text-[0.65rem] tracking-[0.15em] text-primary/70 font-light uppercase -mt-1"
-              >
-                by Tal Ester Kunsman
-              </span>
             </button>
           </div>
           
