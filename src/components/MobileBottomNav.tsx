@@ -11,7 +11,6 @@ interface NavItem {
 
 const MobileBottomNav = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
-  const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
@@ -27,13 +26,6 @@ const MobileBottomNav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
-      // Hide on scroll down, show on scroll up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
       setLastScrollY(currentScrollY);
 
       // Detect active section
@@ -75,9 +67,7 @@ const MobileBottomNav = () => {
 
   return (
     <nav
-      className={`fixed bottom-0 left-0 right-0 z-[200] md:hidden transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "translate-y-full"
-      }`}
+      className="fixed bottom-0 left-0 right-0 z-[200] md:hidden"
       dir="rtl"
     >
       {/* Glass effect background */}
